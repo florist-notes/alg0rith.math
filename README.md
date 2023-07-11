@@ -2,14 +2,14 @@
 
 
 
-## Essence of Mathematics [[notes]()]
+## Essence of Mathematics [[notes](./mathematics)]
 
 ```latex
     mathematics ~ θ
 
 ```
 
-## Python [[notes]()] 
+## Python [[notes](./python)] 
 ```python
     import numpy as np
     import pandas as pd
@@ -21,7 +21,7 @@
 
 ```
 my sample code : [[ code_i.py ]()][[ code_ii.py ]()][[ code_iii.py ]()]
-## C++, STL and CMake [[notes]()] 
+## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
     #include <bits/stdc++-h>
 
@@ -37,4 +37,4 @@ my sample code : [[ code_i.cpp ]()][[ code_ii.cpp ]()][[ code_iii.cpp ]()]
 
 ## Advanced Software Engineering [[notes]()] 
 
-## Resources [[notes]()] 
+## Resources [[notes](RESOURCE.MD)] 
