@@ -1,3 +1,225 @@
+# AI labs and companies:
+
+## Research Labs
+
+<table style="width:100%" >
+<tr>
+<td>
+<b>MIT</b> :
+
+[MIT CSAIL Computer Vision Research Group]()
+</td>
+<td>
+<b>CMU</b>:
+
+[CI2CV](https://www.ci2cv.net/)
+</td><td>
+<b>Stanford</b>:
+
+[Stanford Vision and Learning Lab (SVL)](https://svl.stanford.edu/)
+</td><td>
+<b>UCB</b>
+
+[Berkeley Artificial Intelligence Research (BAIR)]()
+</td><td>
+<b>University of Oxford</b>
+</td><td>
+<b>ETH Zurich</b>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<b>Harvard</b>
+</td>
+<td>
+<b>EPFL</b>
+</td><td>
+<b>University of Tokyo</b>
+</td><td>
+<b>University of Pennsylvania</b>
+</td><td>
+<b>University of Edinburgh</b>
+</td><td>
+<b>Imperial College London</b>
+</td>
+</tr>
+
+<tr>
+<td>
+<b>Max Planck Society</b>
+</td>
+<td>
+<b>TU Munich</b>
+</td><td>
+<b>Cornell</b>
+</td><td>
+<b>University College London</b>
+</td><td>
+<b>NYU</b>
+</td><td>
+<b>Columbia</b>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<b>University of Alberta</b>
+</td>
+<td>
+<b>University of Torronto</b>
+</td><td>
+<b>University of Cambridge</b>
+</td><td>
+<b>Princeton</b>
+</td><td>
+<b>Caltech</b>
+
+[Computational Vision at Caltech]()
+</td><td>
+<b>Delft University of Technology</b>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<b>University of Bern</b>
+</td>
+<td>
+<b>University of Zurich</b>
+</td><td>
+<b>University of St. Gallen</b>
+</td><td>
+<b>Universität Basel</b>
+</td><td>
+<b>University of Geneva</b>
+</td><td>
+<b>UCLA</b> :
+
+[UCLA Vision Lab]()
+</td>
+</tr>
+</table>
+
+here is a [list](https://home.isr.uc.pt/~peixoto/PXResGrp.html) [[list2](https://medium.com/maheshkkumar/computer-vision-research-laboratories-fa344a129b3e)] of Computer Vision Research groups. More RL labs : [Mila](https://mila.quebec/en/), [vector-institute](https://vectorinstitute.ai/about/).
+
+## Companies:
+
+
+<table style="width:100%" >
+<tr>
+<td>
+<b>NVIDIA</b>
+</td>
+<td>
+<b>Microsoft</b>
+</td><td>
+<b>Google</b>
+</td><td>
+<b>Deepmind</b>
+</td><td>
+<b>OpenAI</b>
+</td><td>
+<b>Boston Dynamics</b>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<b>Apple</b>
+</td>
+<td>
+<b>Amazon</b>
+</td><td>
+<b>Intel</b>
+</td><td>
+<b>Graphcore</b>
+</td><td>
+<b>Anybotics</b>
+</td><td>
+<b>Rethink Robotics</b>
+</td>
+</tr>
+
+</table>
+
+## Autonomous Systems Lab:
+
+<table style="width:100%" >
+<tr>
+<td>
+<b>ETH-Z</b>:
+
+[ASL](https://asl.ethz.ch/), [RSL](https://rsl.ethz.ch/)
+</td>
+<td>
+<b>MIT</b>:
+
+[Spark Lab](https://web.mit.edu/sparklab/)
+</td><td>
+<b>Stanford</b>
+
+[ASL](https://aa.stanford.edu/research-impact/labs-and-centers/autonomous-systems-lab)
+</td><td>
+<b>Norwegian University of Science and Technology (NTNU)</b>
+
+[Autonomous Robots Lab](https://www.autonomousrobotslab.com/)
+</td><td>
+<b>Caltech</b>
+
+[Center for Autonomous Systems and Technologies](https://cast.caltech.edu/)
+</td><td>
+<b>UC San Diego</b>:
+
+[The Safe Autonomous Systems Lab](http://sylviaherbert.com/)
+</td>
+</tr>
+
+
+<tr>
+<td>
+<b>TUM</b>:
+
+[Autonomous Vehicle Lab](https://www.mos.ed.tum.de/en/ftm/labs/autonomous-vehicle/)
+</td>
+<td>
+<b>CMU</b>:
+
+[Reliable Autonomous Systems Lab](https://www.ri.cmu.edu/robotics-groups/reliable-autonomous-systems-lab/)
+</td><td>
+<b>Oak Ridge National Laboratory</b>
+
+[Autonomous Systems Group](https://www.ornl.gov/autonomous-systems-group)
+</td><td>
+<b>NASA</b>
+
+[Autonomous Systems Lab](https://technology.ssc.nasa.gov/techdev/autonomous-systems/autonomous-systems-lab.asp)
+</td><td>
+<b>University of Pennsylvania</b>:
+
+[GRASP Lab](https://www.grasp.upenn.edu/)
+</td>
+
+<td>
+<b>University of Illinois</b>:
+
+[Distributed ASL](http://daslab.illinois.edu/)
+</td>
+</tr>
+</tr>
+
+</table>
+
+
+
+
+AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530) and [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
+## Behavioral Section :
+
 Communication skills and asking questions is very important. Google's behavioural round is called "Googliness" and leadership skills round. Skills like - humility, learning from mistakes, team leadership are assessed. Behavioural Interviews : Questions about your background and experiences. There's no right or wrong answer in these behavioural interviews. Questions like, Tell me about a challenging project you worked on? Doesn't matter about the project, it is about the story, the artist in you that paints the story having an elegant flow. Describe the story in such a way that hints the qualities. Highlight positive things.
 
 General Tips: Do not want to be disrespectful, offensive, mean, arrogant or confrontational. Avoid being too vague in your answers, interviewer is looking for signals of qualities and deep information, into detail. Answer about things that you learned, or decided to do after the situation. Things you do wanna do: Strike a balance between highlighting positive qualities that your're smart, intellectually curious, can lead projects and helping others while being empathetic. You wanna answer behavioural questions with stories, past experiences that highlights the qualities. Don't put it in every answer. If you don't extract lessons from your past experiences, it is not worth sharing. Another example, describe a time when there was a low performer on your team? Make up stuff if you have to but don't devalue your other answers. Communication is important!
