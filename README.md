@@ -2,7 +2,7 @@
 
 
 
-## Essence of Mathematics [[notes](./mathematics)]
+## Essence of Mathematics [[notes](./mathematics/README.MD)]
 
 ```latex
     mathematics ~ θ
