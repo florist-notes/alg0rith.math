@@ -20,7 +20,7 @@
 
 
 ```
-my sample code : [[ code_i.py ]()][[ code_ii.py ]()][[ code_iii.py ]()]
+my sample code : [[ code_i.py ]()] [[ code_ii.py ]()] [[ code_iii.py ]()]
 ## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
     #include <bits/stdc++-h>
