@@ -217,7 +217,7 @@ here is a [list](https://home.isr.uc.pt/~peixoto/PXResGrp.html) [[list2](https:/
 
 
 
-AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530), [FDL](https://frontierdevelopmentlab.org/) and [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
+Multiagent-systems : [[labs](https://multirobotsystems.org/labs)], AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530), [FDL](https://frontierdevelopmentlab.org/) and [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
 ## Behavioral Section :
 
 Communication skills and asking questions is very important. Google's behavioural round is called "Googliness" and leadership skills round. Skills like - humility, learning from mistakes, team leadership are assessed. Behavioural Interviews : Questions about your background and experiences. There's no right or wrong answer in these behavioural interviews. Questions like, Tell me about a challenging project you worked on? Doesn't matter about the project, it is about the story, the artist in you that paints the story having an elegant flow. Describe the story in such a way that hints the qualities. Highlight positive things.
