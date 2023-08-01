@@ -1,6 +1,6 @@
 # C++, CV and Competitive Programming
 
-res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)]
+res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)] | my OpenCV [NOTES](./opencv.MD)
 
 <img src="img/stdio.png" width=48%> <img src="img/stdio2.png" width=48%>
 
@@ -267,6 +267,64 @@ Useful commands in CMake: Set variables with `set(VAR VALUE)`, Get value of a va
 
 In ` $ make -j2` # pass your number of cores here and ` $ make clean` to remove generated binaries`.
 
+</td>
+</tr>
+
+</table>
+
+Use pre-compiled library:  `find_package` calls multiple `find_path` and `find_library` functions. To use `find_package(<pkg>)` CMake must
+have a file `Find<pkg>.cmake` in `CMAKE_MODULE_PATH` folders. `Find<pkg>.cmake` defines which libraries and headers belong to package `<pkg>`.
+
+
+
+<table style="width:100%" >
+<tr>
+<th>CMakeLists.txt</th>
+<th>cmake_modules/Findsome_pkg.cmake</th>
+</tr>
+
+<tr>
+<td>
+
+
+```cmake
+
+ cmake_minimum_required(VERSION 3.1)
+ project( first_project )
+
+ # CMake will search here for Find <pkg >.cmake files
+ SET( CMAKE_MODULE_PATH
+ ${PROJECT_SOURCE_DIR}/ cmake_modules )
+
+ # Search for Findsome_pkg.cmake file and load it
+ find_package(some_pkg )
+
+ # Add the include folders from some_pkg
+ include_directories(${some_pkg_INCLUDE_DIRS})
+
+ # Add the executable "main"
+ add_executable(main small_main .cpp)
+ # Tell the linker to bind these binary objects
+ target_link_libraries(main ${some_pkg_LIBRARIES})
+
+
+```
+
+</td>
+<td>
+
+```cmake
+
+# Find the headers that we will need
+find_path( some_pkg_INCLUDE_DIRS include/some_lib.hpp < FOLDER_WHERE_TO_SEARCH >)
+message(STATUS "headers: ${some_pkg_INCLUDE_DIRS}")
+
+# Find the corresponding libraries
+find_library( some_pkg_LIBRARIES
+NAMES some_lib_name
+PATHS <FOLDER_WHERE_TO_SEARCH >)
+message(STATUS "libs: ${some_pkg_LIBRARIES}")
+```
 </td>
 </tr>
 
