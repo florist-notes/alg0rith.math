@@ -2,8 +2,7 @@
 
 res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)]
 
-<img src="img/stdio.png" width=49%>
-<img src="img/stdio2.png" width=49%>
+<img src="img/stdio.png" width=48%> <img src="img/stdio2.png" width=48%>
 
 ```cpp
 
