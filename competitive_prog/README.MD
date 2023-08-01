@@ -50,6 +50,18 @@ Compilation is translation from text to machine code. Two compilers : { Clang, g
 
 ```
 
+<img src="img/cpp_code.png" width=100%> 
+
++ Preprocess : `$ clang++ -E main.cpp > main.i`
++ Compilation : `$ clang++ -S main.i`
++ Assembly : `$ clang++ -c main.s`
++ Linking : `$ clang++ main.o -o main`
+
+Compilation flags : `-std=c++17,`, `-Wall`, `-Wextra`, `-Werror` | Optimization options:
+`-O0` — no optimizations [default]
+`-O3` or `-Ofast` — full optimizations. Keep debugging symbols: `-g`.
+
+
 
 Tools: [GNU/Linux]() { filesystem, terminal, standard input/output } ; [Text Editor]() { configuring, terminal, compile, debug } ; [Build Systems]() { headers/sources, libraries, compilation flags, cmake, 3rd paty libraries } ; [Git]() ; [gdb]() ; [Web-based tools]() { Quick Bench, Compiler  Explorer, cpp insights, cppreference.com } ; [Clang-tools](https://apt.llvm.org/) {Clang-format, Clang-tidy, Clangd, Cppcheck} ; [Google test](), [OpenCV](). Install llvm-toolchain from [here](https://apt.llvm.org/).
 
@@ -69,5 +81,99 @@ Core c++ : [c++ basic syntax](), [the "main" function](), [#include statements](
 
 Modern c++ :  [Classes](), [Const Correctness](), [typedef / using](), [static variables / methods](), [Move semantics](), [Special functions](), [Singleton pattern](), [Inheritence](), [Function Overriding](), [Abstract classes](), [Interfaces](), [Strategy Pattern](), [Polymorphism](), [Typecasting](), [Memory Management](), [Stack vs Heap](), [Pointers](), [new / delete](), [this pointer](), [Memory issues](), [RAII](), [Smart pointers](), [Generic programming](), [Template functions](), [Template classes](), [Static code generation](), [lambdas]().
 
+## C++ Build System: CMake
+
+Library: multiple object files that are logically connected. Types of libraries:
+- Static: faster, take a lot of space, become part
+of the end binary, named: `lib*.a`
+- Dynamic: slower, can be copied, referenced by a
+program, named `lib*.so` .
+
+Create a static library with
+` $ ar rcs libname.a module.o module.o …`.  Static libraries are just archives just like `zip/tar/…`.
+
+Header / Source Separation :
+Move all declarations to header files (`*.hpp`) and Implementation goes to `*.cpp` or `*.cc`.
+
+```cpp
+1       // some_file.hpp
+2       Type SomeFunc (... args ...);
+3
+4       // some_file.cpp
+5       #include "some_file.hpp"
+6       Type SomeFunc (... args ...) {} // implementation
+7
+8       // program.cpp
+9       #include "some_file.hpp"
+10      int main () {
+11      SomeFunc(/* args */);
+12      return 0;
+13      }
+```
+
+To use a library we need:
+1. A header file `library_api.h`
+2. The compiled library object `libmylibrary.a`
+   
+         folder/
+         --- tools.hpp
+         --- tools.cpp
+         --- main.cpp
+
+
+<table style="width:100%" >
+<tr>
+<th>tools.hpp</th>
+<th>tools.cpp</th>
+<th>main.cpp</th>
+</tr>
+
+<tr>
+<td>
+
+```cpp
+
+#pragma once // Ensure file is included only once
+void MakeItSunny ();
+void MakeItRain ();
+
+```
+</td>
+<td>
+
+```cpp
+
+#include "tools.hpp"
+#include <iostream >
+void MakeItRain () {
+// important weather manipulation code
+std :: cout << "Here! Now it rains! Happy?\n";
+}
+void MakeItSunny () { std :: cerr << "Not available\n"; }
+```
+
+</td>
+<td>
+
+```cpp
+
+#include "tools.hpp"
+int main () {
+MakeItRain ();
+MakeItSunny ();
+return 0;
+}
+```
+</td>
+</tr>
+</table>
+
+Compile modules: ` $ c++ -std=c++17 -c tools.cpp -o tools.o`
+
+Organize modules into libraries: ` $ ar rcs libtools.a tools.o <other_modules>`
+
+Link libraries when building code: ` $ c++ -std=c++17 main.cpp -L . -ltools -o main`
+
+Run the code: ` $ ./main`
 
 resources: [mathematical optimizations with google or-tool](https://developers.google.com/optimization/introduction/cpp), [SNOPT](https://ccom.ucsd.edu/~optimizers/solvers/snopt/), [IPOPT](https://github.com/coin-or/Ipopt), [Conic Bundle](https://www-user.tu-chemnitz.de/~helmberg/ConicBundle/Manual/index.html), [Computer Vision and OpenCV in c++](https://www.youtube.com/watch?v=uJrwLq_BKPY&list=PLkmvobsnE0GHMmTF7GTzJnCISue1L9fJn), [Computer Vision Projects - C++](https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q), [Modern c++](https://www.youtube.com/watch?v=sZK6ouwREXA&list=PLgnQpQtFTOGRM59sr3nSL8BmeMZR9GCIA), [google code styling guide - c++](https://google.github.io/styleguide/cppguide.html), [The C++ Programming Language (4th Edition)](https://www.stroustrup.com/4th.html), [cppreference](https://en.cppreference.com/w/cpp), [cpp tutorial](https://cplusplus.com/doc/tutorial/), [cpp core guidelines](https://github.com/isocpp/CppCoreGuidelines).
