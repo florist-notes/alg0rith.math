@@ -170,10 +170,109 @@ return 0;
 
 Compile modules: ` $ c++ -std=c++17 -c tools.cpp -o tools.o`
 
-Organize modules into libraries: ` $ ar rcs libtools.a tools.o <other_modules>`
+Organize modules into libraries: ` $ ar rcs libtools.a tools.o`
 
 Link libraries when building code: ` $ c++ -std=c++17 main.cpp -L . -ltools -o main`
 
 Run the code: ` $ ./main`
+
+### CMake : Does not build the code, generates files to feed into a build system
+
+Build process : ` $ cd <project_folder>` > ` $ . mkdir build ` > ` $ cd build ` > ` $ cmake .. ` > ` $ make `.
+
+The build process is completely defined in `CMakeLists.txt` and childrens `src/CMakeLists.txt`, etc. 
+
+<b>CMakeLists.txt</b>:
+
+```cmake
+        cmake_minimum_required(VERSION 3.1) # Mandatory.
+        project( first_project ) # Mandatory.
+        set( CMAKE_CXX_STANDARD 17) # Use c++17.
+
+        # tell cmake where to look for *.hpp, *.h files
+        include_directories(include /)
+
+        # create library "libtools"
+        add_library(tools src/tools.cpp) # creates libtools.a
+
+        # add executable main
+        add_executable(main src/tools_main.cpp) # main.o
+
+        # tell the linker to bind these objects together
+        target_link_libraries(main tools) # ./main
+
+```
+
+Automatically detects changes and after doing changes: ` $ . cd <project_folder>/build` and ` $ make`.
+
+
+<table style="width:100%" >
+<tr>
+<th>project structure:</th>
+<th>CMake compilation options</th>
+</tr>
+
+<tr>
+<td>
+
+
+```cmake
+
+ |-- project_name /
+ | |-- CMakeLists .txt
+ | |-- build/ # All generated build files
+ | |-- results/ # Executable artifacts
+ | | |-- bin/
+ | | |-- tools_demo
+ | | |-- lib/
+ | | |-- libtools.a
+ | |-- include/ # API of the project
+ | | |-- project_name
+ | | |-- library_api .hpp
+ | |-- src/
+ | | |-- CMakeLists .txt
+ | | |-- project_name
+ | | |-- CMakeLists .txt
+ | | |-- tools.hpp
+ | | |-- tools.cpp
+ | | |-- tools_demo .cpp
+ | |-- tests/ # Tests for your code
+ | | |-- test_tools .cpp
+ | | |-- CMakeLists .txt
+ | |-- README.md # How to use your code
+
+```
+
+</td>
+<td>
+
+```cmake
+
+ set( CMAKE_CXX_STANDARD 17)
+
+ # Set build type if not set.
+ if(NOT CMAKE_BUILD_TYPE )
+ set( CMAKE_BUILD_TYPE Debug)
+ endif ()
+ # Set additional flags.
+ set( CMAKE_CXX_FLAGS "-Wall -Wextra ")
+ set( CMAKE_CXX_FLAGS_DEBUG "-g -O0")
+
+
+```
+
+`-Wall` `-Wextra`: show all warnings; `-g`: keep debug information in binary; `-O<num>`: optimization level in {0, 1, 2, 3} where 0: no optimization and 3: full optimization.
+
+Useful commands in CMake: Set variables with `set(VAR VALUE)`, Get value of a variable with `${VAR}`, Show a message `message(STATUS "message")`, Also possible `WARNING`, `FATAL_ERROR`.
+
+In ` $ make -j2` # pass your number of cores here and ` $ make clean` to remove generated binaries`.
+
+</td>
+</tr>
+
+</table>
+
+
+
 
 resources: [mathematical optimizations with google or-tool](https://developers.google.com/optimization/introduction/cpp), [SNOPT](https://ccom.ucsd.edu/~optimizers/solvers/snopt/), [IPOPT](https://github.com/coin-or/Ipopt), [Conic Bundle](https://www-user.tu-chemnitz.de/~helmberg/ConicBundle/Manual/index.html), [Computer Vision and OpenCV in c++](https://www.youtube.com/watch?v=uJrwLq_BKPY&list=PLkmvobsnE0GHMmTF7GTzJnCISue1L9fJn), [Computer Vision Projects - C++](https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q), [Modern c++](https://www.youtube.com/watch?v=sZK6ouwREXA&list=PLgnQpQtFTOGRM59sr3nSL8BmeMZR9GCIA), [google code styling guide - c++](https://google.github.io/styleguide/cppguide.html), [The C++ Programming Language (4th Edition)](https://www.stroustrup.com/4th.html), [cppreference](https://en.cppreference.com/w/cpp), [cpp tutorial](https://cplusplus.com/doc/tutorial/), [cpp core guidelines](https://github.com/isocpp/CppCoreGuidelines).
