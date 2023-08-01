@@ -19,7 +19,50 @@ res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)]
 
 `$ c++ file.cpp` > `$ ./a.out` > `$ ./a.out l> stdout.txt`.  Use `clang_format` to format your code
 
-Tools: [GNU/Linux]() { filesystem, terminal, standard input/output } ; [Text Editor]() { configuring, terminal, compile, debug } ; [Build Systems]() { headers/sources, libraries, compilation flags, cmake, 3rd paty libraries } ; [Git]() ; [gdb]() ; [Web-based tools]() { Quick Bench, Compiler  Explorer, cpp insights, cppreference.com } ; [Clang-tools]() {Clang-format, Clang-tidy, Clangd, Cppcheck} ; [Google test](), [OpenCV]().
+
+`main()` is a function that returns an error code
++ Error code 0 means OK
++ Error code can be any number in [1, 255]
+
+```cpp
+
+1       int main () {
+2       return 0; // Program finished without errors.
+3       }
+
+
+1       int main () {
+2       return 1; // Program finished with error code 1.
+3       }
+
+
+```
+
+`#include <file>` — system include files ; `#include "file"` — local include files
+
++ std::cin — maps to stdin ; std::cout — maps to stdout ; std::cerr — maps to stderr
+
+Compilation is translation from text to machine code. Two compilers : { Clang, gcc }
+
+```bash
+
+        $ c++ -std=c++11 -o hello_world hello_world .cpp
+        $ ./ hello_world
+
+```
+
+
+Tools: [GNU/Linux]() { filesystem, terminal, standard input/output } ; [Text Editor]() { configuring, terminal, compile, debug } ; [Build Systems]() { headers/sources, libraries, compilation flags, cmake, 3rd paty libraries } ; [Git]() ; [gdb]() ; [Web-based tools]() { Quick Bench, Compiler  Explorer, cpp insights, cppreference.com } ; [Clang-tools](https://apt.llvm.org/) {Clang-format, Clang-tidy, Clangd, Cppcheck} ; [Google test](), [OpenCV](). Install llvm-toolchain from [here](https://apt.llvm.org/).
+
+
+Install - git : `$ sudo apt install git`, build tools : ` $ sudo apt install build-essential`, cmake : ` $ sudo apt install cmake`, cppcheck : ` $ sudo apt install cppcheck`, clang-tools ` $ sudo apt install clang-format clang-tidy clangd`.
+
+```bash
+        $ sudo apt update
+        $ sudo apt install git build-essential cmake cppcheck clang-format clang-tidy clangd
+```
+
+In VS Code for c++ extensions : CTRL + P , then execute `ext install ms-vscode.cpptools` and `ext install llvm-vs-code-extensions.vscode-clangd`; for CMake extensions : `ext install twxs.cmake`, `ext install ms-vscode.cmake-tools` and `ext install cheshirekow.cmake-format`; for markdown extensions `ext install yzhang.markdown-all-in-one` and `ext install DavidAnson.vscode-markdownlint`.
 
 CODE:
 
@@ -28,4 +71,4 @@ Core c++ : [c++ basic syntax](), [the "main" function](), [#include statements](
 Modern c++ :  [Classes](), [Const Correctness](), [typedef / using](), [static variables / methods](), [Move semantics](), [Special functions](), [Singleton pattern](), [Inheritence](), [Function Overriding](), [Abstract classes](), [Interfaces](), [Strategy Pattern](), [Polymorphism](), [Typecasting](), [Memory Management](), [Stack vs Heap](), [Pointers](), [new / delete](), [this pointer](), [Memory issues](), [RAII](), [Smart pointers](), [Generic programming](), [Template functions](), [Template classes](), [Static code generation](), [lambdas]().
 
 
-resources: [mathematical optimizations with google or-tool](https://developers.google.com/optimization/introduction/cpp), [SNOPT](https://ccom.ucsd.edu/~optimizers/solvers/snopt/), [IPOPT](https://github.com/coin-or/Ipopt), [Conic Bundle](https://www-user.tu-chemnitz.de/~helmberg/ConicBundle/Manual/index.html), [Computer Vision and OpenCV in c++](https://www.youtube.com/watch?v=uJrwLq_BKPY&list=PLkmvobsnE0GHMmTF7GTzJnCISue1L9fJn), [Computer Vision Projects - C++](https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q), [Modern c++](https://www.youtube.com/watch?v=sZK6ouwREXA&list=PLgnQpQtFTOGRM59sr3nSL8BmeMZR9GCIA), [google code styling guide - c++](https://google.github.io/styleguide/cppguide.html).
+resources: [mathematical optimizations with google or-tool](https://developers.google.com/optimization/introduction/cpp), [SNOPT](https://ccom.ucsd.edu/~optimizers/solvers/snopt/), [IPOPT](https://github.com/coin-or/Ipopt), [Conic Bundle](https://www-user.tu-chemnitz.de/~helmberg/ConicBundle/Manual/index.html), [Computer Vision and OpenCV in c++](https://www.youtube.com/watch?v=uJrwLq_BKPY&list=PLkmvobsnE0GHMmTF7GTzJnCISue1L9fJn), [Computer Vision Projects - C++](https://www.youtube.com/watch?v=9iEPzbG-xLE&list=PLMoSUbG1Q_r8jFS04rot-3NzidnV54Z2q), [Modern c++](https://www.youtube.com/watch?v=sZK6ouwREXA&list=PLgnQpQtFTOGRM59sr3nSL8BmeMZR9GCIA), [google code styling guide - c++](https://google.github.io/styleguide/cppguide.html), [The C++ Programming Language (4th Edition)](https://www.stroustrup.com/4th.html), [cppreference](https://en.cppreference.com/w/cpp), [cpp tutorial](https://cplusplus.com/doc/tutorial/), [cpp core guidelines](https://github.com/isocpp/CppCoreGuidelines).

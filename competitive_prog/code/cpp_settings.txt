@@ -1,0 +1,19 @@
+{
+  /*-------------------- GLOBAL EDITOR CONFIGURATIONS -------------------------*/
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  /*----------------------------- C++ STUFF ----------------------------------*/
+  "C_Cpp.autocomplete": "Disabled",
+  "C_Cpp.formatting": "Disabled",
+  "C_Cpp.errorSquiggles": "Disabled",
+  "C_Cpp.intelliSenseEngine": "Disabled",
+  //clangd
+  "clangd.arguments": [
+    "--background-index",
+    "--clang-tidy",
+    "--header-insertion=never",
+    "--suggest-missing-includes",
+    "--compile-commands-dir=build/"
+  ],
+}
