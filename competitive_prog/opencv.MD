@@ -85,14 +85,14 @@ cv::Mat is sort of shared pointer: ` $ c++ -std=c++11 -o copy copy.cpp pkg -conf
 const Mat& img);
 
 ```cpp
-1 #include <opencv2/core.hpp >
-2 #include <opencv2/highgui.hpp >
-3 int main () {
-4       cv:: Mat image = cv:: imread("logo_opencv.png",
-5       cv:: IMREAD_GRAYSCALE );
-6       cv:: imwrite("copy.jpg", image);
-7       return 0;
-8 }
+ #include <opencv2/core.hpp >
+ #include <opencv2/highgui.hpp >
+ int main () {
+       cv:: Mat image = cv:: imread("logo_opencv.png",
+       cv:: IMREAD_GRAYSCALE );
+       cv:: imwrite("copy.jpg", image);
+       return 0;
+ }
 
 ```
 Write float images to *.exr files. These files will store and read values as is without losing precision. Float images I/O example:
@@ -167,3 +167,44 @@ Write float images to *.exr files. These files will store and read values as is 
 </td>
 </tr>
 </table>
+
+### SIFT: Scale Invariant Feature Transform
+
+Popular features: illumination, rotation and translation invariant (to some degree)
++ `SiftFeatureDetector` to detect the keypoints
++ `SiftDescriptorExtractor` to compute descriptors in keypoints
+
+```cpp
+ // Detect key points.
+ auto detector = SiftFeatureDetector :: create ();
+ vector <cv:: KeyPoint > keypoints ;
+ detector ->detect(input , keypoints );
+
+ // Show the keypoints on the image.
+ Mat image_with_keypoints ;
+ drawKeypoints (input , keypoints , image_with_keypoints );
+
+ // extract the SIFT descriptors
+ auto extractor = SiftDescriptorExtractor :: create ();
+ extractor ->compute(input , keypoints , descriptors );
+
+
+```
+
+### FLANN: Fast Library for Approximate
+Nearest Neighbors : build K-d tree, search for neighbors there:
+
+```cpp
+
+ // Create a kdtree for searching the data.
+ cv:: flann :: KDTreeIndexParams index_params ;
+ cv:: flann :: Index kdtree(data , index_params );
+ 
+ // Search the nearest vector to some query
+ int k = 1;
+ Mat nearest_vector_idx (1, k, DataType <int >:: type);
+ Mat nearest_vector_dist (1, k, DataType <float >:: type);
+ kdtree. knnSearch (query , nearest_vector_idx ,
+ nearest_vector_dist , k);
+
+```
