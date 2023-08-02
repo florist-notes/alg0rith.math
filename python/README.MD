@@ -59,18 +59,6 @@ print "Employee.__dict__:", Employee.__dict__
 
 ```
 
-Built-In Class Attributes
-Every Python class keeps following built-in attributes and they can be accessed using dot operator like any other attribute:
-
- + `__dict__` − Dictionary containing the class's namespace.
-
- + `__doc__ `− Class documentation string or none, if undefined.
-
- + `__name__` − Class name.
-
- + ` __module__` − Module name in which the class is defined. This attribute is "`__main__`" in interactive mode.
-
- + `__bases__ `− A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
 </td>
 <td>
 
@@ -105,6 +93,19 @@ for i in fib(5):
 </td>
 </tr>
 </table>
+
+Built-In Class Attributes : 
+Every Python class keeps following built-in attributes and they can be accessed using dot operator like any other attribute:
+
+ + `__dict__` − Dictionary containing the class's namespace.
+
+ + `__doc__ `− Class documentation string or none, if undefined.
+
+ + `__name__` − Class name.
+
+ + ` __module__` − Module name in which the class is defined. This attribute is "`__main__`" in interactive mode.
+
+ + `__bases__ `− A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
 
 resources : [py-notebooks](./code/), [py-cheatsheets](./doc/), [py-deepdive](https://github.com/fbaptiste/python-deepdive), [pep-8](https://peps.python.org/pep-0008/), [py-design-patterns](https://refactoring.guru/design-patterns/python), [python-patterns.guide](https://python-patterns.guide/), [python-patterns](https://github.com/faif/python-patterns) ; py-pm: [anaconda](https://www.anaconda.com/), [mamba](https://mamba.readthedocs.io/en/latest/), [pip](https://pypi.org/project/pip/), [jupyter](https://jupyter.org/); csheets : [py-libraries](./doc/csh/python-cheatsheets.pdf), [pandas](./doc/Pandas_Cheat_Sheet.pdf), [numpy](./code/Lecture-2-Numpy.ipynb), [matplotlib](./code/Lecture-4-Matplotlib.ipynb); [What does if __name__ == "__main__": do?](https://stackoverflow.com/questions/419163/what-does-if-name-main-do). Opensource python libraries @[[aitools-py](https://github.com/florist-notes/aicore_n/blob/main/notes/aitools.MD)], [[google code style guide - python](https://google.github.io/styleguide/pyguide.html)].
 
