@@ -1,4 +1,4 @@
-# C++, CV and Competitive Programming
+# C++, CV and CMake
 
 res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)] | my OpenCV [NOTES](./opencv.MD)
 
