@@ -40,6 +40,40 @@ res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)] | my OpenCV [NOTE
 `#include <file>` — system include files ; `#include "file"` — local include files
 
 + std::cin — maps to stdin ; std::cout — maps to stdout ; std::cerr — maps to stderr
++ cpp keywords : [list](https://en.cppreference.com/w/cpp/keyword), cpp types [list](https://en.cppreference.com/w/cpp/language/types) & cpp expressions : [list](https://en.cppreference.com/w/cpp/language/expressions). Avoid `==` for floating point types.
++ Use `&` to state that a variable is a reference:
+   - `float& ref = original_variable;`
+   - `std::string& hello_ref = hello;`
+  
+Whatever happens to a reference happens to the variable and vice versa. Yields performance gain as references avoid copying data.
+ 
+```cpp
+ const , auto , friend , false , ... ///< C++ Keywords
+ // comment type 1
+ /* comment type 2 */
+ /* comment type 3
+ BLOCK COMMENT
+ */
+ "Hello C++ \n"; ///< "\n" is an escape character
+
+ 3.5f; // value entity
+ std :: string str1; // object entity
+ namespace std; // namespace entity
+ void MyFunc (); // function entity
+ const int& a = b; // reference entity
+ enum MyEnum {}; // enum enityty
+ #define UGLY_MACRO (X) // NOT a C++ entity
+
+ float a; // float is the fundamental type of a
+ bool b; // bool is fundamental
+
+ MyType c; // MyType is user defined , incomplete
+ MyType c{}; // MyType is user defined , complete
+
+ std :: vector; // Also , user -defind type
+ std :: string; // Also , user -defind type
+
+```
 
 Compilation is translation from text to machine code. Two compilers : { Clang, gcc }
 
@@ -75,9 +109,43 @@ Install - git : `$ sudo apt install git`, build tools : ` $ sudo apt install bui
 
 In VS Code for c++ extensions : CTRL + P , then execute `ext install ms-vscode.cpptools` and `ext install llvm-vs-code-extensions.vscode-clangd`; for CMake extensions : `ext install twxs.cmake`, `ext install ms-vscode.cmake-tools` and `ext install cheshirekow.cmake-format`; for markdown extensions `ext install yzhang.markdown-all-in-one` and `ext install DavidAnson.vscode-markdownlint`.
 
-CODE:
+MY CODE:
 
-Core c++ : [c++ basic syntax](), [the "main" function](), [#include statements](), [variables](), [control structures (if, for , while) ](), [I/O streams](), [Input parameters](), [Built-in types](), [Operators](), [Scopes](), [Functions](), [c++ strings](), [Pass by value / Pass by reference](), [Namespaces](), [Containers](), [std::tuple](), [Iterators](), [try/ catch](), [enum classes](), [STL library](), [STL algorithms](), [Function Overloading](), [Operator Overloading](), [String streams](), [filesystem]()
+<table width=100%>
+<tr>
+<th>Python</th>
+<th>C++ 17</th>
+</tr>
+
+<tr>
+<td>
+
+```python
+ my_dict = {'a': 27, 'b': 3}
+ for key , value in my_dict.items ():
+        print(key , "has value", value)
+
+ ```
+</td>
+<td>
+
+```cpp
+ std ::map <char , int> my_dict {{'a', 27}, {'b', 3}};
+ for (const auto& [key , value] : my_dict) {
+        cout << key << " has value " << value << endl;
+ }
+ ```
+</td>
+</tr>
+</table>
+Spoiler alert : The C++ is ≈15 times faster than Python!
+
+Core c++ : [c++ basic syntax](), [the "main" function](), [#include statements](), [variables](), [control structures (if, for , while) ](), [switch](./code/switch.cpp), [I/O streams](), [stringstream](./code/stringstream.cpp), [Input parameters](), [Built-in types](), [Operators](), [Scopes](), [Functions](), [c++ strings](), [Pass by value / Pass by reference](), [Namespaces](), [Containers](), [std::tuple](), [Iterators](), [try/ catch](), [enum classes](), [STL library](), [STL algorithms](), [Function Overloading](), [Operator Overloading](), [String streams](), [filesystem]()
+
+Program input parameters : `int main(int argc, char const *argv[]);
+` , where `argc` defines number of input parameters and `argv` is an array of string parameters. By default:  `argc == 1` &  `argv == "<binary_path>"`.
+
+
 
 Modern c++ :  [Classes](), [Const Correctness](), [typedef / using](), [static variables / methods](), [Move semantics](), [Special functions](), [Singleton pattern](), [Inheritence](), [Function Overriding](), [Abstract classes](), [Interfaces](), [Strategy Pattern](), [Polymorphism](), [Typecasting](), [Memory Management](), [Stack vs Heap](), [Pointers](), [new / delete](), [this pointer](), [Memory issues](), [RAII](), [Smart pointers](), [Generic programming](), [Template functions](), [Template classes](), [Static code generation](), [lambdas]().
 
