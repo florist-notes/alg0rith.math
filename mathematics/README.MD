@@ -46,7 +46,7 @@ ANALYTIC GEOMETRY: [MIT Graph and Geometry Reading Group](https://www.youtube.co
 CALCULUS : [Calculus I (Limits, Derivative, Integrals)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m), [Calculus II (Integration Methods, Series, Parametric/Polar, Vectors)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc4ySKTIW19TLrT91Ik9M4n), [Calculus III: Multivariable Calculus (Vectors, Curves, Partial Derivatives, Integration](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd), [Mathematics for Machine Learning - Multivariate Calculus](https://www.youtube.com/playlist?list=PLiiljHvN6z193BBzS0Ln8NnqQmzimTW23); VECTOR CALCULUS: [Calculus IV: Vector Calculus](https://www.youtube.com/watch?v=AIxiYG-gZ00&list=PLHXZ9OQGMqxfW0GMqeUE1bLKaYor6kbHa).<br />
 
 PROBABILITY AND DISTRIBUTION: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
-{ [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](refresher-probabilities-statistics.pdf)  }
+{ [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](./notes/refresher-probabilities-statistics.pdf)  }
 
 <br />
 
