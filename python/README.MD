@@ -22,7 +22,7 @@
 
 ```
 
-I am comfortable in Python and have experience with Python for AI / Data Science / Flask. I had healthy discussions with Guido Van Rossum (Father / Creator of Python) [image](./img/guido.jpg) at Stanford and python is my primary scripting language.
+I am comfortable in Python and have experience with Python for AI / Data Science / Flask. I had healthy discussions with Guido Van Rossum (Father / Creator of Python) [image](https://twitter.com/florist_notes/status/1639723261528358916) at Stanford and python is my primary scripting language.
 
 <table width=100%>
 <tr>
