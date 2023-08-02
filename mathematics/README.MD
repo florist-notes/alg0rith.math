@@ -8,16 +8,22 @@ $\small Mathematics!$
 $\scriptsize Mathematics!$
 $\tiny Mathematics!$ for ML :))
 
+<br />
+
 
 $$\color{blue}{X \sim Normal \; (\mu,\sigma^2)}$$
 
 
 $$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}>4 \right)$$
 
-## book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+<br />
+
+### book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
 
 LINEAR ALGEBRA: [M4ML - Linear Algebra](https://youtu.be/T73ldK46JqE), [3b1b - Essence of Linear Algebra](https://youtu.be/fNk_zzaMoSs), [MIT 18.06 Linear Algebra - Gilbert Strang](https://www.youtube.com/watch?v=QVKj3LADCnA&list=PL49CF3715CB9EF31D) <br />
 { [linear_algebra_cs229.pdf](./notes/cs229-linalg.pdf), [linear_algebra_review.pdf](./notes/cs229-linalg2.pdf), [vip_referesher_linear_algebra.pdf](./notes/linear-algebra.pdf) }
+
+<br />
 
 $$
 A_{m,n} = 
@@ -28,6 +34,8 @@ a_{2,1} & a_{2,2} & \cdots & a_{2,n} \\
 a_{m,1} & a_{m,2} & \cdots & a_{m,n} 
 \end{pmatrix}
 $$
+
+<br />
 
 MATRIX DECOMPOSITION: [MIT 18.065 Matrix Methods in Data Analysis, Signal Processing, and ML](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)<br />
 
@@ -40,8 +48,11 @@ CALCULUS : [Calculus I (Limits, Derivative, Integrals)](https://www.youtube.com/
 PROBABILITY AND DISTRIBUTION: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
 { [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](refresher-probabilities-statistics.pdf)  }
 
+<br />
 
 $$\dfrac{n!}{k!(n-k)!} = \binom{n}{k}$$
+
+<br />
 
 CONTINUOUS OPTIMIZATION: [Optimization Methods for Machine Learning and Engineering](https://www.youtube.com/playlist?list=PLdkTDauaUnQpzuOCZyUUZc0lxf4-PXNR5)<br />
 
