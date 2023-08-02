@@ -20,19 +20,19 @@
 
 
 ```
-my sample code : [[ code_i.py ]()] [[ code_ii.py ]()] [[ code_iii.py ]()]
+my sample code : [[ code_i.py ]()] [[ code_ii.py ]()]
 ## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
     #include <bits/stdc++-h>
 
 ```
 
-## Data Structure and Algorithms [[notes](#)] 
+## Data Structure and Algorithms [[notes](#)]  #⛺
 
-## Design and Analysis of Algorithms [[notes](#)] 
+## Design and Analysis of Algorithms [[notes](#)]  #⛺
 
-## Competitive Programming [[notes](#)] 
+## Competitive Programming [[notes](#)]  #⛺
 
-## Advanced Software Engineering [[notes](#)] 
+## Advanced Software Engineering [[notes](#)]  #⛺
 
 ## Resources [[notes](RESOURCE.MD)] 
