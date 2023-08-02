@@ -83,7 +83,6 @@ print(next(x))
 print(next(x))
 print(next(x))
  
-# Iterating over the generator object using for on the loop.
 print("\nUsing for in loop")
 for i in fib(5):
     print(i)
