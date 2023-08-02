@@ -176,6 +176,10 @@ here is a [list](https://home.isr.uc.pt/~peixoto/PXResGrp.html) [[list2](https:/
 <b>UC San Diego</b>:
 
 [The Safe Autonomous Systems Lab](http://sylviaherbert.com/)
+</td><td>
+<b>IIT Madras </b>:
+
+[Autonomous Systems Lab](https://asl-iitm.github.io/)
 </td>
 </tr>
 
@@ -209,6 +213,13 @@ here is a [list](https://home.isr.uc.pt/~peixoto/PXResGrp.html) [[list2](https:/
 
 [Distributed ASL](http://daslab.illinois.edu/)
 </td>
+
+<td>
+<b>Deutschen Zentrums für Luft- und Raumfahrt (DLR)</b>:
+
+[Institute of Transport Systems](https://www.dlr.de/ts/en)
+</td>
+
 </tr>
 </tr>
 
