@@ -17,10 +17,7 @@
     df = pd.read_csv('data.csv')
 
     print(df.to_string()) 
-
-
 ```
-my sample code : [[ code_i.py ]()] [[ code_ii.py ]()]
 ## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
     #include <bits/stdc++-h>
