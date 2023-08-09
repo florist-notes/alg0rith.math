@@ -270,3 +270,37 @@ Good Function Example:
  }
 
 ```
+
+Namespaces (Only use what you need): 
+```cpp
+ #include <cmath >
+ #include <iostream >
+ using std :: cout; // Explicitly use cout. (avoid using namespace std;)
+ using std :: endl; // Explicitly use endl.
+
+ // Self -defined function power shadows std::pow
+ double pow(double x, int exp) {
+ double res = 1.0;
+ for (int i = 0; i < exp; i++) {
+ res *= x;
+ }
+ return res;
+ }
+
+ int main () {
+ cout << "2.0^2 = " << pow (2.0 , 2) << endl;
+ return 0;
+ }
+
+
+```
+
+Nameless namespaces : If you find yourself relying on some constants in a file and these constants should not be seen in any other file, put them into a nameless namespace on the top of this file.
+
+```cpp
+ namespace {
+ const int kLocalImportantInt = 13;
+ const float kLocalImportantFloat = 13.0f;
+ } 
+
+```
