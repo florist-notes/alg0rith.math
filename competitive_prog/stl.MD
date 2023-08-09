@@ -48,4 +48,110 @@ int main() {
 
 ```
 
+<table width=100%>
+
+<tr>
+<th>std::array</th>
+<th>std::vector</th>
+</tr>
+<tr>
+<td>
+
+First item: `arr.front() == arr[0]` and Last item: `arr.back() == arr[arr.size() - 1`.
+
+```cpp
+
+ #include <array >
+ #include <iostream >
+ using std :: cout;
+ using std :: endl;
+
+ int main () {
+ std ::array <float , 3> data {10.0F, 100.0F, 1000.0F};
+
+ for (const auto& elem : data) {
+ cout << elem << endl;
+ }
+
+ cout << std :: boolalpha ;
+ cout << "Array empty: " << data.empty () << endl;
+ cout << "Array size : " << data.size () << endl;
+ }
+
+```
+
+</td>
+<td>
+
+Vector is implemented as a dynamic table. Remove all elements: `vec.clear()`. Add a new item in one of two ways:
+`vec.emplace_back(value)` [preferred, c++11]. reserve(n) ensures that the vector has enough memory to store n items (useful optimization).
+
+
+```cpp
+#include <iostream >
+#include <string >
+#include <vector >
+using std :: cout;
+using std :: endl;
+
+int main () {
+std :: vector <int> numbers = {1, 2, 3};
+std :: vector <std :: string > names = {"Nacho", "Cyrill"};
+
+ names. emplace_back ("Roberto");
+
+ cout << "First name : " << names.front () << endl;
+ cout << "Last number: " << numbers.back () << endl;
+ return 0;
+ }
+
+```
+Optimize vector resizing:
+
+```cpp
+
+ int main () {
+ const int N = 100;
+
+ vector <int> vec; // size 0, capacity 0
+ vec.reserve(N); // size 0, capacity 100
+ for (int i = 0; i < N; ++i) {
+ vec. emplace_back (i);
+ }
+ // vec ends with size 100, capacity 100
+
+ vector <int> vec2; // size 0, capacity 0
+ for (int i = 0; i < N; ++i) {
+ vec2. emplace_back (i);
+ }
+ // vec2 ends with size 100, capacity 128
+ }
+
+```
+</td>
+</tr>
+
+
+<tr>
+<th>Containers in CV (Open3D::PointCloud)</th>
+<th>std::map</th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+<tr>
+<th>std::unordered_map</th>
+<th>Open3D::VoxelGrid</th>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+
+</table>
+
+
+
 resources: [The C++ Standard Template Library (STL)](https://www.geeksforgeeks.org/the-c-standard-template-library-stl/), [cplusplus/stl](https://cplusplus.com/reference/stl/)
