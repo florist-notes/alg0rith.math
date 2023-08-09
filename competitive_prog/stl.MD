@@ -1,4 +1,4 @@
-# Standard Template Library (STL)
+# Standard Template Library (STL) 🌸
 
 Some of the key components of the STL include:
 - Containers: The STL provides a range of containers, such as vector, list, map, set, and stack, which can be used to store and manipulate data.
@@ -231,8 +231,8 @@ Sorted associative container and Contains key-value pairs (dictionaries dict in 
 
 ```c++
 
- #include <iostream >
- #include <map >
+ #include <iostream>
+ #include <map>
  using namespace std;
 
  int main () {
@@ -240,9 +240,9 @@ Sorted associative container and Contains key-value pairs (dictionaries dict in 
  StudentList cpp_students ;
 
  // Inserting data in the students dictionary
- cpp_students .emplace (1509 , "Nacho"); // [1]
- cpp_students .emplace (1040 , "Pepe"); // [0]
- cpp_students .emplace (8820 , "Marcelo"); // [2]
+ cpp_students.emplace (1509 , "Nacho"); // [1]
+ cpp_students.emplace (1040 , "Pepe"); // [0]
+ cpp_students.emplace (8820 , "Marcelo"); // [2]
 
  for (const auto& [id , name] : cpp_students ) {
  cout << "id: " << id << ", " << name << endl;
@@ -276,8 +276,81 @@ Check if key present: `m.contains(key)` [bool]
 <th>Open3D::VoxelGrid</th>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>
+Implemented as a hash table and Key type has to be hashable.
+
+```cpp
+
+ #include <iostream>
+ #include <unordered_map>
+ using namespace std;
+
+ int main () {
+ using StudentList = std :: unordered_map <int, string >;
+ StudentList cpp_students ;
+
+ // Inserting data in the students dictionary
+ cpp_students .emplace (1509 , "Nacho"); // [2]
+ cpp_students .emplace (1040 , "Pepe"); // [1]
+ cpp_students .emplace (8820 , "Marcelo"); // [0]
+
+ for (const auto& [id , name] : cpp_students ) {
+ cout << "id: " << id << ", " << name << endl;
+ }
+
+ return 0;
+ }
+
+
+
+
+ #include <functional >
+ template <> struct hash <bool >;
+ template <> struct hash <char >;
+ template <> struct hash <signed char >;
+ template <> struct hash <unsigned char >;
+ template <> struct hash <char8_t >; // C++20
+ template <> struct hash <char16_t >;
+ template <> struct hash <char32_t >;
+ template <> struct hash <wchar_t >;
+ template <> struct hash <short >;
+ template <> struct hash <unsigned short >;
+ template <> struct hash <int >;
+ template <> struct hash <unsigned int >;
+ template <> struct hash <long >;
+ template <> struct hash <long long >;
+ template <> struct hash <unsigned long >;
+ template <> struct hash <unsigned long long >;
+ template <> struct hash <float >;
+ template <> struct hash <double >;
+ template <> struct hash <long double >;
+ template <> struct hash <std :: nullptr_t >; // C++17
+```
+
+Iterating over maps:
+
+```cpp
+ std ::map <char , int> my_dict {{'a', 27}, {'b', 3}};
+ for (const auto& [key , value] : my_dict) {
+    cout << key << " has value " << value << endl;
+
+```
+
+`map` has keys sorted and `unordered_map` has keys in random order.
+
+
+
+</td>
+<td>
+
+```cpp
+ std :: unordered_map <Eigen :: Vector3i, Voxel , hash_eigen ::hash <Eigen :: Vector3i >> voxels_;
+
+```
+
+<img src="img/3d.png" width=48%>
+
+</td>
 </tr>
 
 </table>
