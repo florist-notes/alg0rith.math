@@ -16,7 +16,7 @@ A short introduction to c++ for AI and Robotics:
                                                                           🌸
 ```
 
-### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [OpenCV](./opencv.MD) ]
+### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [Utilities & Libraries](./util.MD), [OpenCV](./opencv.MD) ]
 
 resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] 
 

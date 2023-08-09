@@ -1,6 +1,6 @@
-# alg-rithmth
+# alg-rithmth 🌸
 
-
+my notes on mathematics, algorithms and programming: 
 
 ## Essence of Mathematics [[notes](./mathematics/README.MD)]
 

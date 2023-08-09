@@ -1,4 +1,4 @@
-# Python ([web](https://www.python.org/))
+# Python ([web](https://www.python.org/)) 🌸
 
 ```python
 
@@ -22,7 +22,7 @@
 
 ```
 
-I am comfortable in Python and have experience with Python for AI / Data Science / Flask. I had healthy discussions with Guido Van Rossum (Father / Creator of Python) [image](https://twitter.com/florist_notes/status/1639723261528358916) at Stanford and python is my primary scripting language.
+I am comfortable in Python and have experience with Python for AI (pytorch/tensorflow2/opencv) / Data Science (numpy/pandas/matplotlib/geopandas) / Flask. I had healthy discussions with Guido Van Rossum (Father / Creator of Python) [image](https://twitter.com/florist_notes/status/1639723261528358916) at Stanford and python is my primary scripting language.
 
 <table width=100%>
 <tr>
@@ -51,11 +51,11 @@ class Employee:
    def displayEmployee(self):
       print("Name : ", self.name, ", Salary: ", self.salary)
 
-print("Employee.__doc__:", Employee.__doc__)
-print("Employee.__name__:", Employee.__name__)
-print("Employee.__module__:", Employee.__module__)
-print("Employee.__bases__:", Employee.__bases__)
-print("Employee.__dict__:", Employee.__dict__)
+print(" 🌸 Employee.__doc__:", Employee.__doc__)
+print(" 🌸 Employee.__name__:", Employee.__name__)
+print(" 🌸 Employee.__module__:", Employee.__module__)
+print(" 🌸 Employee.__bases__:", Employee.__bases__)
+print(" 🌸 Employee.__dict__:", Employee.__dict__)
 
 ```
 

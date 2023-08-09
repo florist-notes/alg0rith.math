@@ -6,7 +6,7 @@ $\large Mathematics!$
 $\normalsize Mathematics!$
 $\small Mathematics!$
 $\scriptsize Mathematics!$
-$\tiny Mathematics!$ for ML :))
+$\tiny Mathematics!$ for ML :))  🌸 
 
 <br />
 
@@ -18,7 +18,7 @@ $$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}>4 \right)$$
 
 <br />
 
-### book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF)
+### book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF), [3Blue1Brown ](https://www.youtube.com/@3blue1brown)
 
 LINEAR ALGEBRA: [M4ML - Linear Algebra](https://youtu.be/T73ldK46JqE), [3b1b - Essence of Linear Algebra](https://youtu.be/fNk_zzaMoSs), [MIT 18.06 Linear Algebra - Gilbert Strang](https://www.youtube.com/watch?v=QVKj3LADCnA&list=PL49CF3715CB9EF31D) <br />
 { [linear_algebra_cs229.pdf](./notes/cs229-linalg.pdf), [linear_algebra_review.pdf](./notes/cs229-linalg2.pdf), [vip_referesher_linear_algebra.pdf](./notes/linear-algebra.pdf) }
