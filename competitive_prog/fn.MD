@@ -273,8 +273,8 @@ Good Function Example:
 
 Namespaces (Only use what you need): 
 ```cpp
- #include <cmath >
- #include <iostream >
+ #include <cmath>
+ #include <iostream>
  using std :: cout; // Explicitly use cout. (avoid using namespace std;)
  using std :: endl; // Explicitly use endl.
 
