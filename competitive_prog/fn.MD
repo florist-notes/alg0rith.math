@@ -55,8 +55,8 @@ C++17 you can now:
 
 ### Strings
 
-+ #include <string> to use std::string
-+ Check if str is empty with str.empty()
++ `#include <string>` to use `std::string`
++ Check if `str` is empty with `str.empty()`
 
 ```cpp
 

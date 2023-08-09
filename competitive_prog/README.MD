@@ -1,8 +1,24 @@
-# C++, CV and CMake
+# C++, CV and CMake 🌸
 
-### [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD) ]
+A short introduction to c++ for AI and Robotics:
 
-res : [[code](./code/)] &  /[cpp ref](./cp/) | [[doc](./doc/)] | my OpenCV [NOTES](./opencv.MD)
+```
+        🌸
+
+        
+                🌸                                              🌸
+                         🌸                     c + +
+                                                                                        🌸
+        🌸
+                                        🌸
+                                                        🌸                    
+                                                        
+                                                                          🌸
+```
+
+### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [OpenCV](./opencv.MD) ]
+
+resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] 
 
 <img src="img/stdio.png" width=48%> <img src="img/stdio2.png" width=48%>
 
