@@ -575,7 +575,8 @@ Iterating over maps:
 
  int sum = std :: accumulate (v.begin (), v.end (), 0);
 
- int product = std :: accumulate (v.begin (), v.end (), 1, std :: multiplies ());
+ int product = std :: accumulate (v.begin (), 
+  v.end (), 1, std :: multiplies ());
 
  cout << "Sum : " << sum << endl;
  cout << "Product: " << product << endl;
