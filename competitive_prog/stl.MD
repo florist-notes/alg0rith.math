@@ -61,8 +61,8 @@ First item: `arr.front() == arr[0]` and Last item: `arr.back() == arr[arr.size()
 
 ```cpp
 
- #include <array >
- #include <iostream >
+ #include <array>
+ #include <iostream>
  using std :: cout;
  using std :: endl;
 
@@ -74,8 +74,8 @@ First item: `arr.front() == arr[0]` and Last item: `arr.back() == arr[arr.size()
  }
 
  cout << std :: boolalpha ;
- cout << "Array empty: " << data.empty () << endl;
- cout << "Array size : " << data.size () << endl;
+ cout << "Array empty: " << data.empty() << endl;
+ cout << "Array size : " << data.size() << endl;
  }
 
 ```
@@ -88,9 +88,9 @@ Vector is implemented as a dynamic table. Remove all elements: `vec.clear()`. Ad
 
 
 ```cpp
-#include <iostream >
-#include <string >
-#include <vector >
+#include <iostream>
+#include <string>
+#include <vector>
 using std :: cout;
 using std :: endl;
 
@@ -98,10 +98,10 @@ int main () {
 std :: vector <int> numbers = {1, 2, 3};
 std :: vector <std :: string > names = {"Nacho", "Cyrill"};
 
- names. emplace_back ("Roberto");
+ names.emplace_back ("Roberto");
 
- cout << "First name : " << names.front () << endl;
- cout << "Last number: " << numbers.back () << endl;
+ cout << "First name : " << names.front()<< endl;
+ cout << "Last number: " << numbers.back()<< endl;
  return 0;
  }
 
@@ -116,13 +116,13 @@ Optimize vector resizing:
  vector <int> vec; // size 0, capacity 0
  vec.reserve(N); // size 0, capacity 100
  for (int i = 0; i < N; ++i) {
- vec. emplace_back (i);
+ vec.emplace_back (i);
  }
  // vec ends with size 100, capacity 100
 
  vector <int> vec2; // size 0, capacity 0
  for (int i = 0; i < N; ++i) {
- vec2. emplace_back (i);
+ vec2.emplace_back (i);
  }
  // vec2 ends with size 100, capacity 128
  }
@@ -137,8 +137,138 @@ Optimize vector resizing:
 <th>std::map</th>
 </tr>
 <tr>
-<td></td>
-<td></td>
+<td>
+
+```cpp
+
+std::vector <Eigen :: Vector3d> points_;
+std::vector <Eigen :: Vector3d> normals_;
+std::vector <Eigen :: Vector3d> colors_;
+```
+
+sizeof():
+
+```cpp
+
+ int data [17];
+ size_t data_size = sizeof(data) / sizeof(data [0]);
+ printf("Size of array: %zu\n", data_size );
+
+```
+size():
+
+```cpp
+
+ std ::array <int, 17> data_ {};
+ cout << "Size of array: " << data_.size () << endl;
+
+```
+Empty Container : No standard way of checking if empty
+
+```cpp
+
+ int empty_arr [10];
+ printf("Array empty: %d\n", empty_arr [0] == NULL);
+
+ int full_arr [5] = {1, 2, 3, 4, 5};
+ printf("Array empty: %d\n", full_arr [0] == NULL);
+
+```
+
+empty():
+
+
+```cpp
+
+ std :: vector <int> empty_vec_ {};
+ cout << "Array empty: " << empty_vec_ .empty () << endl;
+
+ std :: vector <int> full_vec_ {1, 2, 3, 4, 5};
+ cout << "Array empty: " << full_vec_ .empty () << endl;
+
+
+```
+Access last element : No robust way of doing it
+
+```cpp
+ float f_arr[N] = {1.5 , 2.3};
+ // is it 3, 2 or 900?
+ printf("Last element: %f\n", f_arr [3]);
+```
+back():
+```cpp
+ std ::array <float , 2> f_arr_ {1.5 , 2.3};
+ cout << "Last Element: " << f_arr_.back () << endl;
+```
+Clear elements : External function call, doesn’t always
+work with floating points
+```cpp
+ char letters [5] = {'n', 'a', 'c', 'h', 'o'};
+ memset(letters , 0, sizeof(letters));
+
+```
+clear():
+```cpp
+ std :: vector <char > letters_ = {'n', 'a', 'c', 'h', 'o'};
+ letters_.clear ();
+
+```
+Remember std::string:
+```cpp
+std :: string letters_right_ {"nacho"};
+letters_right_ .clear ();
+
+
+```
+
+
+
+
+</td>
+<td>
+
+Sorted associative container and Contains key-value pairs (dictionaries dict in Python).
+
+```c++
+
+ #include <iostream >
+ #include <map >
+ using namespace std;
+
+ int main () {
+ using StudentList = std ::map <int, string >;
+ StudentList cpp_students ;
+
+ // Inserting data in the students dictionary
+ cpp_students .emplace (1509 , "Nacho"); // [1]
+ cpp_students .emplace (1040 , "Pepe"); // [0]
+ cpp_students .emplace (8820 , "Marcelo"); // [2]
+
+ for (const auto& [id , name] : cpp_students ) {
+ cout << "id: " << id << ", " << name << endl;
+ }
+
+ return 0;
+ }
+
+
+```
+Create from data: ` std ::map <KeyT , ValueT > m{{key1 , value1}, {..}};`
+
+Check size: `m.size();`
+
+Add item to map: `m.emplace(key, value);`
+
+Modify or add item: `m[key] = value;`
+
+Get (const) ref to an item: `m.at(key);`
+
+Check if key present: `m.count(key) > 0;`
+
+Check if key present: `m.contains(key)` [bool]
+
+
+</td>
 </tr>
 
 <tr>
