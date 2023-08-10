@@ -462,7 +462,7 @@ Iterating over maps:
  int main () {
  std::vector <int> v{1, 2, 3, 3, 4, 3, 7, 8, 9, 10};
 
- int n3 = std::count_if(v.begin (), v.end(), div_by_3);
+ int n3 = std::count_if(v.begin(), v.end(), div_by_3);
  cout<< "# divisible by 3: " <<n3<<endl;
  }
 
@@ -613,8 +613,8 @@ Iterating over maps:
  int main () {
  std :: vector <int> v{3, 1, 4, 1, 0, 5, 9};
 
- auto result = std :: min_element (v.begin (), v.end ());
- auto min_location = std :: distance(v.begin (), result);
+ auto result = std::min_element (v.begin(), v.end());
+ auto min_location = std::distance(v.begin(), result);
  cout<<"min at: "<< min_location << endl;
  }
 
@@ -637,7 +637,7 @@ Iterating over maps:
  using std :: minmax_element ;
 
  auto v = {3, 9, 1, 4, 2, 5, 9};
- auto [min , max] = minmax_element (begin(v), end(v));
+ auto [min , max] = minmax_element(begin(v), end(v));
 
  cout << "min = "<< *min << endl;
  cout << "max = "<< *max << endl;
