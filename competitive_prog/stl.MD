@@ -63,19 +63,19 @@ First item: `arr.front() == arr[0]` and Last item: `arr.back() == arr[arr.size()
 
  #include <array>
  #include <iostream>
- using std :: cout;
- using std :: endl;
+ using std::cout;
+ using std::endl;
 
  int main () {
- std ::array <float , 3> data {10.0F, 100.0F, 1000.0F};
+ std::array <float , 3> data {10.0F, 100.0F, 1000.0F};
 
  for (const auto& elem : data) {
  cout << elem << endl;
  }
 
- cout << std :: boolalpha ;
- cout << "Array empty: " << data.empty() << endl;
- cout << "Array size : " << data.size() << endl;
+ cout<< std :: boolalpha ;
+ cout<<"Array empty: "<< data.empty()<<endl;
+ cout<<"Array size : "<< data.size()<<endl;
  }
 
 ```
@@ -91,17 +91,17 @@ Vector is implemented as a dynamic table. Remove all elements: `vec.clear()`. Ad
 #include <iostream>
 #include <string>
 #include <vector>
-using std :: cout;
-using std :: endl;
+using std::cout;
+using std::endl;
 
 int main () {
-std :: vector <int> numbers = {1, 2, 3};
-std :: vector <std :: string > names = {"Nacho", "Cyrill"};
+std::vector<int> numbers = {1, 2, 3};
+std::vector<std :: string > names = {"Nacho", "Cyrill"};
 
  names.emplace_back ("Roberto");
 
- cout << "First name : " << names.front()<< endl;
- cout << "Last number: " << numbers.back()<< endl;
+ cout<< "First name : "<<names.front()<< endl;
+ cout<< "Last number: "<<numbers.back()<< endl;
  return 0;
  }
 
@@ -159,7 +159,7 @@ size():
 
 ```cpp
 
- std ::array <int, 17> data_ {};
+ std::array <int, 17> data_ {};
  cout << "Size of array: " << data_.size () << endl;
 
 ```
@@ -180,11 +180,11 @@ empty():
 
 ```cpp
 
- std :: vector <int> empty_vec_ {};
- cout << "Array empty: " << empty_vec_ .empty () << endl;
+ std:vector <int> empty_vec_ {};
+ cout<< "Array empty: " << empty_vec_ .empty ()<<endl;
 
- std :: vector <int> full_vec_ {1, 2, 3, 4, 5};
- cout << "Array empty: " << full_vec_ .empty () << endl;
+ std::vector <int> full_vec_ {1, 2, 3, 4, 5};
+ cout<< "Array empty: " << full_vec_ .empty ()<<endl;
 
 
 ```
@@ -197,8 +197,8 @@ Access last element : No robust way of doing it
 ```
 back():
 ```cpp
- std ::array <float , 2> f_arr_ {1.5 , 2.3};
- cout << "Last Element: " << f_arr_.back () << endl;
+ std::array <float , 2> f_arr_ {1.5 , 2.3};
+ cout<< "Last Element: " << f_arr_.back () << endl;
 ```
 Clear elements : External function call, doesn’t always
 work with floating points
@@ -209,13 +209,13 @@ work with floating points
 ```
 clear():
 ```cpp
- std :: vector <char > letters_ = {'n', 'a', 'c', 'h', 'o'};
+ std::vector <char > letters_ = {'n', 'a', 'c', 'h', 'o'};
  letters_.clear ();
 
 ```
 Remember std::string:
 ```cpp
-std :: string letters_right_ {"nacho"};
+std::string letters_right_ {"nacho"};
 letters_right_ .clear ();
 
 
@@ -245,7 +245,7 @@ Sorted associative container and Contains key-value pairs (dictionaries dict in 
  cpp_students.emplace (8820 , "Marcelo"); // [2]
 
  for (const auto& [id , name] : cpp_students ) {
- cout << "id: " << id << ", " << name << endl;
+ cout<<"id: "<<id<< ", "<<name<<endl;
  }
 
  return 0;
@@ -290,12 +290,12 @@ Implemented as a hash table and Key type has to be hashable.
  StudentList cpp_students ;
 
  // Inserting data in the students dictionary
- cpp_students .emplace (1509 , "Nacho"); // [2]
- cpp_students .emplace (1040 , "Pepe"); // [1]
- cpp_students .emplace (8820 , "Marcelo"); // [0]
+ cpp_students.emplace (1509 , "Nacho"); // [2]
+ cpp_students.emplace (1040 , "Pepe"); // [1]
+ cpp_students.emplace (8820 , "Marcelo"); // [0]
 
  for (const auto& [id , name] : cpp_students ) {
- cout << "id: " << id << ", " << name << endl;
+ cout<<"id: "<<id<< ", " << name << endl;
  }
 
  return 0;
@@ -324,15 +324,15 @@ Implemented as a hash table and Key type has to be hashable.
  template <> struct hash <float >;
  template <> struct hash <double >;
  template <> struct hash <long double >;
- template <> struct hash <std :: nullptr_t >; // C++17
+ template <> struct hash <std :: nullptr_t >;
 ```
 
 Iterating over maps:
 
 ```cpp
- std ::map <char , int> my_dict {{'a', 27}, {'b', 3}};
+ std::map<char , int> my_dict {{'a', 27}, {'b', 3}};
  for (const auto& [key , value] : my_dict) {
-    cout << key << " has value " << value << endl;
+    cout<<key<<" has value " << value << endl;
 
 ```
 
@@ -344,7 +344,7 @@ Iterating over maps:
 <td>
 
 ```cpp
- std :: unordered_map <Eigen :: Vector3i, Voxel , hash_eigen ::hash <Eigen :: Vector3i >> voxels_;
+ std::unordered_map <Eigen :: Vector3i, Voxel , hash_eigen ::hash<Eigen :: Vector3i >> voxels_;
 
 ```
 
@@ -389,14 +389,14 @@ Iterating over maps:
 
  int main () {
  const int n1 = 3;
- std :: vector <int> v{0, 1, 2, 3, 4};
+ std::vector <int> v{0, 1, 2, 3, 4};
 
- auto result1 = std :: find(v.begin (), v.end (), n1);
+ auto result1 = std :: find(v.begin(), v.end(), n1);
 
  if (result1 != std :: end(v)) {
- cout << "v contains: " << n1 << endl;
+ cout<< "v contains: "<<n1<<endl;
  } else {
- cout << "v does not contain: " << n1 << endl;
+ cout<< "v does not contain: "<< n1<<endl;
  }
  }
 
@@ -415,9 +415,9 @@ Iterating over maps:
 ```cpp
 
  int main () {
- std :: vector <int> v{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+ std::vector <int> v{0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 
- std :: fill(v.begin (), v.end (), -1);
+ std::fill(v.begin(), v.end(), -1);
 
  Print(v);
  }
@@ -430,14 +430,14 @@ Iterating over maps:
 ```cpp
 
  int main () {
- std :: vector <int> v{1, 2, 3, 4, 4, 3, 7, 8, 9, 10};
+ std:: vector <int> v{1, 2, 3, 4, 4, 3, 7, 8, 9, 10};
 
  const int n1 = 3;
  const int n2 = 5;
- int num_items1 = std :: count(v.begin (), v.end (), n1);
- int num_items2 = std :: count(v.begin (), v.end (), n2);
- cout << n1 << " count: " << num_items1 << endl;
- cout << n2 << " count: " << num_items2 << endl;
+ int num_items1 = std::count(v.begin(), v.end(), n1);
+ int num_items2 = std::count(v.begin(), v.end(), n2);
+ cout<< n1<< " count: " << num_items1<< endl;
+ cout<< n2<< " count: " << num_items2<< endl;
 
  return 0;
  }
@@ -460,10 +460,10 @@ Iterating over maps:
  inline bool div_by_3(int i) { return i % 3 == 0; }
 
  int main () {
- std :: vector <int> v{1, 2, 3, 3, 4, 3, 7, 8, 9, 10};
+ std::vector <int> v{1, 2, 3, 3, 4, 3, 7, 8, 9, 10};
 
- int n3 = std :: count_if(v.begin (), v.end (), div_by_3);
- cout << "# divisible by 3: " << n3 << endl;
+ int n3 = std::count_if(v.begin (), v.end(), div_by_3);
+ cout<< "# divisible by 3: " <<n3<<endl;
  }
 
 
@@ -481,7 +481,7 @@ Iterating over maps:
  auto print = [](const int& n) { cout << " " << n; };
 
  cout << "Numbers:";
- std :: for_each(nums.cbegin (), nums.cend (), print);
+ std::for_each(nums.cbegin(), nums.cend(), print);
  cout << endl;
 
  return 0;
@@ -505,11 +505,11 @@ Iterating over maps:
 
  inline bool even(int i) { return i % 2 == 0; };
  int main () {
- std :: vector <int> v(10, 2);
- std :: partial_sum (v.cbegin (), v.cend (), v.begin ());
+ std:: vector <int> v(10, 2);
+ std:: partial_sum (v.cbegin(), v.cend(), v.begin());
  Print(v);
 
- bool all_even = all_of(v.cbegin (), v.cend (), even);
+ bool all_even = all_of(v.cbegin(), v.cend(), even);
  if (all_even ) {
  cout << "All numbers are even" << endl;
  }
@@ -528,7 +528,7 @@ Iterating over maps:
  cout << "before rotate: ";
  Print(v);
 
- std :: rotate(v.begin (), v.begin () + 2, v.end ());
+ std :: rotate(v.begin(), v.begin() + 2, v.end());
  cout << "after rotate: ";
  Print(v);
  }
@@ -550,13 +550,13 @@ Iterating over maps:
 
 ```cpp
 
- auto UpperCase (char c) { return std :: toupper(c); }
+ auto UpperCase (char c) { return std::toupper(c); }
  int main () {
  const std :: string s("hello");
  std :: string S{s};
- std :: transform (s.begin (),
- s.end (),
- S.begin (),
+ std :: transform (s.begin(),
+ s.end(),
+ S.begin(),
  UpperCase );
 
  cout << s << endl;
@@ -571,15 +571,15 @@ Iterating over maps:
 ```cpp
 
  int main () {
- std :: vector <int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+ std::vector <int> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
- int sum = std :: accumulate (v.begin (), v.end (), 0);
+ int sum = std :: accumulate (v.begin(), v.end(), 0);
 
- int product = std :: accumulate (v.begin (), 
-  v.end (), 1, std :: multiplies ());
+ int product = std :: accumulate (v.begin(), 
+  v.end (), 1, std :: multiplies());
 
- cout << "Sum : " << sum << endl;
- cout << "Product: " << product << endl;
+ cout<< "Sum : " <<sum << endl;
+ cout<< "Product: " <<product << endl;
  }
 
 ```
@@ -600,8 +600,8 @@ Iterating over maps:
 
  int main () {
  using std :: max;
- cout << "max(1, 9999) : " << max(1, 9999) << endl;
- cout << "max('a', 'b'): " << max('a', 'b') << endl;
+ cout<< "max(1, 9999) : "<< max(1, 9999) <<endl;
+ cout<< "max('a', 'b'): "<< max('a', 'b') <<endl;
  }
 
 ```
@@ -615,7 +615,7 @@ Iterating over maps:
 
  auto result = std :: min_element (v.begin (), v.end ());
  auto min_location = std :: distance(v.begin (), result);
- cout << "min at: " << min_location << endl;
+ cout<<"min at: "<< min_location << endl;
  }
 
 
@@ -639,8 +639,8 @@ Iterating over maps:
  auto v = {3, 9, 1, 4, 2, 5, 9};
  auto [min , max] = minmax_element (begin(v), end(v));
 
- cout << "min = " << *min << endl;
- cout << "max = " << *max << endl;
+ cout << "min = "<< *min << endl;
+ cout << "max = "<< *max << endl;
  }
 ```
 
@@ -655,10 +655,10 @@ Iterating over maps:
  const double kMax = 1.0F;
  const double kMin = 0.0F;
 
- cout << std :: clamp (0.5 , kMin , kMax) << endl;
- cout << std :: clamp (1.1 , kMin , kMax) << endl;
- cout << std :: clamp (0.1 , kMin , kMax) << endl;
- cout << std :: clamp (-2.1, kMin , kMax) << endl;
+ cout<<std ::clamp (0.5 , kMin , kMax) << endl;
+ cout<<std ::clamp (1.1 , kMin , kMax) << endl;
+ cout<<std ::clamp (0.1 , kMin , kMax) << endl;
+ cout<<std ::clamp (-2.1, kMin , kMax) << endl;
  }
 
 ```
@@ -677,7 +677,7 @@ Iterating over maps:
 ```cpp
  int main () {
  std :: string in = "C++ is cool", out;
- auto rnd_dev = std :: mt19937{ random_device {}() };
+ auto rnd_dev = std::mt19937{ random_device {}() };
  const int kNLetters = 5;
  std :: sample(in.begin (),
  in.end (),
@@ -685,8 +685,8 @@ Iterating over maps:
  kNLetters ,
  rnd_dev);
 
- cout << "from : " << in << endl;
- cout << "sample: " << out << endl;
+ cout<<"from : " <<in << endl;
+ cout<<"sample: " <<out << endl;
  }
 ```
 
