@@ -11,17 +11,23 @@ $\tiny Mathematics!$ for ML :))  🌸
 <br />
 
 
-$$\color{blue}{X \sim Normal \; (\mu,\sigma^2)}$$
+$$ \color{blue}{X \sim Normal \; (\mu,\sigma^2)} $$
 
 
-$$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}>4 \right)$$
+$$P \left( A=2 \, \middle| \, \dfrac{A^2}{B}>4 \right) $$
+
+Mathematics is beautiful and imperative for problem solving with control. Important concepts to be comfortable around with : Linear Algebra, Matrix Decomposition, Analytical Geometry,  Calculus, Probability and Statistics.
 
 <br />
 
 ### book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF), [3Blue1Brown ](https://www.youtube.com/@3blue1brown)
 
+## Mathematics NOTES 📖:
+
 LINEAR ALGEBRA: [M4ML - Linear Algebra](https://youtu.be/T73ldK46JqE), [3b1b - Essence of Linear Algebra](https://youtu.be/fNk_zzaMoSs), [MIT 18.06 Linear Algebra - Gilbert Strang](https://www.youtube.com/watch?v=QVKj3LADCnA&list=PL49CF3715CB9EF31D) <br />
-{ [linear_algebra_cs229.pdf](./notes/cs229-linalg.pdf), [linear_algebra_review.pdf](./notes/cs229-linalg2.pdf), [vip_referesher_linear_algebra.pdf](./notes/linear-algebra.pdf) }
+{ [linear_algebra_cs229.pdf](./notes/cs229-linalg.pdf), [linear_algebra_review.pdf](./notes/cs229-linalg2.pdf), [vip_referesher_linear_algebra.pdf](./notes/linear-algebra.pdf) } 📖
+
+More on Lie Group and Lie Algebra from my notes @[slam/lie](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/lieg.MD)
 
 <br />
 
@@ -46,7 +52,7 @@ ANALYTIC GEOMETRY: [MIT Graph and Geometry Reading Group](https://www.youtube.co
 CALCULUS : [Calculus I (Limits, Derivative, Integrals)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m), [Calculus II (Integration Methods, Series, Parametric/Polar, Vectors)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc4ySKTIW19TLrT91Ik9M4n), [Calculus III: Multivariable Calculus (Vectors, Curves, Partial Derivatives, Integration](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd), [Mathematics for Machine Learning - Multivariate Calculus](https://www.youtube.com/playlist?list=PLiiljHvN6z193BBzS0Ln8NnqQmzimTW23); VECTOR CALCULUS: [Calculus IV: Vector Calculus](https://www.youtube.com/watch?v=AIxiYG-gZ00&list=PLHXZ9OQGMqxfW0GMqeUE1bLKaYor6kbHa).<br />
 
 PROBABILITY AND DISTRIBUTION: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
-{ [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](./notes/refresher-probabilities-statistics.pdf)  }
+{ [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](./notes/refresher-probabilities-statistics.pdf)  } 📖
 
 <br />
 
