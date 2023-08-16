@@ -18,7 +18,11 @@ A short introduction to c++ for AI and Robotics:
 
 ### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [Utilities & Libraries](./util.MD), [OpenCV](./opencv.MD) ]
 
-resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] 
+I am comfortable with c++ build systems and c++ was my first programming language that I used extensively throughout high school. I have an overview note on problem solving with c++:
+
+[ [c++ iterators](https://www.javatpoint.com/cpp-iterators), [c++ enumeration](https://www.javatpoint.com/cpp-enumeration), [c++ bitset](https://www.javatpoint.com/post/cpp-bitset), [c++ map](https://www.javatpoint.com/post/cpp-map), [c++ multimap](https://www.javatpoint.com/post/cpp-multimap), [c++ templates](https://www.javatpoint.com/cpp-templates), [c++ files and streams](https://www.javatpoint.com/cpp-files-and-streams), [c++ algorithms](https://www.javatpoint.com/cpp-algorithm), [c++ namespaces](https://www.javatpoint.com/cpp-namespaces), [c++ math functions](https://www.javatpoint.com/cpp-math-functions) s]
+
+resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] [CMake tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4)
 
 <img src="img/stdio.png" width=48%> <img src="img/stdio2.png" width=48%>
 
