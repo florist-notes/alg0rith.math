@@ -20,6 +20,26 @@ Mathematics is beautiful and imperative for problem solving with control. Import
 
 <br />
 
+<table width=100%>
+<tr>
+<th>Practical Mathematics ( c++ / py  )
+
+<img src="mcode.gif" width=100%>
+
+[ [code](./mcode.MD) ]
+
+</th>
+
+<th>Optimizations
+
+<img src="mop.png" width=50%>
+
+[ [code](./op.MD) ]
+
+</th>
+</tr>
+</table>
+
 ### book : [Mathematics for ML](https://course.ccs.neu.edu/ds4420sp20/readings/mml-book.pdf) | series : [Weights & Biases](https://www.youtube.com/watch?v=uZeDTwWcnuY&list=PLD80i8An1OEGZ2tYimemzwC3xqkU0jKUg), [StatQuest](https://www.youtube.com/watch?v=Gv9_4yMHFhI&list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF), [3Blue1Brown ](https://www.youtube.com/@3blue1brown)
 
 ## Mathematics NOTES 📖:
