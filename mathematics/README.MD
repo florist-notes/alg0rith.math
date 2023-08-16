@@ -24,7 +24,7 @@ Mathematics is beautiful and imperative for problem solving with control. Import
 <tr>
 <th>Practical Mathematics ( c++ / py  )
 
-<img src="mcode.gif" width=100%>
+<img src="code.gif" width=100%>
 
 [ [code](./mcode.MD) ]
 
@@ -32,7 +32,7 @@ Mathematics is beautiful and imperative for problem solving with control. Import
 
 <th>Optimizations
 
-<img src="mop.png" width=50%>
+<img src="mop.png" width=100%>
 
 [ [code](./op.MD) ]
 
