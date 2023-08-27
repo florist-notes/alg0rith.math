@@ -1,11 +1,173 @@
 # Standard Template Library (STL) 🌸
 
+`` int num = 42; | float pi = 3.14; | char letter = 'A'; | int arr[5] = {1, 2, 3, 4, 5};``
+
+<table width=100%>
+<tr>
+<th>Structures (struct)</th>
+<th>Classes (class)</th>
+<th>Enums (enum)</th>
+</tr>
+<tr>
+<td>
+
+
+Structures allow you to group multiple data types into a single entity.
+
+```cpp
+struct Person {
+    std::string name;
+    int age;
+};
+
+
+```
+</td>
+<td>Classes are similar to structures but encapsulate data and functions (methods) that operate on that data.
+
+```cpp
+class Rectangle {
+public:
+    int length;
+    int width;
+
+    int area() {
+        return length * width;
+    }
+};
+
+
+```
+</td>
+<td>
+
+Enums allow you to define a set of named integer constants.
+
+```cpp
+enum Color {
+    RED,
+    GREEN,
+    BLUE
+};
+
+
+```
+</td>
+</tr>
+</table>
+
 Some of the key components of the STL include:
 - Containers: The STL provides a range of containers, such as vector, list, map, set, and stack, which can be used to store and manipulate data.
 - Algorithms: The STL provides a range of algorithms, such as sort, find, and binary_search, which can be used to manipulate data stored in containers.
 - Iterators: Iterators are objects that provide a way to traverse the elements of a container. The STL provides a range of iterators, such as forward_iterator, bidirectional_iterator, and random_access_iterator, that can be used with different types of containers.
 - Function Objects: Function objects, also known as functors, are objects that can be used as function arguments to algorithms. They provide a way to pass a function to an algorithm, allowing you to customize its behavior.
 - Adapters: Adapters are components that modify the behavior of other components in the STL. For example, the reverse_iterator adapter can be used to reverse the order of elements in a container.
+
+
+<table width=100%>
+<tr>
+<th>Vectors</th>
+<th>Lists</th>
+<th>Sets and Maps</th>
+</tr>
+<tr>
+<td>
+
+Vectors are dynamic arrays that can grow or shrink in size.
+
+```cpp
+#include <vector>
+
+std::vector<int> numbers = {1, 2, 3, 4, 5};
+numbers.push_back(6); // Add an element
+
+```
+</td>
+<td>Lists are doubly-linked lists, allowing efficient insertion and removal of elements anywhere in the list.
+
+```cpp
+#include <list>
+
+std::list<std::string> names = {"Alice", "Bob", "Charlie"};
+names.push_back("David");
+names.pop_front(); // Remove the first element
+
+
+
+```
+</td>
+<td>
+Sets store unique elements, and maps store key-value pairs.
+
+```cpp
+#include <set>
+#include <map>
+
+std::set<int> uniqueNumbers = {1, 2, 3, 4, 5};
+std::map<std::string, int> scores = {{"Alice", 90}, {"Bob", 85}};
+
+
+
+```
+</td>
+</tr>
+
+
+
+<tr>
+<th>Stacks and Queues</th>
+<th>Deques</th>
+<th>Arrays</th>
+</tr>
+<tr>
+<td>
+
+Stacks follow the Last-In-First-Out (LIFO) principle, while queues follow the First-In-First-Out (FIFO) principle.
+
+```cpp
+#include <stack>
+#include <queue>
+
+std::stack<int> s;
+s.push(1); // Push an element onto the stack
+
+std::queue<int> q;
+q.push(1); // Enqueue an element
+
+
+
+```
+</td>
+<td>Deques (Double-ended queues) allow efficient insertion and deletion at both ends.
+
+```cpp
+#include <deque>
+
+std::deque<int> dq;
+dq.push_back(1); // Add an element to the back
+dq.push_front(2); // Add an element to the front
+
+
+
+```
+</td>
+<td>
+STL arrays are fixed-size arrays.
+
+```cpp
+#include <array>
+
+std::array<int, 3> arr = {1, 2, 3};
+
+
+
+
+```
+</td>
+</tr>
+
+
+</table>
 
 
 ```cpp
