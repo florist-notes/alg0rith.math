@@ -1,6 +1,7 @@
 # Practical Mathematics
 
 
+
 ## Linear Algebra
 
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
@@ -8,6 +9,9 @@
 ## Analytic Geometry
 
 [ Norms, Inner Products, Lengths and Distances, Angles and Orthogonality, Orthonormal Basis, Orthogonal Complement, Inner Product of Functions, Orthogonal Projections, Rotations ]
+
+
+## Multiple View Geometry [[notes](./mvgeometry.MD)]
 
 ## Matrix Decomposition
 
