@@ -8,6 +8,8 @@
 #include <opencv2/opencv.hpp>
 
 ```
+NOTES : [IMAGE PROCESSING with OpenCV](./imageprocess.MD)
+
 OpenCV has namespace : `cv::` | types in OpenCV : `CV_<bit_count>` `<itentifier>` `<num_of_channels>`, example:
 + RGB image is `CV_8UC3`: 8-bit unsigned char with 3 channels for RGB
 + Grayscale image is `CV_8UC1`: single 8-bit unsigned char for intensity
