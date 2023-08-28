@@ -105,7 +105,7 @@ Every Python class keeps following built-in attributes and they can be accessed 
 
  + `__bases__ `− A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
 
-I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly. I have a sample [py-notebook](./code/src/anom_graphfinale.ipynb) I wrote professionally to process and visualize time series anomaly data. I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27.html)) :
+I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly [ [example 1](./code/), [example 2](https://github.com/florist-notes/Data-Analysis)]. I have a sample [py-notebook](./code/src/anomgg.ipynb) I wrote professionally to process and visualize time series anomaly data. I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27.html)) :
 
 <img src="./code/src/anom.gif" width=100%>
 
