@@ -16,7 +16,7 @@ A short introduction to c++ for AI and Robotics:
                                                                           🌸
 ```
 
-### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [Utilities & Libraries](./util.MD), [OpenCV](./opencv.MD) ]
+### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [Utilities & Libraries](./util.MD), [OpenCV](./opencv.MD), [Math Libraries](./mathcpp.MD) ]
 
 I am comfortable with c++ build systems and c++ was my first programming language that I used extensively throughout high school. I have an overview note on problem solving with c++:
 
