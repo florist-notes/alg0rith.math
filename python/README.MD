@@ -105,9 +105,9 @@ Every Python class keeps following built-in attributes and they can be accessed 
 
  + `__bases__ `− A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
 
-I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly [ [example 1](https://github.com/florist-notes/Data-Analysis), [example 2](./code/) ]. I have a sample [py-notebook](./code/src/anomgg.ipynb) I wrote professionally to process and visualize time series anomaly data. I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27.html)) :
+I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly [ [example 1](https://github.com/florist-notes/Data-Analysis), [example 2](./code/) ]. I have a professional python work report here @ [py_anom.pdf](./code/DaQuAI_anom.pdf) to process and visualize time series anomaly data. I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27.html)) :
 
-<img src="./code/src/anom.gif" width=100%>
+<img src="./code/anom.png" width=100%>
 
 I did py geo data work and my notes are @github/[webappmap](https://github.com/florist-notes/linux_d/blob/main/proj/maps.MD). Some important documents and notes to keep handy: [py-chs](./doc/csh/python-cheatsheets.pdf) and [py-notebooks](./code/). I have been writing deep learning code in PyTorch and are @ [PyTorch](https://github.com/florist-notes/aicore_n/blob/main/notes/pyt.MD), [TensorFlow](https://github.com/florist-notes/aicore_n/blob/main/notes/tf.MD) and [dl-code](https://github.com/florist-notes/aicore_n/blob/main/notes/dlcode.MD).
 
