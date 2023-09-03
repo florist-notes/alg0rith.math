@@ -9,11 +9,7 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
 Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action:
-- Linear / Logistic Regression
-- {dot, scalar, inner} product
-- Discrete Fourier Transform
-- Comvolutions
-- Principal Component Analysis (PCA)
+- Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Comvolutions, Principal Component Analysis (PCA)
 
 
 $$ matmul(X, Y)_{i,j} = \sum_{i}{X_{i,r} Y_{r,j}} = XY_{i,j} $$
@@ -30,13 +26,14 @@ Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
 [  Determinant and Trace,  Eigenvalues and Eigenvectors, Cholesky Decomposition, Eigendecomposition and Diagonalization, Singular Value Decomposition, Matrix Approximation, Matrix Phylogeny ]
 
+functions expects input of type float and returns float.
 
 ```python
 def square(x: float) -> float:
     return x ** 2
 ```
 
-functions expects input of type float and returns float.
+
 
 ```py
 matrix = np.array([[1, 2], [3, 4], [5, 6]])  # 3 x 2 matrix
