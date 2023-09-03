@@ -15,13 +15,14 @@ Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplicati
 - Comvolutions
 - Principal Component Analysis (PCA)
 
-$$ matmul(X, Y)_{i,j} = \sum{X_{i,r}Y_{r,j}} = XY_{i,j} $$
+
+$$ matmul(X, Y)_{i,j} = \sum_{i}{X_{i,r} Y_{r,j}} = XY_{i,j} $$
 
 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
 
 Single Value Decomposition (SVD): Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
 
-<img src="./svd.png" width=100%>
+<img src="./svd.png" width=50%><img src="./svd2.webp" width=50%>
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
@@ -41,11 +42,62 @@ functions expects input of type float and returns float.
 matrix = np.array([[1, 2], [3, 4], [5, 6]])  # 3 x 2 matrix
 vector = np.array([7, 8])  # length 2 vector
 
-print(matrix @ vector)  # length 3 vector
+print(matrix @ vector)  # multiply multiplication results in length 3 vector
 
-print('Dimension of matrix : ',matrix.ndim)
+print('Dimension and shape of matrix : ',matrix.ndim, ' and ', matrix.shape)
 
 ```
+The transpose of a matrix `M` is written in numpy as `M.T`.
+
+```py
+
+a = 4
+b = 0
+ 
+# using assert to check for 0
+print("The value of a / b is : ")
+assert b != 0
+print(a / b)
+
+
+set_second_to_zero = np.array([[1, 0],
+                               [0, 0]])
+vector = [10, 1]
+assert (set_second_to_zero @ vector)[1] == 0
+```
+
+Matrix functions:
+
+```py
+def their_pipeline(v):
+    after_W = np.matmul(W, v)
+    after_X = np.matmul(X, after_W)
+    after_Y = Y @ after_X
+    after_Z = Z @ after_Y
+    return after_Z
+```
+Parallelization in Linear Algebra: Concatenation :
+
+```py
+matrix = np.array([[1, 2], [3, 4], [5, 6], [7, 8]])
+rows = [row for row in matrix]  # split the matrix into 4 rows with shape (2, 1)
+
+vector = [3, 5]
+print(matrix @ vector, [row @ vector for row in rows])
+np.allclose(matrix @ vector,
+            np.hstack([row @ vector for row in rows]))
+
+
+
+
+arrays = [np.array([[1, 2], [3, 4]]), np.array([[5, 6], [7, 8]])]
+print(arrays)
+
+print(np.concatenate(arrays))
+
+```
+
+`numpy.allclose()` function is used to find if two arrays are element-wise equal within a tolerance and the `numpy.hstack()` function is used to stack arrays in sequence horizontally 
 
 ## Analytic Geometry
 
