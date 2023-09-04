@@ -1,0 +1,279 @@
+# 🌸 Data Structure and Algorithms in c++
+
+<table width=100%>
+<tr>
+<th>Sorting and Searching</th>
+<th>Data Structure</th>
+</tr>
+<tr>
+<td>
+
++ Sorting Algorithms
+    + Bubble Sort
+    + Merge Sort
+    + Sorting Lower Bound
+    + Counting Sort
+    + Sorting in Practice
++ Solving problems by sorting
+    + Sweep Line Algorithms
+    + Scheduling Events
+    + Tasks and Deadlines
++ Binary Search
+    + Implementing the Search
+    + Finding Optimal Solutions
+</td>
+<td>
+
++ Dynamic Arrays
+    + Vectors
+    + Iterators and Ranges
+    + Other Structures
++ Set Structures
+    + Sets and multisets
+    + Maps
+    + Priority Queues
+    + Policy-Based Sets
++ Experiments:
+    + Set Versus Sorting
+    + Map Versus Array
+    + Priority Queue Versus Multiset
+</td>
+</tr>
+
+<tr>
+<th>Dynamic Programming</th>
+<th>Graph Algorithms</th>
+</tr>
+<tr>
+<td>
+
++ Basic Concepts
+    + When Greedy Fails
+    + Finding an Optimal Solution
+    + Counting Solutions
++ Further Examples
+    + Longest Increasing Subsequence
+    + Paths in a Grid
+    + Knapsack Problems
+    + From Permutations to Subsets
+    + Counting Tilings
+</td>
+<td>
+
++ Basics of Graphs
+    + Graph Terminiology and Representation
++ Graph Traversal
+    + Depth First Search (DFS)
+    + Breadth First Search (BFS)
+    + Applications
++ Shortest Paths
+    + Bellman-Ford Algorithm
+    + Djikstra's Algorithm
+    + Floyd-Warshall Algorithm
++ Directed Acyclic Graphs
+    + Topological Sorting
+    + Dynamic Programming
++ Successor Graphs
+    + Finding Successors
+    + Cycle Detection
++ Minimum Spanning Trees
+    + Kruskal's Algorithm
+    + Union-Find Structure
+    + Prim's Algorithm
+</td>
+</tr>
+
+<tr>
+<th>Algorithm design topics</th>
+<th>Range Queries</th>
+</tr>
+<tr>
+<td>
+
++ Bit Parallel Algorithms
+    + Hamming Distances
+    + Counting Subgrids
+    + Reachability in Graphs
++ Amortized Analysis
+    + Two Pointers method
+    + Nearest Smaller Elements
+    + Sliding Window Minimum
++ Finding Minimum Vales
+    + Ternary Search
+    + Convex Functions
+    + Minimizing Sums
+</td>
+<td>
+
++ Queries on Static Arrays
+    + Sum Queries
+    + Minimum Queries
++ Tree Structures
+    + Binary Indexed Trees
+    + Segment Trees
+    + Additional Techniques
+</td>
+</tr>
+
+<tr>
+<th>Tree Algorithms</th>
+<th>Mathematics</th>
+</tr>
+<tr>
+<td>
+
++ Basic Techniques
+    + Tree Traversal
+    + Calculating Diameters
+    + All Longest Paths
++ Tree Queries
+    + Finding Ancestors
+    + Subtrees and Paths
+    + Lowest Common Ancestors
+    + Merging Data Structures
++ Advanced Techniques
+    + Centroid Decomposition
+    + Heavy-Light Deconmposition
+</td>
+<td>
+
++ Number Theory
+    + Primes and Factors
+    + Sieve of Erastosthenes
+    + Euclid's Algorithm
+    + Modular Exponentiation
+    + Euler's Theorem
+    + Solving Equations
++ Combinatorics
+    + Binomial Coefficients
+    + Catalan Numbers
+    + Inclusion-Exclusion
+    + Burnside's Lemma
+    + Cayley's Formula
++ Matrices
+    + Matrix Operations
+    + Linear Recurrences
+    + Graphs and Matrices
+    + Gaussian Elimination
++ Probability
+    + Working with Events
+    + Random Variables
+    + Markov Chains
+    + Randomized Algorithms
++ Game Theory
+    + Game States
+    + Nim Game
+    + Sprague-Grundy Theorem
++ Fourier Transform
+    + Working with Polynomials
+    + FFT Algorithm
+    + Calculating Convolutions
+</td>
+</tr>
+
+<tr>
+<th>Advanced Graph Algorithms</th>
+<th>Geometry</th>
+</tr>
+<tr>
+<td>
+
++ Strong Connectivity
+    + Kosaraju's Algorithm
+    + 2SAT Problem
++ Complete Paths
+    + Eulerian Paths
+    + Hamiltonian Paths
+    + Applications
++ Maximum Flows
+    + Ford-Fulkerson Algorithm
+    + Disjoint Paths
+    + Maximum Matchings
+    + Path Covers
++ Depth-First Search Trees
+    + Biconnectivity
+    + Eulerian Subgraphs
++ Minimum Cost Flows
+    + Minimum Cost Paths Algorithm
+    + Minimum Weight Matchings
+    + Improving the Algorithm
+</td>
+<td>
+
++ Geometric Techniques
+    + Complex Numbers
+    + Points and Lines
+    + Polygon Area
+    + Distance Functions
++ Sweep Line Algorithms
+    + Intersection Points
+    + Closest Pair Problem
+    + Convex Hull Problem
+</td>
+</tr>
+
+<tr>
+<th>String Algorithms</th>
+<th>Additional Topics</th>
+</tr>
+<tr>
+<td>
+
++ Basic Topics
+    + Trie Structure
+    + Dynamic Programming
++ String Hashing
+    + Polynomial Hashing
+    + Applications
+    + Collisions and Parameters
++ Z-Algorithm   
+    + Constructing the Z-Array
+    + Applications
++ Suffix Arrays
+    + Prefix Doubling Method
+    + Finding Patterns
+    + LCP Arrays
++ String Automata
+    + Regular Languages
+    + Pattern Matching Automata
+    + Suffix Automata
+
+</td>
+<td>
+
++ Square Root Techniques
+    + Data Structures
+    + Subalgorithms
+    + Integer Partitions
+    + Mo's Algorithm
++ Segment Trees Revisited
+    + Lazy Propagation
+    + Dynamic Trees
+    + Data Structures in Nodes
+    + Two-Dimensional Trees
++ Treaps
+    + Splitting and Merging
+    + Implementation
+    + Additional Techniques
++ Dynamic Programming Optimization
+    + Convex Hull Trick
+    + Divide and Conquer Optimization
+    + Knuth's Optimization
++ Backtracking Techniques
+    + Prunning the Search Tree
+    + Heuristic Functions
++ Miscellaneous 
+    + Meet in the middle
+    + Counting Subsets
+    + Parallel Binary Search
+    + Dynamic Connectivity
+</td>
+</tr>
+</table>
+
+
+
+resources: @github/[cpp-ds-algorithms](https://github.com/TheAlgorithms/C-Plus-Plus), [Looking for a Challenge 2
+Problems from the Polish Collegiate
+Programming Contest 2011–2014](./cp/looking-for-a-challenge-2-en.pdf), [Guide to Competitive
+Programming](https://link.springer.com/book/10.1007/978-3-030-39357-1), [Competitive Programmer’s Handbook](./cp/CPbook.pdf), [C/C++ cheatsheet Documentation](./cp/cppcheatsheet-readthedocs-io-en-latest.pdf), [KTH Royal Institute of Technology Omogen Heap](./cp/kactl.pdf).

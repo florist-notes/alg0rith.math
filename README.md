@@ -25,7 +25,7 @@ my notes on mathematics, algorithms and programming:
 
 ```
 
-## Data Structure and Algorithms [[notes](#)]  #⛺
+## Data Structure and Algorithms [[notes](./competitive_prog/dsalgo.MD)]
 
 ## Design and Analysis of Algorithms [[notes](#)]  #⛺
 
