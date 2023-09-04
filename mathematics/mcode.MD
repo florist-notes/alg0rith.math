@@ -193,7 +193,7 @@ probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=m
 
 ```
 
-<table width=100%>
+<table style="overflow-x:auto;">
 <tr>
 <th>Surprise / Entropy</th>
 <th>Softmax</th>
@@ -311,6 +311,48 @@ $$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
 </table>
 
 #### Minimizing the Surprise with Gradient Descent: The Gaussian Distribution and its Surprise Function
+
+Cross Entropy is the average surprise using the pmf q on samples from the pmf p.
+
+But cross entropies and surprises don't always appear directly in the loss function. For example, if the variable we are predicting has a pdf instead of a pmf, then we'd need to work with functions instead of arrays, which is much tricker. Even in that case, the loss function is still usually derived from a surprise.
+
+The Gaussian, or normal, distribution has the following probability density function:
+
+$$ p(x;  μ) = \frac{1}{\sqrt{Z}}.e^{ - \frac{1}{2} (x- μ)^2 } $$
+
+where 
+ (pronounced "mew") is the mean of the distribution and Z = 2π.This constant ensures that the distribution integrates to 1.
+
+ The surprise function in the context of the Gaussian distribution typically refers to the likelihood or probability of observing a specific value or range of values from the distribution.
+
+```py
+
+import numpy as np
+import scipy.stats as stats
+
+# Parameters of the Gaussian distribution (mean and standard deviation)
+mean = 0
+std_dev = 1
+
+# Value you want to calculate the surprise for
+x = 1.5
+
+# Calculate the PDF (probability density function) at the given value
+pdf_value = stats.norm.pdf(x, loc=mean, scale=std_dev)
+
+# Alternatively, you can calculate the cumulative distribution function (CDF)
+# to find the probability of the value being less than or equal to x
+cdf_value = stats.norm.cdf(x, loc=mean, scale=std_dev)
+
+# Calculate the "surprise" or likelihood
+surprise = 1 / pdf_value  # Inverse of PDF value
+
+print("PDF at x:", pdf_value)
+print("CDF at x:", cdf_value)
+print("Surprise at x:", surprise)
+
+
+```
 
 More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/main/math-for-ml/03_probability/extras.ipynb) notebook.
 
