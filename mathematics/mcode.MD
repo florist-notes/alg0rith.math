@@ -193,6 +193,125 @@ probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=m
 
 ```
 
+<table width=100%>
+<tr>
+<th>Surprise / Entropy</th>
+<th>Softmax</th>
+</tr>
+
+<tr>
+<td>While the probability captures the chance that an event occurs, the negative log probability, or "surprise", captures how unexpected an event is -- larger values mean it is more unexpected. Entropy measures the uncertainty or surprise associated with a probability distribution. Higher entropy values indicate more uncertainty or surprise.
+
+Given the probability mass function (pmf), we can always compute the suprise by taking the negative logarithm:
+
+$$ surprise(p, i) = -log(p_i) $$
+
+```py
+
+import scipy.stats as stats
+import numpy as np
+
+# Example probability distribution (a fair six-sided die)
+probabilities = np.array([1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
+
+# Calculate entropy
+entropy = stats.entropy(probabilities, base=2)
+print("Entropy:", entropy)
+
+
+```
+
+</td>
+<td>
+
+Softmax is a mathematical function often used in machine learning and deep learning to convert a vector of real numbers into a probability distribution. It takes an input vector and normalizes it to produce a set of values between 0 and 1 that sum up to 1. The Softmax function is commonly used for multi-class classification problems to determine the probabilities of each class.
+
+$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+
+```py
+
+import numpy as np
+
+def softmax(x):
+    e_x = np.exp(x - np.max(x))  # Subtracting the maximum value for numerical stability
+    return e_x / e_x.sum(axis=0)
+
+```
+
+
+</td>
+</tr>
+
+
+<tr>
+<th>Entropy and Cross-Entropy</th>
+<th>The KL-Divergence</th>
+</tr>
+
+<tr>
+<td>In information theory, the entropy of a random variable is defined, in terms of its probability mass function, as:
+
+$$ entropy(p) = \sum_{i} p_i . - log(p_i) $$
+
+This is the same as the expected value of the surprise -- if we were to draw a large number of samples of a random variable with p as its pmf, calculate the surprise function on each, and then take the average, it would be close to the entropy.
+
+If we draw samples according to the distribution p, but calculate the surprise using the distribution q, then the average surprise will not be the entropy. Instead, it will be the cross-entropy -- the entropy from mixing probability and surprise across distributions, which is defined as:
+
+$$ crossentropy(p, q) = \sum_{i} p_i . - log(q_i) $$
+
+It measures the dissimilarity between the predicted probability distribution and the true (target) probability distribution. In the context of binary classification, the cross-entropy loss is often referred to as "binary cross-entropy," while for multi-class classification, it's called "categorical cross-entropy."
+
+```py
+
+import numpy as np
+
+def binary_cross_entropy(y_true, y_pred):
+    epsilon = 1e-15  # Small constant to avoid log(0)
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)  # Clip to avoid invalid log values
+    return - (y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+
+def categorical_cross_entropy(y_true, y_pred):
+    epsilon = 1e-15  # Small constant to avoid log(0)
+    y_pred = np.clip(y_pred, epsilon, 1 - epsilon)  # Clip to avoid invalid log values
+    return - np.sum(y_true * np.log(y_pred), axis=-1)
+
+```
+
+
+</td>
+<td>KL divergence measures the difference between two probability distributions. It quantifies how one distribution differs from another, in terms of surprise or information.
+
+```py
+# Example probability distributions (P and Q)
+P = np.array([0.3, 0.5, 0.2])
+Q = np.array([0.2, 0.6, 0.2])
+
+# Calculate KL divergence from Q to P
+kl_divergence = stats.entropy(P, Q, base=2)
+print("KL Divergence:", kl_divergence)
+
+```
+
+The cross-entropy gives us one way to measure how different two probability mass functions are -- almost like a notion of distance between two pmfs.
+
+But the distance from a point to itself should be 0, while crossentropy(p, p) == entropy(p)
+
+So instead of using the cross-entropy, it is sometimes convenient to use a different quantity to measure the difference between two probability distributions, the divergence:
+
+$$ divergence(p, q) = \sum_{i} p_i . -log(\frac{q_i}{p_i}) $$
+
+
+and we can say:
+
+$$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
+
+</td>
+</tr>
+
+</table>
+
+#### Minimizing the Surprise with Gradient Descent: The Gaussian Distribution and its Surprise Function
+
 More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/main/math-for-ml/03_probability/extras.ipynb) notebook.
 
 ## When Model Meet Data
