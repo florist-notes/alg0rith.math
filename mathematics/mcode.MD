@@ -11,7 +11,7 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
 
-$$ matmul(X,Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
+$$ matmul(X,Y){i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
 
