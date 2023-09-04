@@ -9,10 +9,11 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
 Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action:
-- Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Comvolutions, Principal Component Analysis (PCA)
+
+- Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass.
 
 
-$$ matmul(X, Y)_{i,j} = \sum_{i}{X_{i,r} Y_{r,j}} = XY_{i,j} $$
+$$ matmul(X, Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
 
@@ -63,7 +64,7 @@ vector = [10, 1]
 assert (set_second_to_zero @ vector)[1] == 0
 ```
 
-Matrix functions:
+Matrix multiplication functions:
 
 ```py
 def their_pipeline(v):
@@ -73,7 +74,7 @@ def their_pipeline(v):
     after_Z = Z @ after_Y
     return after_Z
 ```
-Parallelization in Linear Algebra: Concatenation :
+Parallelization in Linear Algebra - Concatenation :
 
 ```py
 matrix = np.array([[1, 2], [3, 4], [5, 6], [7, 8]])
@@ -84,9 +85,6 @@ print(matrix @ vector, [row @ vector for row in rows])
 np.allclose(matrix @ vector,
             np.hstack([row @ vector for row in rows]))
 
-
-
-
 arrays = [np.array([[1, 2], [3, 4]]), np.array([[5, 6], [7, 8]])]
 print(arrays)
 
@@ -94,7 +92,7 @@ print(np.concatenate(arrays))
 
 ```
 
-`numpy.allclose()` function is used to find if two arrays are element-wise equal within a tolerance and the `numpy.hstack()` function is used to stack arrays in sequence horizontally 
+`numpy.allclose()` function is used to find if two arrays are element-wise equal within a tolerance and the `numpy.hstack()` function is used to stack arrays in sequence horizontally. More on linear algebra [here](https://github.com/wandb/edu/blob/main/math-for-ml/01_linearalgebra/extras.ipynb).
 
 ## Analytic Geometry
 
@@ -106,6 +104,41 @@ print(np.concatenate(arrays))
 ## Vector Calculus
 
 [ Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices, Useful Identities for Computing Gradients, Backpropagation and Automatic Differentiation, Higher-Order Derivatives, Linearization and Multivariate Taylor Series ]
+
+Calculus is approximation with linear maps and helps us incrementally optimize.The derivative is the ratio between change in output and change in input.
+
+
+$$ f^{'}(x) \lim_{ε \to 0} \dfrac{f(x)+ε}{ε}$$
+
+We make the change in input smaller.
+
+Fréchet Derivative: If the change in the value of the output at a point ε away is 
+
+$$ f(x+ε) = f(x) + f^{'}(x)ε + o(ε) $$
+
+some function of x times ε, plus something smaller, we call that function the derivative. The function we are trying to approximate is linear and can be represented as arrays.
+
+$$ f(x+ε) = f(x) + <\nabla f(x), ε> + o(||ε||) $$
+
+Gradient Descent:
+
+$$ x \longleftarrow x - \eta \nabla f(x) $$
+
+```py
+
+f_x = x
+g_x = 2x^2
+
+# this prints the limit
+print(sympy.limit(f_x / g_x, x, 0))
+
+```
+
+[sympy](https://www.sympy.org/en/index.html), a Python library for doing symbolic math (limits, integrals, algebra, and more!)
+
+More on Calculus in [notebook 1](https://github.com/wandb/edu/blob/main/math-for-ml/02_calculus/extras.ipynb) and [notebook 2](https://colab.research.google.com/github/ageron/handson-ml2/blob/master/math_differential_calculus.ipynb). Blog : [Calculus on Computational Graphs: Backpropagation](https://colah.github.io/posts/2015-08-Backprop/), [Calculus in SymPy](http://prob140.org/sp17/textbook/ch17/Calculus_in_SymPy.html).
+
+
 
 ## Probability and Distributions
 
