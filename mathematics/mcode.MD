@@ -8,12 +8,10 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
-Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action:
-
-- Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass.
+Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
 
-$$ matmul(X, Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
+$$ matmul(X,Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
 
@@ -139,10 +137,63 @@ print(sympy.limit(f_x / g_x, x, 0))
 More on Calculus in [notebook 1](https://github.com/wandb/edu/blob/main/math-for-ml/02_calculus/extras.ipynb) and [notebook 2](https://colab.research.google.com/github/ageron/handson-ml2/blob/master/math_differential_calculus.ipynb). Blog : [Calculus on Computational Graphs: Backpropagation](https://colah.github.io/posts/2015-08-Backprop/), [Calculus in SymPy](http://prob140.org/sp17/textbook/ch17/Calculus_in_SymPy.html).
 
 
-
 ## Probability and Distributions
 
 [ Construction of a Probability Space, Discrete and Continuous Probabilities, Sum Rule, Product Rule, and Bayes’ Theorem, Summary Statistics and Independence, Gaussian Distribution, Conjugacy and the Exponential Family, Change of Variables/Inverse Transform ]
+
+```py
+
+import numpy as np
+
+true_mu = -1.; true_sigma = 0.5; N = 20;
+data = true_sigma * np.random.standard_normal(size=N) + true_mu
+
+```
+
+#### Probability Mass Function (PMF):
+
+A PMF is used to describe the probability distribution of a discrete random variable. It assigns a probability to each possible outcome or value that the random variable can take.
+
+Mathematically, for a discrete random variable X, the PMF is defined as:
+
+$$ P(X = x) $$
+
+Where x is a specific value that X can take, and P(X=x) is the probability of X taking that value.
+In Python, we can create a PMF using a dictionary to represent the mapping of values to their probabilities.
+
+```py
+# Example PMF for a six-sided die
+pmf_die = {1: 1/6, 2: 1/6, 3: 1/6, 4: 1/6, 5: 1/6, 6: 1/6}
+
+# Probability of getting a 3 when rolling the die
+probability_3 = pmf_die[3]
+
+```
+
+#### Probability Density Function (PDF):
+
+A PDF is used to describe the probability distribution of a continuous random variable. Unlike a PMF, which assigns probabilities to discrete values, a PDF assigns probabilities to intervals or ranges of values.
+
+Mathematically, for a continuous random variable X, the PDF is represented as a function f(x) such that:
+
+$$ P(a \leq X \leq b) = \int_a^b f(x)dx $$
+
+```py
+
+import numpy as np
+from scipy.stats import norm
+
+# Example PDF for a standard normal distribution
+mean = 0
+std_dev = 1
+pdf = norm.pdf(x, loc=mean, scale=std_dev)
+
+# Probability of X falling in the interval [-1, 1]
+probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=mean, scale=std_dev)
+
+```
+
+More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/main/math-for-ml/03_probability/extras.ipynb) notebook.
 
 ## When Model Meet Data
 
