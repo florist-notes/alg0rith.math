@@ -107,7 +107,9 @@ Every Python class keeps following built-in attributes and they can be accessed 
 
  + `__bases__ `− A possibly empty tuple containing the base classes, in the order of their occurrence in the base class list.
 
-I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly [ [example 1](https://github.com/florist-notes/Data-Analysis), [example 2](./code/) ]. I have a professional python work report here @ [py_anom.pdf](./code/DaQuAI_anom.pdf) to process and visualize time series anomaly data. I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27_1_FORECAST_2022_J_27.1_1_I_finalx.html)) :
+I did lot of EDA in python with numpy/pandas/geopandas and matplotlib/plotly [ [example 1](https://github.com/florist-notes/Data-Analysis), [example 2](./code/) ]. I have a professional python work report here @ [py_anom.pdf](./code/DaQuAI_anom.pdf) to process and visualize time series anomaly data. In the project I fetched data from API, stored it as mongodb geojson document and worked on processing as well as anomaly detection of raw sensor data . I created plotly graph objects to visualize the pandas data frame objects interactively ([visualize.html](./code/src/MQ27_1_FORECAST_2022_J_27.1_1_I_finalx.html)) :
+
+<img src="./code/src/anom2e.png" width=100%>
 
 <img src="./code/anom.png" width=100%>
 
