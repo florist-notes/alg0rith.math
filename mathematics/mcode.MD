@@ -178,7 +178,7 @@ Mathematically, for a continuous random variable X, the PDF is represented as a 
 
 $$ P(a \leq X \leq b) = \int_a^b f(x)dx $$
 
-```py
+```python
 
 import numpy as np
 from scipy.stats import norm
@@ -206,7 +206,7 @@ Given the probability mass function (pmf), we can always compute the suprise by 
 
 $$ surprise(p, i) = -log(p_i) $$
 
-```py
+```python
 
 import scipy.stats as stats
 import numpy as np
@@ -228,7 +228,7 @@ Softmax is a mathematical function often used in machine learning and deep learn
 
 $$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
 
-```py
+```python
 
 import numpy as np
 
@@ -249,7 +249,9 @@ def softmax(x):
 </tr>
 
 <tr>
-<td>In information theory, the entropy of a random variable is defined, in terms of its probability mass function, as:
+<td>
+
+In information theory, the entropy of a random variable is defined, in terms of its probability mass function, as:
 
 $$ entropy(p) = \sum_{i} p_i . - log(p_i) $$
 
@@ -261,7 +263,7 @@ $$ crossentropy(p, q) = \sum_{i} p_i . - log(q_i) $$
 
 It measures the dissimilarity between the predicted probability distribution and the true (target) probability distribution. In the context of binary classification, the cross-entropy loss is often referred to as "binary cross-entropy," while for multi-class classification, it's called "categorical cross-entropy."
 
-```py
+```python
 
 import numpy as np
 
@@ -279,9 +281,11 @@ def categorical_cross_entropy(y_true, y_pred):
 
 
 </td>
-<td>KL divergence measures the difference between two probability distributions. It quantifies how one distribution differs from another, in terms of surprise or information.
+<td>
 
-```py
+KL divergence measures the difference between two probability distributions. It quantifies how one distribution differs from another, in terms of surprise or information.
+
+```python
 # Example probability distributions (P and Q)
 P = np.array([0.3, 0.5, 0.2])
 Q = np.array([0.2, 0.6, 0.2])
@@ -325,7 +329,7 @@ where
 
  The surprise function in the context of the Gaussian distribution typically refers to the likelihood or probability of observing a specific value or range of values from the distribution.
 
-```py
+```python
 
 import numpy as np
 import scipy.stats as stats
