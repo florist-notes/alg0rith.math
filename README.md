@@ -9,7 +9,7 @@ my notes on mathematics, algorithms and programming:
 
 ```
 
-## Python [[notes](./python)] 
+## Python [[notes](./python/README.MD)] 
 ```python
     import numpy as np
     import pandas as pd
@@ -18,6 +18,7 @@ my notes on mathematics, algorithms and programming:
 
     print(df.to_string()) 
 ```
+
 ## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
     #include <bits/stdc++-h>

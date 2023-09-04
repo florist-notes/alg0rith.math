@@ -24,6 +24,8 @@
 
 I am comfortable in Python and have experience with Python for AI (pytorch/tensorflow2/opencv) / Data Science (numpy/pandas/matplotlib/geopandas) / Flask. I had healthy discussions with Guido Van Rossum (Father / Creator of Python) [image](https://twitter.com/florist_notes/status/1639723261528358916) at Stanford and python is my primary scripting language.
 
+#### 🌸 Python [ [NOTES](./py.MD) ]
+
 <table width=100%>
 <tr>
 <th>Python Class</th>
