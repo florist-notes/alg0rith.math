@@ -2,7 +2,7 @@
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-
+<img src="./notes/map-of-mathematics.webp" width=53%> <img src="./notes/math.jpg" width=45%>
 
 ## Linear Algebra
 
