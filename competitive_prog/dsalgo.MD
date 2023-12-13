@@ -193,34 +193,34 @@ int main() {
 </td>
 <td>
 
-+ Number Theory
++ Number Theory [[notes](./code/number_theory.MD)]
     + Primes and Factors
     + Sieve of Erastosthenes
     + Euclid's Algorithm
     + Modular Exponentiation
     + Euler's Theorem
     + Solving Equations
-+ Combinatorics
++ Combinatorics [[notes](./code/combinatorics.MD)]
     + Binomial Coefficients
     + Catalan Numbers
     + Inclusion-Exclusion
     + Burnside's Lemma
     + Cayley's Formula
-+ Matrices
++ Matrices [[notes](./code/matrices.MD)]
     + Matrix Operations
     + Linear Recurrences
     + Graphs and Matrices
     + Gaussian Elimination
-+ Probability
++ Probability [[notes](./code/probability.MD)]
     + Working with Events
     + Random Variables
     + Markov Chains
     + Randomized Algorithms
-+ Game Theory
++ Game Theory [[notes](./code/gametheory.MD)]
     + Game States
     + Nim Game
     + Sprague-Grundy Theorem
-+ Fourier Transform
++ Fourier Transform  [[notes](./code/fft.MD)]
     + Working with Polynomials
     + FFT Algorithm
     + Calculating Convolutions
@@ -256,12 +256,12 @@ int main() {
 </td>
 <td>
 
-+ Geometric Techniques
++ Geometric Techniques [[notes](./code/geo/geometric.MD)]
     + Complex Numbers
     + Points and Lines
     + Polygon Area
     + Distance Functions
-+ Sweep Line Algorithms
++ Sweep Line Algorithms [[notes](./code/geo/sweepline.MD)]
     + Intersection Points
     + Closest Pair Problem
     + Convex Hull Problem
