@@ -82,11 +82,8 @@ tuple<int, int, int> gcd(int a, int b) {
 
 There is often need to efficiently calculate the value of x^nmod m. This can be done in O(logn) time using the following recursive formula:
 
-$$  x^n = \Biggl\{ {1}{, n = 0}    //
-
-
-{x^\frac{n}{2}x^\frac{n}{2}}{, n is even} //
-
+$$  x^n = \Biggl\{ {1}{, n = 0} | 
+{x^\frac{n}{2}x^\frac{n}{2}}{, n is even} | 
 {x^{n-1}x}{, n is odd}
 $$
 
