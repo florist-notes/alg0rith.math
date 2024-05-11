@@ -1,6 +1,6 @@
 # Practical Mathematics
 
-Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
+Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
 <img src="./notes/map-of-mathematics.webp" width=53%> <img src="./notes/math.jpg" width=45%>
 
@@ -193,14 +193,16 @@ probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=m
 
 ```
 
-<table style="overflow-x:auto;">
+<table style="overflow:auto;">
 <tr>
 <th>Surprise / Entropy</th>
 <th>Softmax</th>
 </tr>
 
 <tr>
-<td>While the probability captures the chance that an event occurs, the negative log probability, or "surprise", captures how unexpected an event is -- larger values mean it is more unexpected. Entropy measures the uncertainty or surprise associated with a probability distribution. Higher entropy values indicate more uncertainty or surprise.
+<td>
+
+While the probability captures the chance that an event occurs, the negative log probability, or "surprise", captures how unexpected an event is -- larger values mean it is more unexpected. Entropy measures the uncertainty or surprise associated with a probability distribution. Higher entropy values indicate more uncertainty or surprise.
 
 Given the probability mass function (pmf), we can always compute the suprise by taking the negative logarithm:
 
