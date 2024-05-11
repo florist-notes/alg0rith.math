@@ -190,7 +190,6 @@ pdf = norm.pdf(x, loc=mean, scale=std_dev)
 
 # Probability of X falling in the interval [-1, 1]
 probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=mean, scale=std_dev)
-
 ```
 
 <table style="overflow:auto;">
