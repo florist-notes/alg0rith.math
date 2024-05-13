@@ -1,27 +1,29 @@
-# Practical Mathematics
+# Practical Mathematics 🌸
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-<img src="./notes/map-of-mathematics.webp" width=53%> <img src="./notes/math.jpg" width=45%>
+<img src="./notes/math.jpg" width=100%>
+
+[map of mathematics](./notes/map-of-mathematics.webp)
 
 ## Linear Algebra
 
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
-Linear Algebra : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
+`Linear Algebra` : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
 
 $$ matmul(X,Y){i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
 
-Single Value Decomposition (SVD): Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
+`Single Value Decomposition (SVD)`: Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
 
 <img src="./svd.png" width=50%><img src="./svd2.webp" width=50%>
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
-### Matrix Decompositions
+## Matrix Decompositions
 
 [  Determinant and Trace,  Eigenvalues and Eigenvectors, Cholesky Decomposition, Eigendecomposition and Diagonalization, Singular Value Decomposition, Matrix Approximation, Matrix Phylogeny ]
 
@@ -46,7 +48,6 @@ print('Dimension and shape of matrix : ',matrix.ndim, ' and ', matrix.shape)
 The transpose of a matrix `M` is written in numpy as `M.T`.
 
 ```py
-
 a = 4
 b = 0
  
@@ -55,9 +56,7 @@ print("The value of a / b is : ")
 assert b != 0
 print(a / b)
 
-
-set_second_to_zero = np.array([[1, 0],
-                               [0, 0]])
+set_second_to_zero = np.array([[1, 0], [0, 0]])
 vector = [10, 1]
 assert (set_second_to_zero @ vector)[1] == 0
 ```
