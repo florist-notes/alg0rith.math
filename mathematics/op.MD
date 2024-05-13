@@ -1,5 +1,7 @@
 # Mathematical Optimizations
 
+Mathematical optimization plays a central role in machine learning, where the goal is to find the optimal parameters of a model that minimize a cost function, thereby improving its performance on unseen data. 
+
 ## Continuous Optimization:
 
 Continuous optimization means finding the minimum or maximum value of a function of one or many real variables, subject to constraints. The constraints usually take the form of equations or inequalities. 
@@ -104,7 +106,7 @@ maximize (or minimize) the function F(x, y) subject to the
 condition g(x, y) = 0.
 
 
-### Convex Optimization
+## Convex Optimization
 
 Convex optimization is a specialized field within optimization theory, focusing on problems where both the objective function and the feasible region (constraints) are convex.
 
@@ -146,4 +148,4 @@ print("Optimal Solution:", x.value)
 
 Notes and code on linear and nonlinear optimization of pose graphs for vSLAMs are @/[slam-backend-i](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/optimization.MD) and @github/[slam-backend-ii](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/optimization2.MD). All my notes on visual SLAM can be found @github/[vSLAM](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/README.MD). 
 
-Some good resources on Convex Optimization: [convex_optimization.pdf](./notes/convexopt.pdf), [introduction video](https://youtu.be/oLowhs83aHk?si=wb0bQ1pB7bpv4MaL) and class : { [Stanford University: Convex Optimization](https://www.edx.org/learn/engineering/stanford-university-convex-optimization) }.
+Some good resources on Convex Optimization: [convex_optimization.pdf](./notes/convexopt.pdf), [introduction video](https://youtu.be/oLowhs83aHk?si=wb0bQ1pB7bpv4MaL) and class : { [Stanford University: Convex Optimization](https://www.edx.org/learn/engineering/stanford-university-convex-optimization) }, [Optimization in Deep Learning](https://youtu.be/M2xkmc2oHUc?si=aNzpW22Xf5Yxz5aM), [Optimization for Deep Learning (Momentum, RMSprop, AdaGrad, Adam)](https://youtu.be/NE88eqLngkg?si=sYYHEkvpIJjhe96u).
