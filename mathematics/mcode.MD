@@ -19,7 +19,7 @@ Arrays represent linear functions. Linear functions really plays nice with weigh
 
 `Single Value Decomposition (SVD)`: Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
 
-<center><img src="./svdn.webp" width=50%></center>
+<center><img src="./svdn.webp" width=100%></center>
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
@@ -227,7 +227,7 @@ $$ surprise(p, i) = -log(p_i) $$
 
 <br/>
 
-$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+$$ softmax(x)_i = \frac{ e^{x_i} }{ \sum_{j} e^{x_j} } $$
 
 <br/>
 
