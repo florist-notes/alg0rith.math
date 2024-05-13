@@ -225,7 +225,11 @@ def softmax(x):
 
 $$ surprise(p, i) = -log(p_i) $$
 
+<br/>
+
 $$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+
+<br/>
 
 <table style="overflow:auto;">
 <tr>
