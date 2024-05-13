@@ -19,21 +19,13 @@ Arrays represent linear functions. Linear functions really plays nice with weigh
 
 `Single Value Decomposition (SVD)`: Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
 
-<img src="./svd.png" width=50%><img src="./svd2.webp" width=50%>
+<center><img src="./svd2.webp" width=50%></center>
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
-## Matrix Decompositions
+### Matrix Decompositions :
 
 [  Determinant and Trace,  Eigenvalues and Eigenvectors, Cholesky Decomposition, Eigendecomposition and Diagonalization, Singular Value Decomposition, Matrix Approximation, Matrix Phylogeny ]
-
-functions expects input of type float and returns float.
-
-```python
-def square(x: float) -> float:
-    return x ** 2
-```
-
 
 
 ```py
@@ -41,9 +33,7 @@ matrix = np.array([[1, 2], [3, 4], [5, 6]])  # 3 x 2 matrix
 vector = np.array([7, 8])  # length 2 vector
 
 print(matrix @ vector)  # multiply multiplication results in length 3 vector
-
 print('Dimension and shape of matrix : ',matrix.ndim, ' and ', matrix.shape)
-
 ```
 The transpose of a matrix `M` is written in numpy as `M.T`.
 
@@ -86,7 +76,6 @@ arrays = [np.array([[1, 2], [3, 4]]), np.array([[5, 6], [7, 8]])]
 print(arrays)
 
 print(np.concatenate(arrays))
-
 ```
 
 `numpy.allclose()` function is used to find if two arrays are element-wise equal within a tolerance and the `numpy.hstack()` function is used to stack arrays in sequence horizontally. More on linear algebra [here](https://github.com/wandb/edu/blob/main/math-for-ml/01_linearalgebra/extras.ipynb).
@@ -122,13 +111,11 @@ Gradient Descent:
 $$ x \longleftarrow x - \eta \nabla f(x) $$
 
 ```py
-
 f_x = x
 g_x = 2x^2
 
 # this prints the limit
 print(sympy.limit(f_x / g_x, x, 0))
-
 ```
 
 [sympy](https://www.sympy.org/en/index.html), a Python library for doing symbolic math (limits, integrals, algebra, and more!)
@@ -141,12 +128,10 @@ More on Calculus in [notebook 1](https://github.com/wandb/edu/blob/main/math-for
 [ Construction of a Probability Space, Discrete and Continuous Probabilities, Sum Rule, Product Rule, and Bayes’ Theorem, Summary Statistics and Independence, Gaussian Distribution, Conjugacy and the Exponential Family, Change of Variables/Inverse Transform ]
 
 ```py
-
 import numpy as np
 
 true_mu = -1.; true_sigma = 0.5; N = 20;
 data = true_sigma * np.random.standard_normal(size=N) + true_mu
-
 ```
 
 #### Probability Mass Function (PMF):
@@ -204,8 +189,6 @@ While the probability captures the chance that an event occurs, the negative log
 
 Given the probability mass function (pmf), we can always compute the suprise by taking the negative logarithm:
 
-$$ surprise(p, i) = -log(p_i) $$
-
 ```python
 
 import scipy.stats as stats
@@ -217,8 +200,6 @@ probabilities = np.array([1/6, 1/6, 1/6, 1/6, 1/6, 1/6])
 # Calculate entropy
 entropy = stats.entropy(probabilities, base=2)
 print("Entropy:", entropy)
-
-
 ```
 
 </td>
@@ -226,7 +207,7 @@ print("Entropy:", entropy)
 
 Softmax is a mathematical function often used in machine learning and deep learning to convert a vector of real numbers into a probability distribution. It takes an input vector and normalizes it to produce a set of values between 0 and 1 that sum up to 1. The Softmax function is commonly used for multi-class classification problems to determine the probabilities of each class.
 
-$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+
 
 ```python
 
@@ -235,14 +216,18 @@ import numpy as np
 def softmax(x):
     e_x = np.exp(x - np.max(x))  # Subtracting the maximum value for numerical stability
     return e_x / e_x.sum(axis=0)
-
 ```
 
 
 </td>
 </tr>
+</table>
 
+$$ surprise(p, i) = -log(p_i) $$
 
+$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+
+<table style="overflow:auto;">
 <tr>
 <th>Entropy and Cross-Entropy</th>
 <th>The KL-Divergence</th>
@@ -251,15 +236,9 @@ def softmax(x):
 <tr>
 <td>
 
-In information theory, the entropy of a random variable is defined, in terms of its probability mass function, as:
-
-$$ entropy(p) = \sum_{i} p_i . - log(p_i) $$
-
 This is the same as the expected value of the surprise -- if we were to draw a large number of samples of a random variable with p as its pmf, calculate the surprise function on each, and then take the average, it would be close to the entropy.
 
-If we draw samples according to the distribution p, but calculate the surprise using the distribution q, then the average surprise will not be the entropy. Instead, it will be the cross-entropy -- the entropy from mixing probability and surprise across distributions, which is defined as:
-
-$$ crossentropy(p, q) = \sum_{i} p_i . - log(q_i) $$
+If we draw samples according to the distribution p, but calculate the surprise using the distribution q, then the average surprise will not be the entropy. Instead, it will be the cross-entropy -- the entropy from mixing probability and surprise across distributions.
 
 It measures the dissimilarity between the predicted probability distribution and the true (target) probability distribution. In the context of binary classification, the cross-entropy loss is often referred to as "binary cross-entropy," while for multi-class classification, it's called "categorical cross-entropy."
 
@@ -276,7 +255,6 @@ def categorical_cross_entropy(y_true, y_pred):
     epsilon = 1e-15  # Small constant to avoid log(0)
     y_pred = np.clip(y_pred, epsilon, 1 - epsilon)  # Clip to avoid invalid log values
     return - np.sum(y_true * np.log(y_pred), axis=-1)
-
 ```
 
 
@@ -293,14 +271,22 @@ Q = np.array([0.2, 0.6, 0.2])
 # Calculate KL divergence from Q to P
 kl_divergence = stats.entropy(P, Q, base=2)
 print("KL Divergence:", kl_divergence)
-
 ```
 
 The cross-entropy gives us one way to measure how different two probability mass functions are -- almost like a notion of distance between two pmfs.
 
 But the distance from a point to itself should be 0, while crossentropy(p, p) == entropy(p)
 
-So instead of using the cross-entropy, it is sometimes convenient to use a different quantity to measure the difference between two probability distributions, the divergence:
+So instead of using the cross-entropy, it is sometimes convenient to use a different quantity to measure the difference between two probability distributions.
+
+
+</td>
+</tr>
+
+</table>
+
+$$ entropy(p) = \sum_{i} p_i . - log(p_i) $$
+$$ crossentropy(p, q) = \sum_{i} p_i . - log(q_i) $$
 
 $$ divergence(p, q) = \sum_{i} p_i . -log(\frac{q_i}{p_i}) $$
 
@@ -309,12 +295,8 @@ and we can say:
 
 $$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
 
-</td>
-</tr>
 
-</table>
-
-#### Minimizing the Surprise with Gradient Descent: The Gaussian Distribution and its Surprise Function
+### Minimizing the Surprise with Gradient Descent: The Gaussian Distribution and its Surprise Function
 
 Cross Entropy is the average surprise using the pmf q on samples from the pmf p.
 
@@ -330,7 +312,6 @@ where
  The surprise function in the context of the Gaussian distribution typically refers to the likelihood or probability of observing a specific value or range of values from the distribution.
 
 ```python
-
 import numpy as np
 import scipy.stats as stats
 
@@ -354,8 +335,6 @@ surprise = 1 / pdf_value  # Inverse of PDF value
 print("PDF at x:", pdf_value)
 print("CDF at x:", cdf_value)
 print("Surprise at x:", surprise)
-
-
 ```
 
 More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/main/math-for-ml/03_probability/extras.ipynb) notebook.
