@@ -157,7 +157,11 @@ int main() {
   + If the Item Cannot Be Included : `dp[i][w] = dp[i-1][w]` : If the current item's weight exceeds the current capacity `w`, it cannot be included, so we just carry forward the value without including this item.
 
 
-`Longest Increasing Subsequence (LIS) :` Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order.
+🌸 `Longest Increasing Subsequence (LIS) :` Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order. Given an array of integers, the goal is to find the length of the longest subsequence that is strictly increasing. A subsequence is a sequence derived by deleting some or none of the elements from the array without changing the order of the remaining elements.
+
+Given the array `[10, 22, 9, 33, 21, 50, 41, 60, 80]`, one of the longest increasing subsequences is `[10, 22, 33, 50, 60, 80]`, which has a length of 6.
+
+The idea is to use a dynamic programming array `dp` where `dp[i]` represents the length of the longest increasing subsequence that ends with the element at index `i`.
 
 ```cpp
 #include <iostream>
