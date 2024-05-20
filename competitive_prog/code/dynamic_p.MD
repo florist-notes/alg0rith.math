@@ -114,4 +114,35 @@ int main() {
 }
 ```
 
+`Longest Increasing Subsequence (LIS) :` Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int lis(const vector<int>& arr) {
+    int n = arr.size();
+    vector<int> dp(n, 1);  // Initialize LIS values for all indexes as 1
+    
+    for (int i = 1; i < n; ++i) {
+        for (int j = 0; j < i; ++j) {
+            if (arr[i] > arr[j] && dp[i] < dp[j] + 1) {
+                dp[i] = dp[j] + 1;
+            }
+        }
+    }
+    
+    return *max_element(dp.begin(), dp.end());
+}
+
+int main() {
+    vector<int> arr = {10, 22, 9, 33, 21, 50, 41, 60, 80};
+    cout << "Length of LIS = " << lis(arr) << endl;
+    return 0;
+}
+```
+
 Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7) ]
