@@ -144,8 +144,17 @@ int main() {
 
 + Filling the DP Table :
   
-  + `dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])` : If the current item can be included in the knapsack, we decide whether to include it or not by taking the maximum value of including it or excluding it.
-  + `dp[i][w] = dp[i-1][w]` : If the current item's weight exceeds the current capacity `w`, it cannot be included, so we just carry forward the value without including this item.
+  + `dp[i][w]` will store the maximum value achievable with the first i items and capacity w.
+  + `if (weights[i - 1] <= w) {` : This condition checks if the weight of the current item i (which is `weights[i - 1]` because our item indices start from 0) is less than or equal to the current capacity `w`. If `weights[i - 1] <= w`, it means the current item can potentially be included in the knapsack.
+  + If the Item Can Be Included : 
+  ```
+    + Exclude the item: The value is the same as dp[i - 1][w], which means the maximum value without considering the current item.
+
+    + Include the item: The value is dp[i - 1][w - wt[i - 1]] + val[i - 1], which means we add the current item's value to the maximum value that can be obtained with the remaining capacity (w - weights[i - 1]).
+  ``` 
+  We take the maximum of these two values to get the best value possible for `dp[i][w]`.
+
+  + If the Item Cannot Be Included : `dp[i][w] = dp[i-1][w]` : If the current item's weight exceeds the current capacity `w`, it cannot be included, so we just carry forward the value without including this item.
 
 
 `Longest Increasing Subsequence (LIS) :` Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order.
@@ -179,4 +188,4 @@ int main() {
 }
 ```
 
-Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7), Mastering Dynamic Programming - How to solve any interview problem - [(Part 1)](https://youtu.be/Hdr64lKQ3e4?si=gyxiDKqWIzPo_EGx), [(Part 2)](https://youtu.be/rE5h11FwiVw?si=Bv5AKug6xIZOJjwV), NeetCode - [Dynamic Programming](https://www.youtube.com/watch?v=g0npyaQtAQM&list=PLot-Xpze53lcvx_tjrr_m2lgD2NsRHlNO), [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=kKhLpcDl7AAf1oVH) ]
+Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7), Mastering Dynamic Programming - How to solve any interview problem - [(Part 1)](https://youtu.be/Hdr64lKQ3e4?si=gyxiDKqWIzPo_EGx), [(Part 2)](https://youtu.be/rE5h11FwiVw?si=Bv5AKug6xIZOJjwV), NeetCode - [Dynamic Programming](https://www.youtube.com/watch?v=g0npyaQtAQM&list=PLot-Xpze53lcvx_tjrr_m2lgD2NsRHlNO), [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=kKhLpcDl7AAf1oVH), [DP Series](https://www.youtube.com/watch?v=PGsgv6nXhLw&list=PLDzeHZWIZsTomOPnCiU3J95WufjE36wsb) ]
