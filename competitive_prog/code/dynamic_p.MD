@@ -133,6 +133,21 @@ int main() {
 }
 ```
 
++ `vector<vector<int>>` : This declares a 2D vector, which is essentially a vector of vectors.
+`dp` is the name of this 2D vector. 
+
++ `dp(n + 1, vector<int>(W + 1, 0))` : This initializes the 2D vector dp with dimensions (n + 1) x (W + 1). `n + 1` is the number of rows. We add 1 to n to account for the case when no items are included (i = 0) and similarly for w.
+
++ `vector<int>(W + 1, 0)` : This is the constructor for a vector of integers with size `W + 1`, where all elements are initialized to 0. Each element in this vector represents the maximum value achievable with a specific capacity of the knapsack.
+
++ `dp(n + 1, ...)` : This constructs the outer vector, which contains `n + 1` elements. Each of these elements is itself a vector of size `W + 1` initialized to 0.
+
++ Filling the DP Table :
+  
+  + `dp[i][w] = max(dp[i-1][w], dp[i-1][w-weights[i-1]] + values[i-1])` : If the current item can be included in the knapsack, we decide whether to include it or not by taking the maximum value of including it or excluding it.
+  + `dp[i][w] = dp[i-1][w]` : If the current item's weight exceeds the current capacity `w`, it cannot be included, so we just carry forward the value without including this item.
+
+
 `Longest Increasing Subsequence (LIS) :` Given an array of integers, find the length of the longest subsequence such that all elements of the subsequence are sorted in increasing order.
 
 ```cpp
