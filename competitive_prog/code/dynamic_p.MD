@@ -10,7 +10,7 @@
 
 ### Example Problems and Solutions :
 
-`Fibonacci Sequence` : The Fibonacci sequence is a classic example of a DP problem. The  𝑛-th Fibonacci number is defined as:
+🌸 `Fibonacci Sequence` : The Fibonacci sequence is a classic example of a DP problem. The  𝑛-th Fibonacci number is defined as:
 
 $$ F(n) = F(n-1) + F(n-2) $$
 
@@ -43,7 +43,7 @@ int fib(int n) {
 int main() {
     int n = 10;
     memo.assign(n + 1, -1);
-    cout << "Fibonacci("<< n <<") = "<< fib(n) <<endl;
+    cout << "Fibonacci("<< n <<") = "<<fib(n)<<endl;
     return 0;
 }
 ```
@@ -70,7 +70,7 @@ int fib(int n) {
 
 int main() {
     int n = 10;
-    cout << "Fibonacci("<< n <<") = "<< fib(n) <<endl;
+    cout << "Fibonacci("<< n <<") = "<<fib(n)<<endl;
     return 0;
 }
 ```
@@ -78,9 +78,28 @@ int main() {
 </tr>
 </table>
 
-`0/1 Knapsack Problem` : Given weights and values of 𝑛 items, put these items in a knapsack of capacity 𝑊 to get the maximum total value in the knapsack.
+`memo.assign(n + 1, -1)`: Initializes the `memo` vector with `n+1` elements, all set to `-1`. This indicates that no Fibonacci numbers have been computed yet. We use `n+1` to ensure the vector has a slot for each Fibonacci number from 0 to `n`.
+
+🌸 `0/1 Knapsack Problem` : Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible. Each item can either be taken (1) or not taken (0), hence the name 0/1 Knapsack Problem.
 
 DP Solution with Tabulation:
+
++ Initialize `dp[i][0]` = 0 for all i (if the capacity is 0, the value is 0).
++ Initialize `dp[0][w]` = 0 for all w (if there are no items, the value is 0).
+
+<pre>
+    <code>
+    For each item i (from 1 to n):
+        For each capacity w (from 1 to W):
+            If the weight of the item i is less than or equal to w:
+                dp[i][w] = max(dp[i-1][w], dp[i-1][w-weight[i]] + value[i])
+            Else:
+                dp[i][w] = dp[i-1][w]
+</code>
+</pre>
+
+The value at `dp[n][W]` will be the maximum value that can be achieved with `n` items and capacity `W`.
+
 ```cpp
 #include <iostream>
 #include <vector>
@@ -145,4 +164,4 @@ int main() {
 }
 ```
 
-Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7) ]
+Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7), Mastering Dynamic Programming - How to solve any interview problem - [(Part 1)](https://youtu.be/Hdr64lKQ3e4?si=gyxiDKqWIzPo_EGx), [(Part 2)](https://youtu.be/rE5h11FwiVw?si=Bv5AKug6xIZOJjwV), NeetCode - [Dynamic Programming](https://www.youtube.com/watch?v=g0npyaQtAQM&list=PLot-Xpze53lcvx_tjrr_m2lgD2NsRHlNO), [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=kKhLpcDl7AAf1oVH) ]
