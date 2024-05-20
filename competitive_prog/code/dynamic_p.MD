@@ -43,7 +43,7 @@ int fib(int n) {
 int main() {
     int n = 10;
     memo.assign(n + 1, -1);
-    cout << "Fibonacci(" << n << ") = " << fib(n) << endl;
+    cout << "Fibonacci("<< n <<") = "<< fib(n) <<endl;
     return 0;
 }
 ```
@@ -70,13 +70,48 @@ int fib(int n) {
 
 int main() {
     int n = 10;
-    cout << "Fibonacci(" << n << ") = " << fib(n) << endl;
+    cout << "Fibonacci("<< n <<") = "<< fib(n) <<endl;
     return 0;
 }
 ```
-
 </td>
 </tr>
 </table>
+
+`0/1 Knapsack Problem` : Given weights and values of 𝑛 items, put these items in a knapsack of capacity 𝑊 to get the maximum total value in the knapsack.
+
+DP Solution with Tabulation:
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+int knapsack(int W, const vector<int>& wt, const vector<int>& val, int n) {
+    vector<vector<int>> dp(n + 1, vector<int>(W + 1, 0));
+    
+    for (int i = 1; i <= n; ++i) {
+        for (int w = 0; w <= W; ++w) {
+            if (wt[i-1] <= w) {
+                dp[i][w] = max(val[i-1] + dp[i-1][w - wt[i-1]], dp[i-1][w]);
+            } else {
+                dp[i][w] = dp[i-1][w];
+            }
+        }
+    }
+    return dp[n][W];
+}
+
+int main() {
+    int W = 50;
+    vector<int> wt = {10, 20, 30};
+    vector<int> val = {60, 100, 120};
+    int n = wt.size();
+    
+    cout << "Maximum value in knapsack = " << knapsack(W, wt, val, n) << endl;
+    return 0;
+}
+```
 
 Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7) ]
