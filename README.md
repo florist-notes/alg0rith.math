@@ -5,8 +5,7 @@ my notes on mathematics, algorithms and programming:
 ## Essence of Mathematics [[notes](./mathematics/README.MD)]
 
 ```latex
-    mathematics ~ θ
-
+    mathematics ~ || Δ x ||
 ```
 
 ## Python [[notes](./python/README.MD)] 
@@ -21,8 +20,7 @@ my notes on mathematics, algorithms and programming:
 
 ## C++, STL and CMake [[notes](./competitive_prog/)] 
 ```cpp
-    #include <bits/stdc++-h>
-
+    #include <bits/stdc++.h>
 ```
 
 ## Data Structure and Algorithms [[notes](./competitive_prog/dsalgo.MD)]

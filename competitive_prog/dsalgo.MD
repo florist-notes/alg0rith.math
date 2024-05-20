@@ -53,13 +53,14 @@ int main() {
     depth_first_search(1);
     std::cout << "Height of the Tree : " << dp[1] << std::endl;
 }
-
 ```
 
 <table width=100%>
 <tr>
 <th>Sorting and Searching</th>
-<th>Data Structure</th>
+<th>
+
+Data Structure [[NOTES](./code/ds.MD)]</th>
 </tr>
 <tr>
 <td>
@@ -97,8 +98,12 @@ int main() {
 </tr>
 
 <tr>
-<th>Dynamic Programming</th>
-<th>Graph Algorithms</th>
+<th>
+
+Dynamic Programming [[NOTES](./code/dynamic_p.MD)]</th>
+<th>
+
+Graph Algorithms [ [NOTES](./code/graph_base.MD) ] </th>
 </tr>
 <tr>
 <td>
@@ -116,7 +121,7 @@ int main() {
 </td>
 <td>
 
-+ Basics of Graphs
++ Basics of Graphs 
     + Graph Terminiology and Representation
 + Graph Traversal
     + Depth First Search (DFS)
@@ -228,7 +233,9 @@ int main() {
 </tr>
 
 <tr>
-<th>Advanced Graph Algorithms</th>
+<th>
+
+Advanced Graph Algorithms [[NOTES](./code/graph_advanced.MD)]</th>
 <th>Geometry</th>
 </tr>
 <tr>

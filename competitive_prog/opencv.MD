@@ -4,9 +4,7 @@
 <img src="img/opencv.png" width=30%>
 
 ```cpp
-
 #include <opencv2/opencv.hpp>
-
 ```
 NOTES : [IMAGE PROCESSING with OpenCV](./imageprocess.MD)
 
