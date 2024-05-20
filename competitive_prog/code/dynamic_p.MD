@@ -163,6 +163,16 @@ Given the array `[10, 22, 9, 33, 21, 50, 41, 60, 80]`, one of the longest increa
 
 The idea is to use a dynamic programming array `dp` where `dp[i]` represents the length of the longest increasing subsequence that ends with the element at index `i`.
 
+<pre>
+<code>
+        For each element `arr[i]` in the array (starting from the second element):
+            Check all elements before it (`arr[j]` where `j < i`).
+            If `arr[j] < arr[i]`, then `arr[i]` can be appended to the increasing subsequence ending at `arr[j]`.
+            Update `dp[i]` to `max(dp[i], dp[j] + 1)`.
+</code>
+</pre>
+
+
 ```cpp
 #include <iostream>
 #include <vector>
