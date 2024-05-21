@@ -206,7 +206,7 @@ Key Operations:
     + operator[]: Accesses or modifies the value associated with a key.
     + size(): Returns the number of key-value pairs.
 
-## Bitwsie 🌸:
+## Bitwise 🌸:
 
 
 <table width=100%>
@@ -335,5 +335,93 @@ int main() {
 </tr>
 </table>
 
+## Using `bitset` in STL :
+
+The `bitset` class in the STL provides an easy way to handle fixed-size sequences of bits. It's useful for tasks that involve bit manipulation, such as representing sets or flags.
+
++ Creating and Initializing a `bitset` :
+
+```cpp
+#include <bitset>
+#include <iostream>
+
+int main() {
+    std::bitset<8> bits1;  // Default initializes to 00000000
+    std::bitset<8> bits2(5);  // Initializes to 00000101
+    std::bitset<8> bits3("1100");  // Initializes to 00001100
+
+    std::cout << "bits1: " << bits1 << std::endl;
+    std::cout << "bits2: " << bits2 << std::endl;
+    std::cout << "bits3: " << bits3 << std::endl;
+
+    return 0;
+}
+```
+
++ Accessing and Modifying Bits :
+
+```cpp
+#include <bitset>
+#include <iostream>
+
+int main() {
+    std::bitset<8> bits(5);  // 00000101
+
+    std::cout << "Initial bits: " << bits << std::endl;
+
+    bits.set(1);  // Sets bit at position 1 (00000111)
+    bits.reset(2);  // Resets bit at position 2 (00000011)
+    bits.flip(0);  // Flips bit at position 0 (00000010)
+
+    std::cout << "Modified bits: " << bits << std::endl;
+
+    return 0;
+}
+```
+
++ Bitset Operations :
+
+```cpp
+#include <bitset>
+#include <iostream>
+
+int main() {
+    std::bitset<8> bits1(5);  // 00000101
+    std::bitset<8> bits2(3);  // 00000011
+
+    std::cout << "bits1 & bits2: " << (bits1 & bits2) << std::endl;  // 00000001
+    std::cout << "bits1 | bits2: " << (bits1 | bits2) << std::endl;  // 00000111
+    std::cout << "bits1 ^ bits2: " << (bits1 ^ bits2) << std::endl;  // 00000110
+
+    return 0;
+}
+```
+
+### Other Useful Methods :
+
++ `count()`: Returns the number of set bits.
++ `any()`: Checks if any bit is set.
++ `none()`: Checks if no bits are set.
++ `all()`: Checks if all bits are set.
++ `to_ulong()`: Converts the bitset to an unsigned long.
+
+```cpp
+#include <bitset>
+#include <iostream>
+
+int main() {
+    std::bitset<8> bits(29);  // 00011101
+
+    std::cout << "Number of set bits: " << bits.count() << std::endl;
+    std::cout << "Any bits set: " << bits.any() << std::endl;
+    std::cout << "No bits set: " << bits.none() << std::endl;
+    std::cout << "All bits set: " << bits.all() << std::endl;
+
+    unsigned long num = bits.to_ulong();
+    std::cout << "Bitset as unsigned long: " << num << std::endl;
+
+    return 0;
+}
+```
 
 Resources : My [notes](https://github.com/florist-notes/alg0rith.math/blob/main/competitive_prog/stl.MD) on STL Data Structures with C++, [geeksforgeeks.org/data-structures/](https://www.geeksforgeeks.org/data-structures/), [cpp-builtin-ds_cheatsheet](https://www.codecademy.com/learn/c-plus-plus-for-programmers/modules/cpp-built-in-data-structures/cheatsheet), [cplusplus.com/data-structures](https://cplusplus.com/doc/tutorial/structures/), @github/[TheAlgorithms_CPlusPlus](https://github.com/TheAlgorithms/C-Plus-Plus), @github/[algorithms&ds](https://github.com/mandliya/algorithms_and_data_structures), [C++ STL](https://www.youtube.com/watch?v=R5BEcvTVZj0&list=PLauivoElc3gh3RCiQA82MDI-gJfXQQVnn), [C++ Bitwise Operators](https://www.youtube.com/watch?v=9univCkSz9c&list=PLQMs5svASiXMy79a5wQRk5cSnBPn445ab), [Intro to Binary and Bitwise Operators in C++](https://youtu.be/KXwRt7og0gI?si=DqyS2qS13KtN2QkB), [Bitwise AND (&), OR (|), XOR (^) and NOT (~) in C++](https://youtu.be/HoQhw6_1NAA?si=YDEXw99GMj7ACKAF), [Bitmasking and Bitmanipulation](https://www.youtube.com/watch?v=oL5bmRUbAJ4&list=PLX0iyO9CrCF1-4je7G0JMSr_50I0J2K3Z), [Complete Bitwise Operations Practice - Noob to Expert | Topic Stream 8](https://www.youtube.com/live/UPVoGMZWQMU?si=LwlT0WDOsnK1TzM9), [Lecture 5: Bitwise Operators, For Loops, Operator Precedence & Variable Scoping](https://youtu.be/yjdQHb2elqI?si=8DJnMwxyyUDrGPnD).
