@@ -213,4 +213,6 @@ Directed Acyclic Graphs : LIS = Longest path in DAG + 1. LIS [4] = 1 + max { LIS
 
 <img src="img/boxstack_generalize.png" width=100%>
 
+<img src="img/boxstack_algo.png" width=100%>
+
 Resources : [ Video : [5 Simple Steps for Solving Dynamic Programming Problems](https://youtu.be/aPQY__2H3tE?si=5E-UJDxwCPKKrxC7), Mastering Dynamic Programming - How to solve any interview problem - [(Part 1)](https://youtu.be/Hdr64lKQ3e4?si=gyxiDKqWIzPo_EGx), [(Part 2)](https://youtu.be/rE5h11FwiVw?si=Bv5AKug6xIZOJjwV), NeetCode - [Dynamic Programming](https://www.youtube.com/watch?v=g0npyaQtAQM&list=PLot-Xpze53lcvx_tjrr_m2lgD2NsRHlNO), [Dynamic Programming - Learn to Solve Algorithmic Problems & Coding Challenges](https://youtu.be/oBt53YbR9Kk?si=kKhLpcDl7AAf1oVH), [DP Series](https://www.youtube.com/watch?v=PGsgv6nXhLw&list=PLDzeHZWIZsTomOPnCiU3J95WufjE36wsb), hackerEarth - [Dynamic Programming](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/), leetcode - [Dynamic Programming](https://leetcode.com/tag/dynamic-programming/) ]
