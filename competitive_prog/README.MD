@@ -1,6 +1,6 @@
 # C++, CV and CMake 🌸
 
-A short introduction to c++ for AI and Robotics:
+A short introduction to C++ for AI and Robotics:
 
 ```
         🌸
