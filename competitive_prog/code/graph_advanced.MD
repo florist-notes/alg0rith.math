@@ -6,6 +6,8 @@ NOTES : [graph_theory.MD](./graph_base.MD) 🌸
 
 + `Definition`: A directed graph is strongly connected if there is a path from any vertex to every other vertex. In other words, for every pair of vertices (u, v), there should be a directed path from u to v and a directed path from v to u.
 
+In the mathematical theory of directed graphs, a graph is said to be strongly connected if every vertex is reachable from every other vertex. 
+
 + `Finding Strongly Connected Components (SCCs)`: To find all the SCCs in a graph, we can use Kosaraju's Algorithm.
 
 ### `Kosaraju's Algorithm`
