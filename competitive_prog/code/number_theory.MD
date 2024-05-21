@@ -1,5 +1,17 @@
 # Number Theory:
 
+Number theory is a branch of mathematics that deals with the properties and relationships of numbers, particularly integers. It explores patterns, properties, and relationships among numbers, often focusing on topics like divisibility, prime numbers, modular arithmetic, and Diophantine equations.
+
+Here's an overview of some key concepts in number theory:
+
++ `Divisibility`: Divisibility is a fundamental concept in number theory. An integer 𝑎 is said to be divisible by another integer 𝑏 if the division 𝑎/𝑏 yields an integer result without any remainder. The "divides" symbol is often denoted as 𝑏∣𝑎 .
+
++ `Prime Numbers`: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Prime numbers play a crucial role in number theory and have applications in various fields like cryptography and computer science.
+
++ `Modular Arithmetic`: Modular arithmetic deals with operations on numbers that have a fixed "modulus" or "modulo". It involves performing arithmetic operations like addition, subtraction, multiplication, and exponentiation with respect to a modulus. Modular arithmetic has applications in cryptography, computer science, and various other fields.
+
++ `Diophantine Equations`: Diophantine equations are polynomial equations with integer coefficients, where the goal is to find integer solutions. These equations are named after the ancient Greek mathematician Diophantus, who studied them extensively.
+
 ### Primes and Factors
 
 -  Basic Algorithm:
