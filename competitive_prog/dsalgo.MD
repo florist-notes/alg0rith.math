@@ -65,7 +65,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
 <tr>
 <td>
 
-+ Sorting Algorithms
++ Sorting Algorithms [[vis](https://youtu.be/kPRA0W1kECg?si=uO5HzuvqUQRD6kRi), [vid](https://youtu.be/RfXt_qHDEPw?si=lR0mDz9Ea-0vOW21) ]
     + Bubble Sort
     + Merge Sort
     + Sorting Lower Bound
@@ -250,14 +250,14 @@ Advanced Graph Algorithms [[NOTES](./code/graph_advanced.MD)]</th>
     + Hamiltonian Paths
     + Applications
 + Maximum Flows
-    + Ford-Fulkerson Algorithm
+    + Ford-Fulkerson Algorithm [ [vid](https://youtu.be/LdOnanfc5TM?si=AwNVmlDPJEBdZhpq), [source_c vid](https://youtu.be/Xu8jjJnwvxE?si=Ge8Hwx9HV9PGxFF0) ]
     + Disjoint Paths
     + Maximum Matchings
     + Path Covers
 + Depth-First Search Trees
     + Biconnectivity
     + Eulerian Subgraphs
-+ Minimum Cost Flows
++ Minimum Cost Flows [ [vid](https://youtu.be/0tjpC0MCwY8?si=I5QVh5pjfgsvCBuD) ]
     + Minimum Cost Paths Algorithm
     + Minimum Weight Matchings
     + Improving the Algorithm
@@ -277,7 +277,9 @@ Advanced Graph Algorithms [[NOTES](./code/graph_advanced.MD)]</th>
 </tr>
 
 <tr>
-<th>String Algorithms</th>
+<th>
+
+String Algorithms [ [Knuth–Morris–Pratt KMP](https://youtu.be/JoF0Z7nVSrA?si=iMPeo4CseACh1LXx) ]</th>
 <th>Additional Topics</th>
 </tr>
 <tr>
