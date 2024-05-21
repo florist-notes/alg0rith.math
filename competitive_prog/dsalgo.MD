@@ -1,13 +1,15 @@
 # 🌸 Data Structure and Algorithms in c++
 
-[ [Stanford : Algorithms](https://www.coursera.org/account/accomplishments/specialization/MLPWX6Q7QDPE), [UCSD : Data Structure and Algorithms](https://www.coursera.org/account/accomplishments/specialization/X4SKMS9Y4AKX) ]
+[ [Stanford : Algorithms](https://www.coursera.org/account/accomplishments/specialization/MLPWX6Q7QDPE), [UCSD : Data Structure and Algorithms](https://www.coursera.org/account/accomplishments/specialization/X4SKMS9Y4AKX), [ACM ICPC Bootcamp](https://drive.google.com/file/d/1EAe5LGf5Y4amPhabn3YUcnUBpWy5Sf_i/view?usp=sharing) - [C](https://drive.google.com/file/d/1tNpiDAwh4cJ4vE1Z2F8t8W5BtTxdcNBg/view?usp=sharing) ]
+
+### Depth First Search (DFS) : 
 
 ```cpp
 #include <iostream>
 #include <vector>
 
 // global declarations
-// no of nodes max limit.
+// MAX is the maximum limit for the number of nodes (100,000).
 const int MAX = 1e5;
 // adjacency list
 std::vector<int> adj[MAX];
@@ -55,6 +57,14 @@ int main() {
 }
 ```
 
+`DFS Function`:
++ `depth_first_search(int u)` is a recursive function to perform DFS starting from node u.
++ Marks node `u` as visited.
++ Initializes `child_height` to 1, representing the height of a single node.
++ Iterates over all adjacent nodes `v` of `u`. If v is not visited, it recursively calls `depth_first_search(v)`.
++ Updates `child_height` to the maximum height found among all child nodes plus one (for the current node).
++ Assigns the calculated `child_height` to `dp[u]`, representing the height of the subtree rooted at node u.
+
 <table width=100%>
 <tr>
 <th>Sorting and Searching</th>
@@ -65,7 +75,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
 <tr>
 <td>
 
-+ Sorting Algorithms [[vis](https://youtu.be/kPRA0W1kECg?si=uO5HzuvqUQRD6kRi), [vid](https://youtu.be/RfXt_qHDEPw?si=lR0mDz9Ea-0vOW21) ]
++ Sorting Algorithms [ [vis](https://youtu.be/kPRA0W1kECg?si=uO5HzuvqUQRD6kRi), [vid](https://youtu.be/RfXt_qHDEPw?si=lR0mDz9Ea-0vOW21) ]
     + Bubble Sort
     + Merge Sort
     + Sorting Lower Bound
@@ -75,7 +85,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
     + Sweep Line Algorithms
     + Scheduling Events
     + Tasks and Deadlines
-+ Binary Search
++ Binary Search [[vid](https://www.youtube.com/watch?v=j7NodO9HIbk&list=PL_z_8CaSLPWeYfhtuKHj-9MpYb6XQJ_f2), [vid2](https://www.youtube.com/watch?v=_NT69eLpqks&list=PLgUwDviBIf0pMFMWuuvDNMAkoQFi-h0ZF)]
     + Implementing the Search
     + Finding Optimal Solutions
 </td>
@@ -90,7 +100,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
     + Maps
     + Priority Queues
     + Policy-Based Sets
-+ Bitwise
++ Bitwise Operators
 + Experiments:
     + Set Versus Sorting
     + Map Versus Array
@@ -125,23 +135,23 @@ Graph Algorithms [ [NOTES](./code/graph_base.MD) ] </th>
 + Basics of Graphs 
     + Graph Terminiology and Representation
 + Graph Traversal
-    + Depth First Search (DFS)
-    + Breadth First Search (BFS)
+    + Depth First Search (DFS) [ [vid](https://youtu.be/PMMc4VsIacU?si=Kj61sdv_XsUmqPKV) ]
+    + Breadth First Search (BFS) [ [vid](https://youtu.be/xlVX7dXLS64?si=tghVUkm_m1PPptNR) ]
     + Applications
-+ Shortest Paths
-    + Bellman-Ford Algorithm
-    + Djikstra's Algorithm
-    + Floyd-Warshall Algorithm
-+ Directed Acyclic Graphs
-    + Topological Sorting
++ Shortest Paths [[A Comparison of Pathfinding Algorithms](https://youtu.be/GC-nBgi9r0U?si=HFC4qFxyv-3-49_E), ([A*](https://youtu.be/A60q6dcoCjw?si=431GbLaSDTGEuTJ0))]
+    + Bellman-Ford Algorithm [[vid](https://youtu.be/0vVofAhAYjc?si=OaTh40rJDK86Qnjp)]
+    + Djikstra's Algorithm [[vid](https://youtu.be/EFg3u_E6eHU?si=iiCDRSS_0RaEyfxJ)]
+    + Floyd-Warshall Algorithm [ [vid](https://youtu.be/YbY8cVwWAvw?si=NOm4e3tyEaUkuSm8), [vid2](https://youtu.be/oNI0rf2P9gE?si=QwUWMYM8GFK_ZNF6) ]
++ Directed Acyclic Graphs [[vid](https://youtu.be/TXkDpqjDMHA?si=8TNK5ROF9zV_DDRy)]
+    + Topological Sorting [[vid](https://youtu.be/eL-KzMXSXXI?si=0RZg0d8oWhpXDlqp) - [Kahn's Algorithm](https://youtu.be/cIBFEhD77b4?si=rH5m3JIQ3jxwaJQM)]
     + Dynamic Programming
 + Successor Graphs
     + Finding Successors
     + Cycle Detection
-+ Minimum Spanning Trees
-    + Kruskal's Algorithm
-    + Union-Find Structure
-    + Prim's Algorithm
++ Minimum Spanning Trees [ [vid](https://www.youtube.com/@SpanningTree) ]
+    + Kruskal's Algorithm [ [vid](https://youtu.be/JZBQLXgSGfs?si=hOPRO-UXober8gHE) ]
+    + Union-Find Structure [ [vid](https://youtu.be/Kptz-NVA2RE?si=oxz3lWswA3iiCPte), [vid2](https://youtu.be/0jNmHPfA_yE?si=xmPnwOjSmjLyJK20), [vid3](https://youtu.be/VHRhJWacxis?si=w9Z425PIM6RWKlRF) ]
+    + Prim's Algorithm [[vid](https://youtu.be/jsmMtJpPnhU?si=zzj2ZKEEzo3ab644), [vid2](https://youtu.be/xq3ABa-px_g?si=d-ll9hfEuuIVeigf) - [source_c vid](https://youtu.be/CI5Fvk-dGVs?si=D48jSUqfRAAkdL6O)]
 </td>
 </tr>
 
@@ -171,14 +181,16 @@ Graph Algorithms [ [NOTES](./code/graph_base.MD) ] </th>
     + Sum Queries
     + Minimum Queries
 + Tree Structures
-    + Binary Indexed Trees
-    + Segment Trees
+    + Binary Indexed Trees (Fenwick Tree) [[vid](https://youtu.be/CWDQJGaN1gY?si=bhmwMfnjrhIu7Cj0)]
+    + Segment Trees [[vid](https://youtu.be/ZBHKZF5w4YU?si=SVkicurzuwGuiavz), [p_list](https://www.youtube.com/watch?v=xOogmSgym9Y&list=PLTenPTx8NQDJniUgCDAydREd8h2Bbi_NX)]
     + Additional Techniques
 </td>
 </tr>
 
 <tr>
-<th>Tree Algorithms</th>
+<th>
+
+Tree Algorithms [[vid p_list](https://www.youtube.com/watch?v=AylOfzYJ2qE&list=PLqM7alHXFySHCXD7r1J0ky9Zg_GBB1dbk)]</th>
 <th>Mathematics</th>
 </tr>
 <tr>
@@ -243,7 +255,7 @@ Advanced Graph Algorithms [[NOTES](./code/graph_advanced.MD)]</th>
 <td>
 
 + Strong Connectivity
-    + Kosaraju's Algorithm
+    + Kosaraju's Algorithm [[vid](https://youtu.be/R6uoSjZ2imo?si=hXSw5-CPCqu5pUUI), [vid2](https://youtu.be/RpgcYiky7uw?si=8sBSgvIvtGpDp6pp)]
     + 2SAT Problem
 + Complete Paths
     + Eulerian Paths
@@ -271,8 +283,8 @@ Advanced Graph Algorithms [[NOTES](./code/graph_advanced.MD)]</th>
     + Distance Functions
 + Sweep Line Algorithms [[notes](./code/geo/sweepline.MD)]
     + Intersection Points
-    + Closest Pair Problem
-    + Convex Hull Problem
+    + Closest Pair Problem [[vid](https://youtu.be/6u_hWxbOc7E?si=HWuXdDy9jLVkniNF)]
+    + Convex Hull Problem [[vid](https://youtu.be/G51AjY8tIcA?si=Jn0HXDYw1QshbrKK)]
 </td>
 </tr>
 
@@ -286,16 +298,16 @@ String Algorithms [ [Knuth–Morris–Pratt KMP](https://youtu.be/JoF0Z7nVSrA?si
 <td>
 
 + Basic Topics
-    + Trie Structure
+    + Trie Structure [[vid](https://youtu.be/-urNrIAQnNo?si=PVhcGzHSycH8Sius), [vid2](https://youtu.be/AXjmTQ8LEoI?si=07aoiBCZdiydcdh6)]
     + Dynamic Programming
 + String Hashing
     + Polynomial Hashing
     + Applications
     + Collisions and Parameters
-+ Z-Algorithm   
++ Z-Algorithm [[vid](https://youtu.be/CpZh4eF8QBw?si=o5NAp6Qp06hDY3bl)]
     + Constructing the Z-Array
     + Applications
-+ Suffix Arrays
++ Suffix Arrays [[vid](https://www.youtube.com/watch?v=zqKlL3ZpTqs&list=PLDV1Zeh2NRsCQ_Educ7GCNs3mvzpXhHW5)]
     + Prefix Doubling Method
     + Finding Patterns
     + LCP Arrays
@@ -311,13 +323,13 @@ String Algorithms [ [Knuth–Morris–Pratt KMP](https://youtu.be/JoF0Z7nVSrA?si
     + Data Structures
     + Subalgorithms
     + Integer Partitions
-    + Mo's Algorithm
+    + Mo's Algorithm [[vid](https://youtu.be/hqaRYgsLpUI?si=TsNHH8_NbScgufsI), [vid2](https://youtu.be/gUpfwVRXhNY?si=35XBMHdYxS9bDjnX)]
 + Segment Trees Revisited
     + Lazy Propagation
     + Dynamic Trees
     + Data Structures in Nodes
     + Two-Dimensional Trees
-+ Treaps
++ Treaps [[vid](https://youtu.be/6x0UlIBLRsc?si=vkvdErgpV5Hi6qPc)]
     + Splitting and Merging
     + Implementation
     + Additional Techniques
