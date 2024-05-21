@@ -20,7 +20,7 @@
 </td><td>
 <b>UCB</b>
 
-Berkeley Artificial Intelligence Research (BAIR)
+Berkeley Artificial Intelligence Research ([BAIR](https://bair.berkeley.edu/))
 </td><td>
 <b>
 
@@ -35,10 +35,14 @@ ETH Zurich / [ASL](https://asl.ethz.ch/)</b>
 
 <tr>
 <td>
-<b>Harvard</b>
+<b>
+
+Harvard / [REACT Lab](https://react.seas.harvard.edu/)</b>
 </td>
 <td>
-<b>EPFL</b>
+<b>
+
+EPFL / [Robotics Lab](https://www.epfl.ch/research/domains/robotics/robotics-labs/) [[LIS](https://www.epfl.ch/labs/lis/)]</b>
 </td><td>
 <b>
 
@@ -60,7 +64,9 @@ University of Pennsylvania / [GRASP Lab](https://www.grasp.upenn.edu/)</b>
 <b>Max Planck Society</b>
 </td>
 <td>
-<b>TU Munich</b>
+<b>
+
+TU Munich / [Smart Robotics Lab](https://srl.cit.tum.de/)</b>
 </td><td>
 <b>Cornell</b>
 </td><td>
@@ -84,7 +90,9 @@ University of Pennsylvania / [GRASP Lab](https://www.grasp.upenn.edu/)</b>
 
 University of Cambridge / [MIL](https://mi.eng.cam.ac.uk/)</b>
 </td><td>
-<b>Princeton</b>
+<b>
+
+Princeton / [IROM Lab](https://irom-lab.princeton.edu/)</b>
 </td><td>
 <b>Caltech</b>
 
@@ -110,7 +118,9 @@ Indian Institute of Science (IISC) / [DREAM:Lab](https://dream-lab.in/)</b>
 </td><td>
 <b>Universität Basel</b>
 </td><td>
-<b>University of Geneva</b>
+<b>
+
+IIIT-H / [RRC](https://robotics.iiit.ac.in/)</b>
 </td><td>
 <b>UCLA</b> :
 
@@ -119,11 +129,11 @@ Indian Institute of Science (IISC) / [DREAM:Lab](https://dream-lab.in/)</b>
 </tr>
 </table>
 
-here is [ [list 1](https://home.isr.uc.pt/~peixoto/PXResGrp.html) and [list2](https://medium.com/maheshkkumar/computer-vision-research-laboratories-fa344a129b3e) ] of Computer Vision Research groups. More RL labs : [Mila](https://mila.quebec/en/), [vector-institute](https://vectorinstitute.ai/about/).
+here is [ [list 1](https://home.isr.uc.pt/~peixoto/PXResGrp.html) and [list2](https://medium.com/maheshkkumar/computer-vision-research-laboratories-fa344a129b3e) ] of Computer Vision Research groups. Some good RL labs : [Mila](https://mila.quebec/en/), [vector-institute](https://vectorinstitute.ai/about/).
 
 ## Companies:
 
-Some of the companies involved in cutting edge Machine Learning research work:
+Some of the companies involved in cutting edge Robotics and Machine Learning research work:
 <table style="width:100%" >
 <tr>
 <td>
@@ -156,7 +166,7 @@ Some of the companies involved in cutting edge Machine Learning research work:
 </td><td>
 <b>Anybotics</b>
 </td><td>
-<b>Rethink Robotics</b>
+<b>Festo</b>
 </td>
 </tr>
 
@@ -243,10 +253,12 @@ Some of the companies involved in cutting edge Machine Learning research work:
 
 
 
-Multiagent-systems : [[ labs ](https://multirobotsystems.org/labs)], AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530), [FDL](https://frontierdevelopmentlab.org/) and [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
-## Behavioral Section :
+Multiagent-systems [[ labs ](https://multirobotsystems.org/labs)], AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530), [FDL](https://frontierdevelopmentlab.org/) and AI [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
+## Behavioral Section : 
 
-Communication skills and asking questions is very important. Google's behavioural round is called "Googliness" and leadership skills round. Skills like - humility, learning from mistakes, team leadership are assessed. Behavioural Interviews : Questions about your background and experiences. There's no right or wrong answer in these behavioural interviews. Questions like, Tell me about a challenging project you worked on? Doesn't matter about the project, it is about the story, the artist in you that paints the story having an elegant flow. Describe the story in such a way that hints the qualities. Highlight positive things.
+🌸 Some of my notes from AlgoExpert's behavioural section classes.
+
+Communication skills and asking questions is very important. Google's behavioural round is called "Googliness and leadership skills round". Skills like - humility, learning from mistakes, team leadership are assessed. Behavioural Interviews : Questions about your background and experiences. There's no right or wrong answer in these behavioural interviews. Questions like, Tell me about a challenging project you worked on? Doesn't matter about the project, it is about the story, the artist in you that paints the story having an elegant flow. Describe the story in such a way that hints the qualities. Highlight positive things.
 
 + `General Tips`: Do not want to be disrespectful, offensive, mean, arrogant or confrontational. Avoid being too vague in your answers, interviewer is looking for signals of qualities and deep information, into detail. Answer about things that you learned, or decided to do after the situation. Things you do wanna do: Strike a balance between highlighting positive qualities that your're smart, intellectually curious, can lead projects and helping others while being empathetic. You wanna answer behavioural questions with stories, past experiences that highlights the qualities. Don't put it in every answer. If you don't extract lessons from your past experiences, it is not worth sharing. Another example, describe a time when there was a low performer on your team? Make up stuff if you have to but don't devalue your other answers. Communication is important!
 
@@ -254,7 +266,7 @@ Communication skills and asking questions is very important. Google's behavioura
 
 + `Team Conflict`: Q: Describe a time when there was a conflict within your team, how did you help resolve the conflict, did you do anything to prevent it in the future? Ans: When there's a conflict, I always try to assume good intent to the two parties involved. Always try to find common ground as both parties involved have a common good intent. (e.g Google codefreeze before Cloud Next)
 
-+ `Interest in Company`: Q: Why do you wanna work at this company ? Ans: I wanna work for Google for 3 main reasons: from a technical point of view, I know that Google works with lot of technologies that really excites me, technologies that I have worked a lot on personal projects but I never got the chance to work on a production grade engineering environment. I have worked on React, Flow, TypeScript and I'd love to work on GraphQL at Google, I heard its amazing. Most of Google's technology stack really excites me and interests me. Putting aside the technical details a bit, I am also really interested and excited about Google's culture of moving fast. I have heard that Google has a very unique culture of moving fast and that's somethnig that really excites me. I've worked with LSBG but one thing that frustrates me is the slowness of the engineering projects. I've known few peers who have moved to Google and the change of culture and velocity at which you can ship out code and launch projects and features is very dramatic between the two comapanies. Finally, Google's bootcamp experience really draws me towards it, as I don't have to commit to a particular team before experienceing them. I can experience most of the teams in the bootcamp and commmit to one. I haven't heard about any other company do that and it is really appealing to me.
++ `Interest in Company`: Q: Why do you wanna work at this company ? Ans: I wanna work for X for 3 main reasons: from a technical point of view, I know that X works with lot of technologies that really excites me, technologies that I have worked a lot on personal projects but I never got the chance to work on a production grade engineering environment. I have worked on React, Flow, TypeScript and I'd love to work on GraphQL at X, I heard its amazing. Most of X's technology stack really excites me and interests me. Putting aside the technical details a bit, I am also really interested and excited about X's culture of moving fast. I have heard that X has a very unique culture of moving fast and that's somethnig that really excites me. I've worked with Y but one thing that frustrates me is the slowness of the engineering projects. I've known few peers who have moved to X and the change of culture and velocity at which you can ship out code and launch projects and features is very dramatic between the two comapanies. Finally, X's bootcamp experience really draws me towards it, as I don't have to commit to a particular team before experienceing them. I can experience most of the teams in the bootcamp and commmit to one. I haven't heard about any other company do that and it is really appealing to me.
 
 + `Strong Disagreement`: Q: Describe a time when you strongly disagreed with a coworker about an engineering decision, how did you go about finding the final decision, what did you do after the decision was made? Ans: 1) Dig Deep - try to understand every person, their ideas and stances. They have to understand as well. You do not want to attack people, you attack ideas. When people are attacking your ideas, don't take it personally. 2) Take a step back and see things from a higher level. 3) Accept and commit to the decision that was made, move forward and no grudges.
 
@@ -270,7 +282,7 @@ Communication skills and asking questions is very important. Google's behavioura
 
 + `Tough Feedback`: Q: How do you feel about receiving and giving feedback. Describe a time when you received tough feedback and or a time you gave tough feedback. How did you react to it; how did you give it? Ans : Giving constructive feedback by way of radical transparency. There is no better way to improve than by receiving quality constructive feedback. Give actionable steps to improve otherwise it doesn't really help. Learn to take criticism.
 
-+ `Strengths and Improvements`: Q: What aspects of Software Engineering, do you think you are very good at, what are the areas that you'd like to improve, how do you plan on improving? A: I am well versed in Front End technologies - React, Redux; frontend languages - JavaScript, TypeScript, HTML, CSS. I am also good at non technical aspects of Software Engineering, like taking initiative, exploring projects, setting meetings to disambiguate confusion on a project/feature. I am very good at diving deep, asking questions and making sure that people are on the same page. Every stokeholders are heard - UX designers, managers not just Software Engineers. Making sure that frontend and backends are aligned. One thing I waish to be good at is, getting to understand better on how backend decisions are made. I have started to do this lately - attending API design meetings with backend engineers. I can't be assuming things in the backend are easy, say this is an easy fix when they are not, I need to understand what I say. At my leisure, I have started to read backend engineer's design docs.
++ `Strengths and Improvements`: Q: What aspects of Software Engineering, do you think you are very good at, what are the areas that you'd like to improve, how do you plan on improving? A: I am well versed in Front End technologies - React, Redux; frontend languages - JavaScript, TypeScript, HTML, CSS. I am also good at non technical aspects of Software Engineering, like taking initiative, exploring projects, setting meetings to disambiguate confusion on a project/feature. I am very good at diving deep, asking questions and making sure that people are on the same page. Every stokeholders are heard - UX designers, managers not just Software Engineers. Making sure that frontend and backends are aligned. One thing I wish to be good at is, getting to understand better on how backend decisions are made. I have started to do this lately - attending API design meetings with backend engineers. I can't be assuming things in the backend are easy, say this is an easy fix when they are not, I need to understand what I say. At my leisure, I have started to read backend engineer's design docs.
 
 + `Comfort Zone`: Q: Describe a time when you went out of your comfort zone, why did you do it and what lessons did you learn from the experience? Ans: One of the best ways to grow is to push yourself out of the comfort zone. Challenge yourself with new things that you haven't done before. It is a great way to test yourself. Lessons - Management isn't easy, you can't bring your bad day energy into work and into meetings. There is no another adult to save you so you have to be attentive and very careful with what you do.
 
@@ -286,3 +298,5 @@ Communication skills and asking questions is very important. Google's behavioura
 + `Culture Fit`: Have some interest in the genre of your industry i.e, if you're applying to a crypto startup, understand crypto. Also why you're interested in that particular company? What do you bring to the table? Understand what the company is looking for! In an interview, show that you're passionate about software engineering, development, technology. Some good qualities - leadership capabilities, collaboration, independence. Be specific with what you love about the company, [do not] say that you just love Google Search [do] say that you love that particular technology of a particular team. Be flexible, do not say that you exactly want that and will only work on that. Anything that is in your resume, you should be able to describe very well - any project or experience. Prepare 2-3 questions about the company. e.g - What's been the biggest challenege on your job? technical challenege, team building challenge. What's in the day in the life of you in the company? Is this company going to be trying this in the future?
 
 ***
+
+Resources : [ [10 DARK Psychology and Manipulation Tricks for POWER and INFLUENCE](https://youtu.be/xxY1fGfdxEQ?si=IB8Ox5UkBcoKkw_Y), [6 Dark Psychology Tricks To Beware Of](https://youtu.be/saEErVMirqc?si=W12-77_Tz9kNh3LV), [STUMPED by Behavioral Questions?](https://youtu.be/VW4SJucg9sM?si=3f0iApNuCGV682wZ), [All You Need To Know About Behavioral Interviews (for software engineers)](https://youtu.be/6rW01g6Obwk?si=xE-4SdD_U8n7dpc2) ]
