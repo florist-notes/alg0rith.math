@@ -1,6 +1,6 @@
 # Fast Fourier Transform
 
-The ideaa of the algorithm is to convert the polynomials into a special point-value form where it is easier to calculate the product. The Fast Fourier Transform (FFT) can be understood in terms of polynomial multiplication. The idea is that the coefficients of the product of two polynomials are related to the values of the convolution of their sequences of coefficients. FFT exploits this relationship to efficiently compute polynomial products by transforming the coefficients into a different domain, performing pointwise multiplication, and then transforming back.
+The idea of the algorithm is to convert the polynomials into a special point-value form where it is easier to calculate the product. The Fast Fourier Transform (FFT) can be understood in terms of polynomial multiplication. The idea is that the coefficients of the product of two polynomials are related to the values of the convolution of their sequences of coefficients. FFT exploits this relationship to efficiently compute polynomial products by transforming the coefficients into a different domain, performing pointwise multiplication, and then transforming back.
 
 Let's consider the polynomial multiplication of two polynomials 
 A(x) and B(x):

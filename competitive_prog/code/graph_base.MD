@@ -264,7 +264,7 @@ int main() {
 }
 ```
 
-## Minimum Spanning Tree Algorithmsc :
+## Minimum Spanning Tree Algorithms :
 
 + `Prim’s Algorithm` : Prim’s algorithm finds a minimum spanning tree for a weighted undirected graph.
 

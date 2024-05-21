@@ -1,6 +1,6 @@
 # Matrices
 
-1. Matrix Operations:
+### 1. `Matrix Operations`:
    
 Matrix operations involve various mathematical operations performed on matrices, such as addition, subtraction, multiplication, and inversion.
 
@@ -46,7 +46,7 @@ int main() {
 
 ```
 
-2. Linear Recurrences:
+### 2. `Linear Recurrences`:
    
 Linear recurrences describe a sequence where each term is a linear combination of previous terms. This concept is often used in the context of recursive algorithms and generating functions.
 
@@ -88,7 +88,7 @@ int main() {
 
 ```
 
-3. Graphs and Matrices:
+### 3. `Graphs and Matrices`:
    
 Graphs can be represented using matrices, such as adjacency matrices or incidence matrices. These representations help perform various graph operations efficiently.
 
@@ -120,7 +120,7 @@ int main() {
 
 ```
 
-4. Gaussian Elimination:
+### 4. `Gaussian Elimination`:
    
 Gaussian elimination is a method used for solving systems of linear equations and finding the reduced row-echelon form of a matrix.
 
