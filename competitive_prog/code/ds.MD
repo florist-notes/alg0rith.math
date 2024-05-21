@@ -206,5 +206,134 @@ Key Operations:
     + operator[]: Accesses or modifies the value associated with a key.
     + size(): Returns the number of key-value pairs.
 
+## Bitwsie 🌸:
 
-Resources : My [notes](https://github.com/florist-notes/alg0rith.math/blob/main/competitive_prog/stl.MD) on STL Data Structures with C++, [geeksforgeeks.org/data-structures/](https://www.geeksforgeeks.org/data-structures/), [cpp-builtin-ds_cheatsheet](https://www.codecademy.com/learn/c-plus-plus-for-programmers/modules/cpp-built-in-data-structures/cheatsheet), [cplusplus.com/data-structures](https://cplusplus.com/doc/tutorial/structures/), @github/[TheAlgorithms_CPlusPlus](https://github.com/TheAlgorithms/C-Plus-Plus), @github/[algorithms&ds](https://github.com/mandliya/algorithms_and_data_structures), [C++ STL](https://www.youtube.com/watch?v=R5BEcvTVZj0&list=PLauivoElc3gh3RCiQA82MDI-gJfXQQVnn).
+
+<table width=100%>
+<tr>
+<th>Bitwise AND (&)</th>
+<th>Bitwise OR (|)</th>
+</tr>
+
+<tr>
+<td>
+
+The AND operator compares each bit of its operands. If both bits are 1, the resulting bit is 1; otherwise, it is 0.
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int b = 3;  // 0011 in binary
+    int result = a & b;  // 0001 in binary, which is 1 in decimal
+
+    std::cout << "a & b = " << result << std::endl;
+    return 0;
+}
+```
+
+</td>
+<td>
+
+The OR operator compares each bit of its operands. If at least one of the bits is 1, the resulting bit is 1; otherwise, it is 0.
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int b = 3;  // 0011 in binary
+    int result = a | b;  // 0111 in binary, which is 7 in decimal
+
+    std::cout << "a | b = " << result << std::endl;
+    return 0;
+}
+```
+</td>
+</tr>
+
+<tr>
+<th>Bitwise XOR (^)</th>
+<th>Bitwise NOT (~)</th>
+</tr>
+
+<tr>
+<td>
+
+The XOR operator compares each bit of its operands. If the bits are different, the resulting bit is 1; otherwise, it is 0.
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int b = 3;  // 0011 in binary
+    int result = a ^ b;  // 0110 in binary, which is 6 in decimal
+
+    std::cout << "a ^ b = " << result << std::endl;
+    return 0;
+}
+```
+
+</td>
+<td>
+
+The NOT operator inverts all the bits of its operand.
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int result = ~a;  // 1010 in binary, which is -6 in decimal (two's complement representation)
+
+    std::cout << "~a = " << result << std::endl;
+    return 0;
+}
+```
+</td>
+</tr>
+
+
+<tr>
+<th>Bitwise Shift Left (<<)</th>
+<th>Bitwise Shift Right (>>)</th>
+</tr>
+
+<tr>
+<td>
+
+The left shift operator shifts bits to the left by the specified number of positions, filling the vacant bits with zeros.
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int result = a << 1;  // 1010 in binary, which is 10 in decimal
+
+    std::cout << "a << 1 = " << result << std::endl;
+    return 0;
+}
+```
+
+</td>
+<td>
+
+The right shift operator shifts bits to the right by the specified number of positions. For signed integers, it fills the vacant bits with the sign bit (arithmetic shift).
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5;  // 0101 in binary
+    int result = a >> 1;  // 0010 in binary, which is 2 in decimal
+
+    std::cout << "a >> 1 = " << result << std::endl;
+    return 0;
+}
+```
+</td>
+</tr>
+</table>
+
+
+Resources : My [notes](https://github.com/florist-notes/alg0rith.math/blob/main/competitive_prog/stl.MD) on STL Data Structures with C++, [geeksforgeeks.org/data-structures/](https://www.geeksforgeeks.org/data-structures/), [cpp-builtin-ds_cheatsheet](https://www.codecademy.com/learn/c-plus-plus-for-programmers/modules/cpp-built-in-data-structures/cheatsheet), [cplusplus.com/data-structures](https://cplusplus.com/doc/tutorial/structures/), @github/[TheAlgorithms_CPlusPlus](https://github.com/TheAlgorithms/C-Plus-Plus), @github/[algorithms&ds](https://github.com/mandliya/algorithms_and_data_structures), [C++ STL](https://www.youtube.com/watch?v=R5BEcvTVZj0&list=PLauivoElc3gh3RCiQA82MDI-gJfXQQVnn), [C++ Bitwise Operators](https://www.youtube.com/watch?v=9univCkSz9c&list=PLQMs5svASiXMy79a5wQRk5cSnBPn445ab), [Intro to Binary and Bitwise Operators in C++](https://youtu.be/KXwRt7og0gI?si=DqyS2qS13KtN2QkB), [Bitwise AND (&), OR (|), XOR (^) and NOT (~) in C++](https://youtu.be/HoQhw6_1NAA?si=YDEXw99GMj7ACKAF), [Bitmasking and Bitmanipulation](https://www.youtube.com/watch?v=oL5bmRUbAJ4&list=PLX0iyO9CrCF1-4je7G0JMSr_50I0J2K3Z), [Complete Bitwise Operations Practice - Noob to Expert | Topic Stream 8](https://www.youtube.com/live/UPVoGMZWQMU?si=LwlT0WDOsnK1TzM9), [Lecture 5: Bitwise Operators, For Loops, Operator Precedence & Variable Scoping](https://youtu.be/yjdQHb2elqI?si=8DJnMwxyyUDrGPnD).

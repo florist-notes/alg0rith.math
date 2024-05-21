@@ -90,6 +90,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
     + Maps
     + Priority Queues
     + Policy-Based Sets
++ Bitwise
 + Experiments:
     + Set Versus Sorting
     + Map Versus Array
