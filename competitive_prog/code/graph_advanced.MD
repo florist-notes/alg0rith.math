@@ -463,3 +463,171 @@ int main() {
     return 0;
 }
 ```
+## Maximum Flows:
+In graph theory, a flow network is a directed graph where each edge has a capacity and represents the maximum amount of flow that can pass through it. The maximum flow problem is to find the maximum amount of flow from a source node to a sink node in the network while satisfying the capacity constraints of the edges and the conservation of flow at each node (except the source and sink nodes).
+
+### `Ford-Fulkerson Algorithm` :
+The Ford-Fulkerson algorithm is a method for computing the maximum flow in a flow network. It repeatedly augments paths from the source to the sink until no more augmenting paths exist. An augmenting path is a path from the source to the sink such that all edges on the path have available capacity for additional flow.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+const int INF = 1e9;
+
+int fordFulkerson(vector<vector<int>>& graph, int source, int sink) {
+    int n = graph.size();
+    vector<vector<int>> residualGraph = graph;
+    vector<int> parent(n);
+    int maxFlow = 0;
+
+    // Find augmenting paths and update the residual graph
+    while (true) {
+        fill(parent.begin(), parent.end(), -1);
+        queue<int> q;
+        q.push(source);
+        parent[source] = source;
+
+        while (!q.empty()) {
+            int u = q.front();
+            q.pop();
+
+            for (int v = 0; v < n; ++v) {
+                if (parent[v] == -1 && residualGraph[u][v] > 0) {
+                    parent[v] = u;
+                    q.push(v);
+                }
+            }
+        }
+
+        // If no augmenting path is found, terminate
+        if (parent[sink] == -1) break;
+
+        int pathFlow = INF;
+        for (int v = sink; v != source; v = parent[v]) {
+            int u = parent[v];
+            pathFlow = min(pathFlow, residualGraph[u][v]);
+        }
+
+        for (int v = sink; v != source; v = parent[v]) {
+            int u = parent[v];
+            residualGraph[u][v] -= pathFlow;
+            residualGraph[v][u] += pathFlow;
+        }
+
+        maxFlow += pathFlow;
+    }
+
+    return maxFlow;
+}
+
+int main() {
+    // Example usage
+    int n = 6;
+    vector<vector<int>> graph(n, vector<int>(n, 0));
+    // Define the graph with capacities
+    graph[0][1] = 16;
+    graph[0][2] = 13;
+    graph[1][2] = 10;
+    graph[1][3] = 12;
+    graph[2][1] = 4;
+    graph[2][4] = 14;
+    graph[3][2] = 9;
+    graph[3][5] = 20;
+    graph[4][3] = 7;
+    graph[4][5] = 4;
+
+    int source = 0;
+    int sink = 5;
+    cout << "Maximum Flow: " << fordFulkerson(graph, source, sink) << endl;
+    return 0;
+}
+```
+This code demonstrates the Ford-Fulkerson algorithm for finding the maximum flow in a flow network. It uses a residual graph to keep track of remaining capacity in the network.
+
+### `Disjoint Paths` :
+Disjoint paths in a graph are paths between two vertices that do not share any common edges or vertices, except possibly for the starting and ending vertices. The problem of finding disjoint paths is relevant in various applications such as network routing and scheduling.
+
+Implementing an algorithm to find disjoint paths involves graph traversal techniques like depth-first search (DFS) or breadth-first search (BFS), along with appropriate data structures for path storage and bookkeeping to ensure paths are disjoint.
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+void addEdge(vector<vector<int>>& adj, int u, int v) {
+    adj[u].push_back(v);
+    adj[v].push_back(u);
+}
+
+bool BFS(vector<vector<int>>& rGraph, int s, int t, vector<int>& parent) {
+    int V = rGraph.size();
+    vector<bool> visited(V, false);
+
+    queue<int> q;
+    q.push(s);
+    visited[s] = true;
+    parent[s] = -1;
+
+    while (!q.empty()) {
+        int u = q.front();
+        q.pop();
+
+        for (int v = 0; v < V; ++v) {
+            if (!visited[v] && rGraph[u][v] > 0) {
+                q.push(v);
+                parent[v] = u;
+                visited[v] = true;
+            }
+        }
+    }
+
+    return (visited[t] == true);
+}
+
+int fordFulkerson(vector<vector<int>>& graph, int source, int sink) {
+    int V = graph.size();
+    vector<vector<int>> rGraph = graph;
+
+    vector<int> parent(V);
+    int maxFlow = 0;
+
+    while (BFS(rGraph, source, sink, parent)) {
+        int pathFlow = INT_MAX;
+        for (int v = sink; v != source; v = parent[v]) {
+            int u = parent[v];
+            pathFlow = min(pathFlow, rGraph[u][v]);
+        }
+
+        for (int v = sink; v != source; v = parent[v]) {
+            int u = parent[v];
+            rGraph[u][v] -= pathFlow;
+            rGraph[v][u] += pathFlow;
+        }
+
+        maxFlow += pathFlow;
+    }
+
+    return maxFlow;
+}
+
+int main() {
+    int V = 6;
+    vector<vector<int>> graph(V, vector<int>(V, 0));
+    addEdge(graph, 0, 1);
+    addEdge(graph, 0, 2);
+    addEdge(graph, 1, 3);
+    addEdge(graph, 1, 4);
+    addEdge(graph, 2, 3);
+    addEdge(graph, 2, 4);
+    addEdge(graph, 3, 5);
+    addEdge(graph, 4, 5);
+
+    int source = 0;
+    int sink = 5;
+
+    cout << "Maximum number of disjoint paths: " << fordFulkerson(graph, source, sink) << endl;
+
+    return 0;
+}
+```
+This code demonstrates finding the maximum number of disjoint paths between two vertices using the Ford-Fulkerson algorithm. It uses BFS to find augmenting paths in each iteration of the algorithm.
