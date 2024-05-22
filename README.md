@@ -27,7 +27,7 @@ my notes on mathematics, algorithms and programming:
 
 ## Design and Analysis of Algorithms [[notes](#)]  #⛺
 
-## Competitive Programming [[notes](#)]  #⛺
+## Competitive Programming [[notes](./competitive_prog/cp/cp.MD)]  🦩
 
 ## Advanced Software Engineering [[notes](#)]  #⛺
 
