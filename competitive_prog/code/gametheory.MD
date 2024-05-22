@@ -6,7 +6,7 @@ $$ s = X_1 \oplus X_2 \oplus X_3 ... \oplus X_n  $$
 
 The nim-sum of a set of numbers is the XOR (exclusive OR) of those numbers. If the nim-sum is zero, the first player has a winning strategy; otherwise, the second player has a winning strategy.
 
-#### [Grundy Numbers - Combinatorial Game Theory - I](https://youtu.be/MboYbpE76js?si=QKhCpu5zX9nb9WLm), [Sprague Grundy Theorem - Combinatorial Game Theory - II](https://youtu.be/AbJqhMm8htw?si=ihmlMHrgETNBpVw_), [Game Theory L-2 | Grundy Numbers & Sprague Grundy Theorem](https://www.youtube.com/live/AaaEl55iK40?si=XBOoXQYwF2HDpfPb), [Nimbers And Sprague Grundy Theorem](https://www.youtube.com/live/h2ZsdmUkfMI?si=7Lq1IH9ofwQTQBiT)
+ [ [Grundy Numbers - Combinatorial Game Theory - I](https://youtu.be/MboYbpE76js?si=QKhCpu5zX9nb9WLm), [Sprague Grundy Theorem - Combinatorial Game Theory - II](https://youtu.be/AbJqhMm8htw?si=ihmlMHrgETNBpVw_), [Game Theory L-2 | Grundy Numbers & Sprague Grundy Theorem](https://www.youtube.com/live/AaaEl55iK40?si=XBOoXQYwF2HDpfPb), [Nimbers And Sprague Grundy Theorem](https://www.youtube.com/live/h2ZsdmUkfMI?si=7Lq1IH9ofwQTQBiT) ]
 
 Here's a simple explanation of the Sprague-Grundy theorem with code in Python:
 

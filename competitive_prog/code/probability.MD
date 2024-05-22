@@ -1,6 +1,6 @@
 # Probability
 
-1. Working with Events:
+### 1. `Working with Events`:
    
 Events in probability are outcomes or sets of outcomes of a random experiment. Probability is assigned to events, and operations such as union, intersection, and complement can be performed on them.
 
@@ -24,7 +24,7 @@ int main() {
 
 ```
 
-2. Random Variables:
+### 2. `Random Variables`:
    
 A random variable is a variable whose possible values are outcomes of a random experiment. It can be discrete or continuous, and its probability distribution describes the likelihood of different values.
 
@@ -49,7 +49,7 @@ int main() {
 
 ```
 
-3. Markov Chains:
+### 3. `Markov Chains`:
 
 A Markov chain is a stochastic model that describes a sequence of events in which the probability of each event depends only on the state attained in the previous event. It has states, transition probabilities, and an initial state.
 
@@ -83,7 +83,7 @@ int main() {
 
 ```
 
-4. Randomized Algorithms:
+### 4. `Randomized Algorithms`:
    
 Randomized algorithms use random numbers to make decisions or introduce randomness to achieve desired properties. They are often used in situations where deterministic algorithms may be impractical or too slow.
 

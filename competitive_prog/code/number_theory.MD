@@ -1,5 +1,17 @@
 # Number Theory:
 
+Number theory is a branch of mathematics that deals with the properties and relationships of numbers, particularly integers. It explores patterns, properties, and relationships among numbers, often focusing on topics like divisibility, prime numbers, modular arithmetic, and Diophantine equations.
+
+Here's an overview of some key concepts in number theory:
+
++ `Divisibility`: Divisibility is a fundamental concept in number theory. An integer 𝑎 is said to be divisible by another integer 𝑏 if the division 𝑎/𝑏 yields an integer result without any remainder. The "divides" symbol is often denoted as 𝑏∣𝑎 .
+
++ `Prime Numbers`: A prime number is a natural number greater than 1 that has no positive divisors other than 1 and itself. Prime numbers play a crucial role in number theory and have applications in various fields like cryptography and computer science.
+
++ `Modular Arithmetic`: Modular arithmetic deals with operations on numbers that have a fixed "modulus" or "modulo". It involves performing arithmetic operations like addition, subtraction, multiplication, and exponentiation with respect to a modulus. Modular arithmetic has applications in cryptography, computer science, and various other fields.
+
++ `Diophantine Equations`: Diophantine equations are polynomial equations with integer coefficients, where the goal is to find integer solutions. These equations are named after the ancient Greek mathematician Diophantus, who studied them extensively.
+
 ### Primes and Factors
 
 -  Basic Algorithm:
@@ -30,11 +42,16 @@ vector<int> factors(int n) {
 
 ```
 
-
-
--  Properties of Primes:
-
 ### Sieve of Eratosthenes
+
+The Sieve of Eratosthenes is an ancient algorithm used to find all prime numbers up to a specified integer value. It works by iteratively marking the multiples of each prime number starting from 2 as composite (i.e., not prime). Here's how the algorithm works:
+
++ Create a list of consecutive integers from 2 through the specified upper limit.
++ Start with the first prime number, which is 2. Mark all of its multiples greater than 2 as composite.
++ Find the next prime number (the smallest number greater than the current prime that is not marked as composite). + This next prime will be the next unmarked number in the list.
++ Repeat step 3 until the square of the current prime is greater than the specified upper limit. At this point, all non-marked numbers that remain in the list are prime.
+
+The algorithm is efficient because it doesn't waste time checking multiples of numbers that have already been identified as composite. By the end of the process, all prime numbers up to the specified upper limit are identified, while composite numbers are marked as such. This algorithm is named after the ancient Greek mathematician Eratosthenes, who is credited with its invention.
 
 [Sieve Algorithm: How to find Prime Numbers Optimally ?](https://youtu.be/T8PaMnb0GPo?si=oPtcq-XG8rkw_exE), [15.1 Sieve of Eratosthenes](https://youtu.be/nDPo9hsDNvU?si=E8zoCGQyWiDmElSx), [cp-algorithms.com](https://cp-algorithms.com/algebra/sieve-of-eratosthenes.html)
 
@@ -82,10 +99,17 @@ tuple<int, int, int> gcd(int a, int b) {
 
 There is often need to efficiently calculate the value of x^nmod m. This can be done in O(logn) time using the following recursive formula:
 
-$$  x^n = \Biggl\{ {1}{, n = 0} | 
-{x^\frac{n}{2}x^\frac{n}{2}}{, n is even} | 
-{x^{n-1}x}{, n is odd}
+
 $$
+x^n = \left\{
+\begin{array}{ll}
+1 & \text{if } n = 0 \\
+x^{\frac{n}{2}}x^{\frac{n}{2}} & \text{if } n \text{ is even} \\
+x^{n-1}x & \text{if } n \text{ is odd}
+\end{array}
+\right.
+$$
+
 
 ```cpp
 
