@@ -11,7 +11,7 @@
 ### ✿🦩 Bitwise (Bit Manipulation) :
 + [ [string-transmission (60)](https://www.hackerrank.com/challenges/string-transmission/problem) -hr ] [ [string-transmission.cpp](./cp_code/string-transmission.cpp), [string-transmission.MD](./cp_code/string-transmission.MD) ] ✓
 + [ [the-great-xor](https://www.hackerrank.com/challenges/the-great-xor/problem) - hr ] [ [the-great-xor.cpp](./cp_code/the-great-xor.cpp), [the-great-xor.MD](./cp_code/the-great-xor.MD) ] 
-+ [ [yet-another-minimax-problem](https://www.hackerrank.com/challenges/yet-another-minimax-problem/problem) - hr ] [ [yet-another-minimax-problem.cpp](./cp_code/yet-another-minimax-problem.cpp), [yet-another-minimax-problem.MD](./cp_code/yet-another-minimax-problem.MD) ] 
++ [ [yet-another-minimax-problem](https://www.hackerrank.com/challenges/yet-another-minimax-problem/problem) - hr ] [ [yet-another-minimax-problem.cpp](./cp_code/yet-another-minimax-problem.cpp), [yet-another-minimax-problem.MD](./cp_code/yet-another-minimax-problem.MD) ] ✓
 + [ [xoring-ninja](https://www.hackerrank.com/challenges/xoring-ninja/problem) - hr ] [ [xoring-ninja.cpp](./cp_code/xoring-ninja.cpp), [xoring-ninja.MD](./cp_code/xoring-ninja.MD) ] 
 + [ [manipulative-numbers](https://www.hackerrank.com/challenges/manipulative-numbers/problem) - hr ] [ [manipulative-numbers.cpp](./cp_code/manipulative-numbers.cpp), [manipulative-numbers.MD](./cp_code/manipulative-numbers.MD) ] 
 
