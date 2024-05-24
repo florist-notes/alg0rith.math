@@ -4,7 +4,7 @@
 + [ [merging-communities (50)](https://www.hackerrank.com/challenges/merging-communities/problem) - hr ] [ [merging-communities.cpp](./cp_code/merging-communities.cpp), [merging-communities.MD](./cp_code/merging-communities.MD) ] ✓
 + [ [tree-height-of-a-binary-tree](https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem) - hr ] [ [tree-height-of-a-binary-tree.cpp](./cp_code/tree-height-of-a-binary-tree.cpp), [tree-height-of-a-binary-tree.MD](./cp_code/tree-height-of-a-binary-tree.MD) ] 
 + [ [balanced-forest](https://www.hackerrank.com/challenges/balanced-forest/problem) - hr ] [ [balanced-forest.cpp](./cp_code/balanced-forest.cpp), [balanced-forest.MD](./cp_code/balanced-forest.MD) ] 
-+ [ [castle-on-the-grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem) - hr ] [ [castle-on-the-grid.cpp](./cp_code/castle-on-the-grid.cpp), [castle-on-the-grid.MD](./cp_code/castle-on-the-grid.MD) ] 
++ [ [castle-on-the-grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem) - hr ] [ [castle-on-the-grid.cpp](./cp_code/castle-on-the-grid.cpp), [castle-on-the-grid.MD](./cp_code/castle-on-the-grid.MD) ] ✓
 + [ [minimum-average-waiting-time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem) - hr ] [ [minimum-average-waiting-time.cpp](./cp_code/minimum-average-waiting-time.cpp), [minimum-average-waiting-time.MD](./cp_code/minimum-average-waiting-time.MD) ] 
 + [ [kittys-calculations-on-a-tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem) - hr ] [ [kittys-calculations-on-a-tree.cpp](./cp_code/kittys-calculations-on-a-tree.cpp), [kittys-calculations-on-a-tree.MD](./cp_code/kittys-calculations-on-a-tree.MD) ]
 
