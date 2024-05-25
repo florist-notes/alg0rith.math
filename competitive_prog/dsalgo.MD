@@ -152,6 +152,8 @@ Graph Algorithms [ [NOTES](./code/graph_base.MD) ] </th>
     + Kruskal's Algorithm [ [vid](https://youtu.be/JZBQLXgSGfs?si=hOPRO-UXober8gHE) ]
     + Union-Find Structure [ [vid](https://youtu.be/Kptz-NVA2RE?si=oxz3lWswA3iiCPte), [vid2](https://youtu.be/0jNmHPfA_yE?si=xmPnwOjSmjLyJK20), [vid3](https://youtu.be/VHRhJWacxis?si=w9Z425PIM6RWKlRF) ]
     + Prim's Algorithm [[vid](https://youtu.be/jsmMtJpPnhU?si=zzj2ZKEEzo3ab644), [vid2](https://youtu.be/xq3ABa-px_g?si=d-ll9hfEuuIVeigf) - [source_c vid](https://youtu.be/CI5Fvk-dGVs?si=D48jSUqfRAAkdL6O)]
+
+[[The Definitive Guide to Graph Problems](https://www.giulianopertile.com/blog/the-definitive-guide-to-graph-problems/)]
 </td>
 </tr>
 
