@@ -96,9 +96,9 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
     + Iterators and Ranges
     + Other Structures
 + Set Structures
-    + Sets and multisets
-    + Maps
-    + Priority Queues
+    + Sets and multisets [[vid](https://youtu.be/7mx2BasNK0w?si=PPzqesmxu78RHNZw)]
+    + Maps [[vid](https://youtu.be/gUrfXZ0hqoA?si=9_5vrpXUmHOQKnH2)]
+    + Priority Queues [[vid](https://youtu.be/wptevk0bshY?si=o6XiXrfPcdlXffP6)]
     + Policy-Based Sets
 + Bitwise Operators
 + Experiments:
@@ -120,15 +120,15 @@ Graph Algorithms [ [NOTES](./code/graph_base.MD) ] </th>
 <td>
 
 + Basic Concepts
-    + When Greedy Fails
+    + When Greedy Fails [[vid](https://youtu.be/bC7o8P_Ste4?si=NbNNSfffskg1_lGU)]
     + Finding an Optimal Solution
     + Counting Solutions
 + Further Examples
     + Longest Increasing Subsequence
     + Paths in a Grid
     + Knapsack Problems
-    + From Permutations to Subsets
-    + Counting Tilings
+    + From Permutations to Subsets [[blog](https://medium.com/@CalvinChankf/a-general-approach-for-subsets-combinations-and-permutations-5c8fe3aff0ae)]
+    + Counting Tilings [[blog](https://www.geeksforgeeks.org/cses-solutions-counting-tilings/)]
 
 [ [How to Solve Any Dynamic Programming Problem](https://blog.pramp.com/how-to-solve-any-dynamic-programming-problem-603b6fbbd771) ]
 </td>
@@ -201,7 +201,7 @@ Tree Algorithms [[vid p_list](https://www.youtube.com/watch?v=AylOfzYJ2qE&list=P
 <td>
 
 + Basic Techniques
-    + Tree Traversal
+    + Tree Traversal [[blog](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)]
     + Calculating Diameters
     + All Longest Paths
 + Tree Queries
@@ -210,8 +210,8 @@ Tree Algorithms [[vid p_list](https://www.youtube.com/watch?v=AylOfzYJ2qE&list=P
     + Lowest Common Ancestors
     + Merging Data Structures
 + Advanced Techniques
-    + Centroid Decomposition
-    + Heavy-Light Deconmposition
+    + Centroid Decomposition [[blog](https://www.geeksforgeeks.org/centroid-decomposition-of-tree/), [blog2](https://robert1003.github.io/2020/01/16/centroid-decomposition.html)]
+    + Heavy-Light Deconmposition [[blog](https://cp-algorithms.com/graph/hld.html)]
 </td>
 <td>
 
