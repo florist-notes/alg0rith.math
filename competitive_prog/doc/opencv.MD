@@ -93,7 +93,6 @@ const Mat& img);
        cv:: imwrite("copy.jpg", image);
        return 0;
  }
-
 ```
 Write float images to *.exr files. These files will store and read values as is without losing precision. Float images I/O example:
 
@@ -112,7 +111,6 @@ Write float images to *.exr files. These files will store and read values as is 
       std :: cout << copy.at <float >(5, 5) << std :: endl;
       return 0;
  }
-
 ```
 
 
@@ -143,8 +141,6 @@ Write float images to *.exr files. These files will store and read values as is 
         cv:: waitKey (); // Don't close window instantly.
         return 0;
  }
-
-
 ```
 </td>
 <td>
@@ -187,8 +183,6 @@ Popular features: illumination, rotation and translation invariant (to some degr
  // extract the SIFT descriptors
  auto extractor = SiftDescriptorExtractor :: create ();
  extractor ->compute(input , keypoints , descriptors );
-
-
 ```
 
 ### FLANN: Fast Library for Approximate
@@ -206,5 +200,4 @@ Nearest Neighbors : build K-d tree, search for neighbors there:
  Mat nearest_vector_dist (1, k, DataType <float >:: type);
  kdtree. knnSearch (query , nearest_vector_idx ,
  nearest_vector_dist , k);
-
 ```

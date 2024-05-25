@@ -304,7 +304,7 @@ int main() {
 
 </table>
 
-resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] [CMake tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4) [[How to Properly Setup C++ Projects](https://youtu.be/5glH8dGoeCA?si=nkwRWgvsitERl3L9)] [[Making and Working with Libraries in C++](https://youtu.be/Wt4dxDNmDA8?si=eBW6m8PqW0slulwi)] [[C++](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)]
+resources : [ /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] [CMake tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4) [[How to Properly Setup C++ Projects](https://youtu.be/5glH8dGoeCA?si=nkwRWgvsitERl3L9)] [[Making and Working with Libraries in C++](https://youtu.be/Wt4dxDNmDA8?si=eBW6m8PqW0slulwi)] [[C++](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)]
 
 <img src="img/stdio.png" width=48%> <img src="img/stdio2.png" width=48%>
 
