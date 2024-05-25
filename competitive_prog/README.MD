@@ -21,7 +21,7 @@ A short introduction to C++ for AI and Robotics:
 I am comfortable with c++ build systems and c++ was my first programming language that I used extensively throughout high school. I have an overview note on problem solving with c++:
 
 
-<table width=100%>
+<table width="100%">
 <tr>
 <th>C++ Iterators:</th>
 <th>C++ Enumeration:</th>
