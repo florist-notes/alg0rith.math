@@ -73,10 +73,10 @@ Q 2
 + The M 2 3 query merges the communities of Persons 2 and 3.
 + The Q 3 and Q 2 queries show that Persons 3 and 2 now belong to a community of size 3.
 
-This problem involves efficiently managing and querying dynamic community sizes, often tackled using data structures such as Disjoint Set Union (DSU) or Union-Find.
-
 
 ## 🦩 Solution:
+
+This problem involves efficiently managing and querying dynamic community sizes, often tackled using data structures such as Disjoint Set Union (DSU) or Union-Find.
 
 To solve the problem of merging communities and querying their sizes, we can utilize the Disjoint Set Union (DSU) data structure, also known as Union-Find. This structure is efficient for operations that involve merging sets and finding the representative or size of sets. Here's a detailed step-by-step solution and the corresponding C++ STL code:
 

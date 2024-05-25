@@ -97,6 +97,7 @@ Data Structure [[NOTES](./code/ds.MD)]</th>
     + Other Structures
 + Set Structures
     + Sets and multisets [[vid](https://youtu.be/7mx2BasNK0w?si=PPzqesmxu78RHNZw)]
+    + Disjoint Set Union (DSU) / Union Find [[blog](https://cp-algorithms.com/data_structures/disjoint_set_union.html), [blog 2](https://www.geeksforgeeks.org/union-by-rank-and-path-compression-in-union-find-algorithm/), [Union Find Path Compression](https://youtu.be/VHRhJWacxis?si=jskV2H3isBtwS5DU)]
     + Maps [[vid](https://youtu.be/gUrfXZ0hqoA?si=9_5vrpXUmHOQKnH2)]
     + Priority Queues [[vid](https://youtu.be/wptevk0bshY?si=o6XiXrfPcdlXffP6)]
     + Policy-Based Sets

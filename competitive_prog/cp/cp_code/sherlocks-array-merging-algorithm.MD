@@ -114,6 +114,8 @@ Explanation 1 :
 
 The only distinct possible collection is V = {[2, 1]}, so we print the result of 1mod(10^9+7) = 1 as our answer.
 
+### Solution : 
+
 ```cpp
 #include <iostream>
 #include <cstring>
@@ -188,6 +190,9 @@ int main() {
     return 0;
 }
 ```
+### Code Walkthrough : 
+
+This is a problem from Dynamic Programming.
 
 ### Header Files and Namespaces:
 
@@ -238,12 +243,16 @@ int countWays(int last, int pos) {
 }
 ```
 
-+ This function computes the number of ways to create collection V recursively.
-+ `last` represents the last element used in the previous collection.
-+ `pos` represents the current position in the array.
-+ If `pos` exceeds `n`, it returns the inverse factorial of `last`.
-+ The function uses memoization to store already computed values in the `dp` array.
-+ It iterates over possible positions to split the array and calculates the number of ways recursively.
++ `Parameters`: `last` is the length of the last segment considered, `pos` is the current position in the array `m`.
++ `Base Case`: If `pos` exceeds `n`, return the inverse factorial of `last` (no more elements to consider).
++ `Memoization`: If the result for `dp[last][pos]` is already computed, return it.
++ `Recursive Calculation`: Iterate over possible next positions (`i`) to split the array. For each position `i`, the function makes a recursive call to `countWays` with the new segment length `i - pos + 1` and the new starting position `i + 1`.
+    + Calculate the number of ways recursively.
+    + Multiply with factorial and inverse factorial for proper combination counting, ensuring results are modulo `MOD`.
+        + `factorial[i - pos + 1]`: Factorial of the length of the new segment.
+        + `countWays(i - pos + 1, i + 1)`: Recursive call for the next segment.
+        + `inverse_factorial[last - (i - pos + 1)]`: Inverse factorial of the remaining length after considering the new segment.
++ `Memoize and Return Result`: Store the result in `dp` and return it.
 
 ### Main Function:
 
@@ -290,9 +299,47 @@ int main() {
 }
 ```
 
-+ The main function reads the input array `m` and calculates the right boundaries of increasing sequences.
-+ It precomputes the factorial and inverse factorial arrays.
-+ Then, it initializes the `dp` array with -1 using `memset`.
-+ Finally, it computes the answer using the `countWays` function and outputs the result.
+#### `Input Reading`:
 
-This code efficiently calculates the number of different ways to create collection V, satisfying the conditions specified in the problem statement.
++ Read the integer `n` (size of array `m`).
++ Read the elements of the array `m`.
+
+#### `Right Boundaries Calculation`:
+
++ Initialize `right_bound[n]` to `n`.
++ Traverse the array from the end to the beginning:
+    + If the next element is greater, propagate the right boundary.
+    + Otherwise, set the right boundary to the current index.
+
+#### `Factorials and Inverse Factorials Precomputation`:
+
++ Compute the factorials modulo `MOD`.
++ Compute the modular inverses of the factorials using the property:
+    + `inverse_factorial[i] = ((-1 * (MOD / i) *  inverse_factorial[MOD % i]) % MOD + MOD) % MOD`.
+
+        Inverse Factorial using Fermat’s Little Theorem.
++ Ensure results are modulo `MOD`.
+
+#### `Initialize dp Array`:
+
++ Set all elements of `dp` to `-1` using `memset`.
+
+#### `Compute the Answer`:
+
++ Iterate over possible initial segment lengths.
++ Use the `countWays` function to compute the number of valid ways for each segment length.
++ Sum the results, ensuring the sum is modulo `MOD`.
+
+#### `Output the Result`:
+
++ Print the computed answer.
+
+The `countWays` function calculates the number of ways to split the array starting from a given position into increasing subsequences. It uses:
+
++ `Recursion`: To explore all possible ways to split the array.
++ `Memoization`: To store already computed results for efficiency.
++ `Factorials and Inverse Factorials`: To correctly handle combinations under modular arithmetic constraints.
+
+This approach ensures that all possible partitions are considered efficiently, and the results are computed accurately within the constraints of the problem.
+
+This code efficiently calculates the number of different ways to create collection V, satisfying the conditions specified in the problem statement. 
