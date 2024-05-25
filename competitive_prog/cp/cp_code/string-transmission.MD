@@ -86,6 +86,37 @@ $$ O(knlog(n)) $$
 
 ## Solution :
 
+The problem requires determining the number of possible original strings Alice could have transmitted given a corrupted binary string. The key insight is to identify if the original string is periodic or not. If the string is not periodic, then it's possible to calculate the number of possible original strings.
+
+### `Dynamic Programming (DP)`:
+
++ The problem is solved using a dynamic programming approach.
++ The `dp` array is used to store the number of possible original strings for each section size.
++ The `dp2` array is used to store intermediate results during the recursive function calls.
+
+### `Recursive Function`:
+
++ The solve function is a recursive function that calculates the number of possible original strings using dynamic programming.
++ It takes parameters `section_size`, `idx`, and `remaining_corruption`.
++ It calculates the result recursively, considering two possibilities for each bit in the section: flipping it to '0' or flipping it to '1'.
++ Memoization is used to avoid redundant calculations, and the `dp2` array is used for memoization.
+
+### `Cost Calculation`:
+
++ The `calculate_costs` function calculates the cost of flipping each bit for each section of the string.
++ It iterates through each bit position in the section and counts the number of '0's and '1's in that position across all sections of the string.
+
+### `Adjusting Results Based on Divisor`:
+
++ After calculating the number of possible original strings for each section size, the results are adjusted based on divisors.
++ This adjustment is necessary because a string can be divided into multiple sections, and the divisor represents the number of sections.
++ The result for the entire string (`dp[length]`) is adjusted based on the results for each divisor.
+
+### `Modular Arithmetic`:
+
++ Modular arithmetic operations are performed using functions `add` and `sub` to avoid integer overflow.
++ The final result is output modulo 10^9+7.
+
 ```cpp
 #include <iostream>
 #include <string>
