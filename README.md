@@ -1,6 +1,6 @@
 # ΛlgΘ-rithm 🌸
 
-my notes on mathematics, algorithms and programming: 
+My notes on mathematics, algorithms and programming: 
 
 ## Essence of Mathematics [[notes](./mathematics/README.MD)]
 
