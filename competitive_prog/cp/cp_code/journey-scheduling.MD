@@ -84,6 +84,26 @@ The tree in question is given in the picture below.
 
 ## Solution :
 
+The strategy to solve the journey-scheduling problem in Treeland involves a combination of tree traversal techniques and efficient distance calculation. Let's break down the strategy and the data structures and algorithms used:
+
+### Tree Representation:
+
++ Represent the tree using an adjacency list. This allows efficient traversal and distance calculation between nodes.
+
+### Distance Calculation Using DFS:
+
++ Use Depth-First Search (DFS) to calculate the maximum distances in the tree.
++ Perform DFS twice to ensure accurate calculation of the longest paths:
+    + First DFS to find the farthest node from an arbitrary starting node.
+    + Second DFS starting from the farthest node found in the first DFS to determine the actual longest path in the tree.
++ During DFS, update the distances between nodes and maintain the maximum path length (`max_length`).
+
+### Processing Journeys:
+
++ For each journey, compute the distance traveled by following the problem's rules:
+    + From the starting city, find the most distant city.
+    + Use the precomputed distances and maximum path length to efficiently calculate the total distance traveled over the given number of visits.
+
 ```cpp
 #include <iostream>
 #include <vector>
