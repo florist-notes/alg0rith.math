@@ -1,4 +1,4 @@
-# alg-rithmth 🌸
+# ΛlgΘ-rithm 🌸
 
 my notes on mathematics, algorithms and programming: 
 

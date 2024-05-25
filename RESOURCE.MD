@@ -7,7 +7,7 @@
 <td>
 <b>MIT</b> :
 
-[MIT CSAIL Research Groups](https://www.csail.mit.edu/research/?category=Groups) / [SparkLab](https://web.mit.edu/sparklab/)
+[CSAIL Research Groups](https://www.csail.mit.edu/research/?category=Groups) / [SparkLab](https://web.mit.edu/sparklab/)
 </td>
 <td>
 <b>CMU</b>:
@@ -74,14 +74,16 @@ TU Munich / [Smart Robotics Lab](https://srl.cit.tum.de/)</b>
 </td><td>
 <b>NYU</b>
 </td><td>
-<b>Columbia</b>
+<b>Osaka University</b>
 </td>
 </tr>
 
 
 <tr>
 <td>
-<b>University of Alberta</b>
+<b>
+
+University of Leeds / [Institute of Robotics, Autonomous Systems and Sensing](https://eps.leeds.ac.uk/electronic-engineering-robotics)</b>
 </td>
 <td>
 <b>University of Torronto</b>
@@ -172,6 +174,8 @@ Some of the companies involved in cutting edge Robotics and Machine Learning res
 
 </table>
 
+Some of the YC - [[robotics startups](https://www.ycombinator.com/companies/industry/robotics), [AI startups](https://www.ycombinator.com/companies/industry/ai)], EU AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530).
+
 ## Autonomous Systems Lab:
 
 <table style="width:100%" >
@@ -184,11 +188,11 @@ Some of the companies involved in cutting edge Robotics and Machine Learning res
 <td>
 <b>MIT</b>:
 
-[Spark Lab](https://web.mit.edu/sparklab/)
+[Spark Lab](https://web.mit.edu/sparklab/), [ARCLab](https://aeroastro.mit.edu/arclab/)
 </td><td>
 <b>Stanford</b>
 
-[ASL](https://aa.stanford.edu/research-impact/labs-and-centers/autonomous-systems-lab)
+[ASL](https://aa.stanford.edu/research-impact/labs-and-centers/autonomous-systems-lab), [CAESAR](https://caesar.stanford.edu/)
 </td><td>
 <b>Norwegian University of Science and Technology (NTNU)</b>
 
@@ -253,7 +257,7 @@ Some of the companies involved in cutting edge Robotics and Machine Learning res
 
 
 
-Multiagent-systems [[ labs ](https://multirobotsystems.org/labs)], AI startups : [ai-startups-europe.eu](https://www.ai-startups-europe.eu/), [generative-ai-starups](https://app.dealroom.co/lists/33530), [FDL](https://frontierdevelopmentlab.org/) and AI [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
+Multiagent-systems [[ labs ](https://multirobotsystems.org/labs)], [FDL](https://frontierdevelopmentlab.org/) and AI [residency programs](https://github.com/dangkhoasdc/awesome-ai-residency#internships).
 ## Behavioral Section : 
 
 🌸 Some of my notes from AlgoExpert's behavioural section classes.

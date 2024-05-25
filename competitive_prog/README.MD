@@ -16,11 +16,293 @@ A short introduction to C++ for AI and Robotics:
                                                                           🌸
 ```
 
-### NOTES : [ [Functions](fn.MD) , [Standard Template Library (STL)](./stl.MD), [Utilities & Libraries](./util.MD), [OpenCV](./opencv.MD), [Math Libraries](./mathcpp.MD) ]
+### NOTES : [ [Functions](./doc/fn.MD) , [Standard Template Library (STL)](./doc/stl.MD), [Utilities & Libraries](./doc/util.MD), [OpenCV](./doc/opencv.MD), [Math Libraries](./doc/mathcpp.MD) ]
 
 I am comfortable with c++ build systems and c++ was my first programming language that I used extensively throughout high school. I have an overview note on problem solving with c++:
 
-[ [c++ iterators](https://www.javatpoint.com/cpp-iterators), [c++ enumeration](https://www.javatpoint.com/cpp-enumeration), [c++ bitset](https://www.javatpoint.com/post/cpp-bitset), [c++ map](https://www.javatpoint.com/post/cpp-map), [c++ multimap](https://www.javatpoint.com/post/cpp-multimap), [c++ templates](https://www.javatpoint.com/cpp-templates), [c++ files and streams](https://www.javatpoint.com/cpp-files-and-streams), [c++ algorithms](https://www.javatpoint.com/cpp-algorithm), [c++ namespaces](https://www.javatpoint.com/cpp-namespaces), [c++ math functions](https://www.javatpoint.com/cpp-math-functions) ]
+
+<table width=100%>
+<tr>
+<th>C++ Iterators:</th>
+<th>C++ Enumeration:</th>
+</tr>
+
+<tr>
+<td>
+
+Iterators are objects that point to elements within a container. They provide a way to traverse through the elements of a container (like arrays, vectors, lists, etc.). Iterators can be incremented (to move to the next element) or decremented (to move to the previous element).
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 2, 3, 4, 5};
+
+    // Using an iterator to traverse the vector
+    std::vector<int>::iterator it;
+    for (it = vec.begin(); it != vec.end(); ++it) {
+        std::cout << *it << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+```
+</td>
+
+<td>
+
+Enumeration (enum) is a user-defined data type in C++ that consists of integral constants. Each enum variable is assigned an integer value by default.
+
+```cpp
+#include <iostream>
+
+enum Color { RED, GREEN, BLUE };
+
+int main() {
+    Color c = RED;
+    
+    if (c == RED) {
+        std::cout << "The color is red." << std::endl;
+    }
+
+    return 0;
+}
+```
+</td>
+</tr>
+
+<tr>
+<th>C++ Bitset:</th>
+<th>C++ Map:</th>
+</tr>
+
+<tr>
+<td>
+
+The bitset class in C++ is used to store a fixed-size sequence of bits. Each bit can be accessed individually, and bitwise operations can be performed.
+
+```cpp
+#include <iostream>
+#include <bitset>
+
+int main() {
+    std::bitset<8> bs1(std::string("1100"));
+    std::bitset<8> bs2(std::string("1010"));
+
+    // Bitwise AND
+    std::bitset<8> bs_and = bs1 & bs2;
+    std::cout << "AND: " << bs_and << std::endl;
+
+    // Bitwise OR
+    std::bitset<8> bs_or = bs1 | bs2;
+    std::cout << "OR: " << bs_or << std::endl;
+
+    // Bitwise XOR
+    std::bitset<8> bs_xor = bs1 ^ bs2;
+    std::cout << "XOR: " << bs_xor << std::endl;
+
+    return 0;
+}
+```
+</td>
+
+<td>
+A map is an associative container that stores key-value pairs. Each key is unique, and the values can be accessed using the keys.
+
+```cpp
+#include <iostream>
+#include <map>
+
+int main() {
+    std::map<int, std::string> myMap;
+
+    // Inserting elements into the map
+    myMap[1] = "One";
+    myMap[2] = "Two";
+    myMap[3] = "Three";
+
+    // Accessing elements
+    std::cout << "Key 1: " << myMap[1] << std::endl;
+
+    // Iterating through the map
+    for (auto it = myMap.begin(); it != myMap.end(); ++it) {
+        std::cout << it->first << ": " << it->second << std::endl;
+    }
+
+    return 0;
+}
+```
+</td>
+</tr>
+
+<tr>
+<th>C++ Multimap:</th>
+<th>C++ Templates:</th>
+</tr>
+
+<tr>
+<td>
+A multimap is similar to a map, but it allows multiple elements to have the same key.
+
+```cpp
+#include <iostream>
+#include <map>
+
+int main() {
+    std::multimap<int, std::string> myMultimap;
+
+    // Inserting elements into the multimap
+    myMultimap.insert({1, "One"});
+    myMultimap.insert({1, "Uno"});
+    myMultimap.insert({2, "Two"});
+
+    // Accessing elements
+    auto range = myMultimap.equal_range(1);
+    for (auto it = range.first; it != range.second; ++it) {
+        std::cout << it->first << ": " << it->second << std::endl;
+    }
+
+    return 0;
+}
+```
+</td>
+
+<td>
+
+Templates allow writing generic programs that can work with any data type. They are particularly useful for creating functions and classes that operate on different data types.
+
+```cpp
+#include <iostream>
+
+template <typename T>
+T add(T a, T b) {
+    return a + b;
+}
+
+int main() {
+    std::cout << "Int: " << add<int>(2, 3) << std::endl;
+    std::cout << "Double: " << add<double>(2.5, 3.5) << std::endl;
+
+    return 0;
+}
+```
+</td>
+</tr>
+
+<tr>
+<th>C++ Files and Streams:</th>
+<th>C++ Algorithms:</th>
+</tr>
+
+<tr>
+<td>
+C++ provides classes to perform file input and output. The `ifstream` class is used for reading from files, and the `ofstream` class is used for writing to files.
+
+```cpp
+#include <iostream>
+#include <fstream>
+
+int main() {
+    std::ofstream outFile("example.txt");
+    outFile << "Hello, World!" << std::endl;
+    outFile.close();
+
+    std::ifstream inFile("example.txt");
+    std::string content;
+    std::getline(inFile, content);
+    std::cout << "File content: " << content << std::endl;
+    inFile.close();
+
+    return 0;
+}
+```
+</td>
+
+<td>
+
+The C++ Standard Library provides a collection of algorithms that can be used to perform various operations on containers.
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int main() {
+    std::vector<int> vec = {1, 3, 2, 5, 4};
+
+    // Sorting the vector
+    std::sort(vec.begin(), vec.end());
+
+    // Displaying the sorted vector
+    for (int i : vec) {
+        std::cout << i << " ";
+    }
+    std::cout << std::endl;
+
+    // Finding an element
+    auto it = std::find(vec.begin(), vec.end(), 3);
+    if (it != vec.end()) {
+        std::cout << "Element found: " << *it << std::endl;
+    } else {
+        std::cout << "Element not found" << std::endl;
+    }
+
+    return 0;
+}
+```
+</td>
+</tr>
+
+<tr>
+<th>C++ Namespaces:</th>
+<th>C++ Math Functions:</th>
+</tr>
+
+<tr>
+<td>
+
+Namespaces are used to organize code into logical groups and to prevent name collisions. The `std` namespace is the most commonly used namespace in C++.
+
+```cpp
+#include <iostream>
+
+namespace myNamespace {
+    void myFunction() {
+        std::cout << "Hello from myNamespace" << std::endl;
+    }
+}
+
+int main() {
+    myNamespace::myFunction();
+    return 0;
+}
+```
+</td>
+
+<td>
+
+The C++ Standard Library provides a set of functions to perform mathematical operations, such as `sqrt`, `pow`, `sin`, `cos`, etc.
+
+```cpp
+#include <iostream>
+#include <cmath>
+
+int main() {
+    double x = 9.0;
+
+    std::cout << "Square root of " << x << " is " << sqrt(x) << std::endl;
+    std::cout << x << " raised to the power 3 is " << pow(x, 3) << std::endl;
+    std::cout << "Sine of 45 degrees is " << sin(45 * M_PI / 180) << std::endl;
+
+    return 0;
+}
+```
+</td>
+</tr>
+
+</table>
 
 resources : [[code](./code/)] &  /[cpp competitive ref](./cp/) | [[cpp doc](./doc/)] [CMake tutorial](https://www.youtube.com/watch?v=nlKcXPUJGwA&list=PLalVdRk2RC6o5GHu618ARWh0VO0bFlif4) [[How to Properly Setup C++ Projects](https://youtu.be/5glH8dGoeCA?si=nkwRWgvsitERl3L9)] [[Making and Working with Libraries in C++](https://youtu.be/Wt4dxDNmDA8?si=eBW6m8PqW0slulwi)] [[C++](https://www.youtube.com/watch?v=18c3MTX0PK0&list=PLlrATfBNZ98dudnM48yfGUldqGD0S4FFb)]
 
