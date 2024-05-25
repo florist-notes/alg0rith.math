@@ -105,6 +105,33 @@ Objective:
 
 + Calculate the probability that Alef escapes the maze.
 
+### Approach : 
+#### `Representation of Maze`:
+
++ The maze is represented as a 2D grid with characters denoting different types of cells: free cell, obstacle, mine, exit, and tunnel entrance.
++ Tunnels are represented by pairs of cells where each entrance has a corresponding exit.
+
+#### `Building Transition Matrix`:
+
++ The problem is approached using Markov chain principles. The transition matrix represents the probabilities of moving from one cell to another.
++ For each free cell in the maze, calculate the probabilities of moving to its adjacent cells (excluding obstacles) or tunnel exits.
++ Initialize an identity matrix for Gaussian elimination.
+
+#### `Gaussian Elimination`:
+
++ Gaussian elimination is used to solve the system of linear equations represented by the transition matrix.
+The goal is to find the probabilities of reaching an exit from each cell.
++ The matrix is manipulated to bring it to row-echelon form, simplifying the process of finding the solution.
+
+#### `Back-Substitution`:
+
++ Once the matrix is in row-echelon form, back-substitution is performed to find the solution.
++ The probabilities of escaping from each cell are computed, with special attention given to the starting cell.
+
+#### `Output`:
+
+The probability of escaping from the starting cell (Alef's initial position) is printed as the final result.
+
 ```cpp
 #include <bits/stdc++.h>
 
