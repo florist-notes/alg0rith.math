@@ -3,9 +3,9 @@
 ### ❁🦩 Data Structures :
 + [ [merging-communities (50)](https://www.hackerrank.com/challenges/merging-communities/problem) - hr ] [ [merging-communities.cpp](./cp_code/merging-communities.cpp), [merging-communities.MD](./cp_code/merging-communities.MD) ] ✓
 + [ [tree-height-of-a-binary-tree](https://www.hackerrank.com/challenges/tree-height-of-a-binary-tree/problem) - hr ] [ [tree-height-of-a-binary-tree.cpp](./cp_code/tree-height-of-a-binary-tree.cpp), [tree-height-of-a-binary-tree.MD](./cp_code/tree-height-of-a-binary-tree.MD) ] 
-+ [ [balanced-forest](https://www.hackerrank.com/challenges/balanced-forest/problem) - hr ] [ [balanced-forest.cpp](./cp_code/balanced-forest.cpp), [balanced-forest.MD](./cp_code/balanced-forest.MD) ] 
++ [ [balanced-forest](https://www.hackerrank.com/challenges/balanced-forest/problem) - hr ] [ [balanced-forest.cpp](./cp_code/balanced-forest.cpp), [balanced-forest.MD](./cp_code/balanced-forest.MD) ]  
 + [ [castle-on-the-grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem) - hr ] [ [castle-on-the-grid.cpp](./cp_code/castle-on-the-grid.cpp), [castle-on-the-grid.MD](./cp_code/castle-on-the-grid.MD) ] ✓
-+ [ [minimum-average-waiting-time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem) - hr ] [ [minimum-average-waiting-time.cpp](./cp_code/minimum-average-waiting-time.cpp), [minimum-average-waiting-time.MD](./cp_code/minimum-average-waiting-time.MD) ] 
++ [ [minimum-average-waiting-time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem) - hr ] [ [minimum-average-waiting-time.cpp](./cp_code/minimum-average-waiting-time.cpp), [minimum-average-waiting-time.MD](./cp_code/minimum-average-waiting-time.MD) ] ✓
 + [ [kittys-calculations-on-a-tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem) - hr ] [ [kittys-calculations-on-a-tree.cpp](./cp_code/kittys-calculations-on-a-tree.cpp), [kittys-calculations-on-a-tree.MD](./cp_code/kittys-calculations-on-a-tree.MD) ]
 
 ### ✿🦩 Bitwise (Bit Manipulation) :
@@ -27,4 +27,4 @@
 + [ [frog-in-maze (65)](https://www.hackerrank.com/challenges/frog-in-maze/problem) - hr ] [ [frog-in-maze.cpp](./cp_code/frog-in-maze.cpp), [frog-in-maze.MD](./cp_code/frog-in-maze.MD) ] ✓
 + [ [kruskalmstrsub](https://www.hackerrank.com/challenges/kruskalmstrsub/problem) - hr ] [ [kruskalmstrsub.cpp](./cp_code/kruskalmstrsub.cpp), [kruskalmstrsub.MD](./cp_code/kruskalmstrsub.MD) ] ✓
 + [ [journey-to-the-moon](https://www.hackerrank.com/challenges/journey-to-the-moon/problem) - hr ] [ [journey-to-the-moon.cpp](./cp_code/journey-to-the-moon.cpp), [journey-to-the-moon.MD](./cp_code/journey-to-the-moon.MD) ] ✓
-+ [ [kingdom-connectivity](https://www.hackerrank.com/challenges/kingdom-connectivity/problem) - hr ] [ [kingdom-connectivity.cpp](./cp_code/kingdom-connectivity.cpp), [kingdom-connectivity.MD](./cp_code/kingdom-connectivity.MD) ]
++ [ [kingdom-connectivity](https://www.hackerrank.com/challenges/kingdom-connectivity/problem) - hr ] [ [kingdom-connectivity.cpp](./cp_code/kingdom-connectivity.cpp), [kingdom-connectivity.MD](./cp_code/kingdom-connectivity.MD) ] ✓
