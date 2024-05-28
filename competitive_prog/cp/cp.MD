@@ -25,6 +25,6 @@
 ### 𖡼🦩 Graph Theory :
 + [ [journey-scheduling (75) ](https://www.hackerrank.com/challenges/journey-scheduling/problem) - hr ] [ [journey-scheduling.cpp](./cp_code/journey-scheduling.cpp), [journey-scheduling.MD](./cp_code/journey-scheduling.MD) ] ✓
 + [ [frog-in-maze (65)](https://www.hackerrank.com/challenges/frog-in-maze/problem) - hr ] [ [frog-in-maze.cpp](./cp_code/frog-in-maze.cpp), [frog-in-maze.MD](./cp_code/frog-in-maze.MD) ] ✓
-+ [ [kruskalmstrsub](https://www.hackerrank.com/challenges/kruskalmstrsub/problem) - hr ] [ [kruskalmstrsub.cpp](./cp_code/kruskalmstrsub.cpp), [kruskalmstrsub.MD](./cp_code/kruskalmstrsub.MD) ]
++ [ [kruskalmstrsub](https://www.hackerrank.com/challenges/kruskalmstrsub/problem) - hr ] [ [kruskalmstrsub.cpp](./cp_code/kruskalmstrsub.cpp), [kruskalmstrsub.MD](./cp_code/kruskalmstrsub.MD) ] ✓
 + [ [journey-to-the-moon](https://www.hackerrank.com/challenges/journey-to-the-moon/problem) - hr ] [ [journey-to-the-moon.cpp](./cp_code/journey-to-the-moon.cpp), [journey-to-the-moon.MD](./cp_code/journey-to-the-moon.MD) ] ✓
 + [ [kingdom-connectivity](https://www.hackerrank.com/challenges/kingdom-connectivity/problem) - hr ] [ [kingdom-connectivity.cpp](./cp_code/kingdom-connectivity.cpp), [kingdom-connectivity.MD](./cp_code/kingdom-connectivity.MD) ]

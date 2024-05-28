@@ -84,3 +84,183 @@ Select 3→4(w=5) to finish the MST yielding a total weight of 3+4+5=12.
 #### Explanation 2
 
 Given the graph above, select edges 1→2, 2→3, 3→4, 4→5 with weights 20+30+40+60 = 150.
+
+## Solution : 
+
+The problem is to find the Minimum Spanning Tree (MST) of a given undirected, weighted, and connected graph using Kruskal's algorithm. Kruskal's algorithm is a greedy algorithm that finds an MST by sorting the edges by weight and adding them one by one, ensuring no cycles are formed.
+
+Here's a step-by-step explanation of the approach and code:
+
+### Steps in Kruskal's Algorithm :
++ `Sort all the edges`: Sort the edges in non-decreasing order of their weight. If two edges have the same weight, use a tie-breaking rule to decide the order.
++ `Initialize the Union-Find structure`: This helps in efficiently checking if adding an edge would form a cycle and in merging sets of nodes.
++ `Iterate over sorted edges`: Add edges to the MST one by one, making sure not to form a cycle. Use the Union-Find structure to check for cycles and to union sets.
++ `Sum the weights of the edges in the MST`: This gives the total weight of the MST.
+
+```cpp
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+
+using namespace std;
+
+// Structure to represent an edge
+struct Edge {
+    int u, v, weight;
+    bool operator<(const Edge& other) const {
+        if (weight == other.weight) {
+            return (u + v + weight) < (other.u + other.v + other.weight);
+        }
+        return weight < other.weight;
+    }
+};
+
+// Find function with path compression
+int find(vector<int>& parent, int u) {
+    if (parent[u] != u) {
+        parent[u] = find(parent, parent[u]);
+    }
+    return parent[u];
+}
+
+// Union function by rank
+void union_sets(vector<int>& parent, vector<int>& rank, int u, int v) {
+    int root_u = find(parent, u);
+    int root_v = find(parent, v);
+    if (root_u != root_v) {
+        if (rank[root_u] > rank[root_v]) {
+            parent[root_v] = root_u;
+        } else if (rank[root_u] < rank[root_v]) {
+            parent[root_u] = root_v;
+        } else {
+            parent[root_v] = root_u;
+            rank[root_u]++;
+        }
+    }
+}
+
+// Kruskal's algorithm to find MST
+int kruskals(int g_nodes, const vector<Edge>& edges) {
+    vector<int> parent(g_nodes + 1);
+    vector<int> rank(g_nodes + 1, 0);
+    iota(parent.begin(), parent.end(), 0);
+    
+    int mst_weight = 0;
+    
+    for (const auto& edge : edges) {
+        if (find(parent, edge.u) != find(parent, edge.v)) {
+            union_sets(parent, rank, edge.u, edge.v);
+            mst_weight += edge.weight;
+        }
+    }
+    
+    return mst_weight;
+}
+
+int main() {
+    int g_nodes, g_edges;
+    cin >> g_nodes >> g_edges;
+    
+    vector<Edge> edges(g_edges);
+    
+    for (int i = 0; i < g_edges; ++i) {
+        cin >> edges[i].u >> edges[i].v >> edges[i].weight;
+    }
+    
+    // Sort edges based on the custom comparator defined in the Edge structure
+    sort(edges.begin(), edges.end());
+    
+    // Get the total weight of the MST
+    int result = kruskals(g_nodes, edges);
+    cout << result << endl;
+    
+    return 0;
+}
+```
+
+### Edge Structure :
+The `Edge` struct represents an edge in the graph:
+
+```cpp
+struct Edge {
+    int u, v, weight;
+    bool operator<(const Edge& other) const {
+        if (weight == other.weight) {
+            return (u + v + weight) < (other.u + other.v + other.weight);
+        }
+        return weight < other.weight;
+    }
+};
+```
+
++ `u, v`: The two vertices connected by the edge.
++ `weight`: The weight of the edge.
++ `operator<`: A custom comparator that first sorts by weight. If weights are equal, it sorts by the sum 
+u+v+weight.
+
+### Union-Find Data Structure :
+Union-Find (or Disjoint Set Union, DSU) is used to manage the sets of nodes and detect cycles efficiently:
+
+```cpp
+int find(vector<int>& parent, int u) {
+    if (parent[u] != u) {
+        parent[u] = find(parent, parent[u]);
+    }
+    return parent[u];
+}
+
+void union_sets(vector<int>& parent, vector<int>& rank, int u, int v) {
+    int root_u = find(parent, u);
+    int root_v = find(parent, v);
+    if (root_u != root_v) {
+        if (rank[root_u] > rank[root_v]) {
+            parent[root_v] = root_u;
+        } else if (rank[root_u] < rank[root_v]) {
+            parent[root_u] = root_v;
+        } else {
+            parent[root_v] = root_u;
+            rank[root_u]++;
+        }
+    }
+}
+```
+
++ `find`: Uses path compression to make future queries faster by flattening the structure of the tree.
++ `union_sets`: Uses union by rank to keep the tree flat, merging smaller trees under larger trees.
+
+### Kruskal's Algorithm :
+The kruskals function implements the core algorithm:
+
+```cpp
+int kruskals(int g_nodes, const vector<Edge>& edges) {
+    vector<int> parent(g_nodes + 1);
+    vector<int> rank(g_nodes + 1, 0);
+    iota(parent.begin(), parent.end(), 0);
+    
+    int mst_weight = 0;
+    
+    for (const auto& edge : edges) {
+        if (find(parent, edge.u) != find(parent, edge.v)) {
+            union_sets(parent, rank, edge.u, edge.v);
+            mst_weight += edge.weight;
+        }
+    }
+    
+    return mst_weight;
+}
+```
+
++ `parent`: Initializes each node to be its own parent.
++ `rank`: Initializes the rank of each node to 0.
++ `iota`: Fills the parent vector with values from 0 to g_nodes.
++ `mst_weight`: Accumulates the total weight of the MST.
++ `for loop`: Iterates through the sorted edges and adds them to the MST if they don't form a cycle.
+
+### Summary :
++ The algorithm uses Kruskal's method to find the MST.
++ Sorting of edges is done with a custom comparator to handle tie-breaking.
++ Union-Find data structure ensures efficient cycle detection and union operations.
++ The total weight of the MST is computed and printed.
+
+This approach ensures that the MST is found efficiently, even for large graphs, adhering to the constraints and tie-breaking rules provided in the problem statement.
