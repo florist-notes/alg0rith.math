@@ -13,14 +13,14 @@
 + [ [the-great-xor](https://www.hackerrank.com/challenges/the-great-xor/problem) - hr ] [ [the-great-xor.cpp](./cp_code/the-great-xor.cpp), [the-great-xor.MD](./cp_code/the-great-xor.MD) ] 
 + [ [yet-another-minimax-problem](https://www.hackerrank.com/challenges/yet-another-minimax-problem/problem) - hr ] [ [yet-another-minimax-problem.cpp](./cp_code/yet-another-minimax-problem.cpp), [yet-another-minimax-problem.MD](./cp_code/yet-another-minimax-problem.MD) ] ✓
 + [ [xoring-ninja](https://www.hackerrank.com/challenges/xoring-ninja/problem) - hr ] [ [xoring-ninja.cpp](./cp_code/xoring-ninja.cpp), [xoring-ninja.MD](./cp_code/xoring-ninja.MD) ] 
-+ [ [manipulative-numbers](https://www.hackerrank.com/challenges/manipulative-numbers/problem) - hr ] [ [manipulative-numbers.cpp](./cp_code/manipulative-numbers.cpp), [manipulative-numbers.MD](./cp_code/manipulative-numbers.MD) ] 
++ [ [manipulative-numbers](https://www.hackerrank.com/challenges/manipulative-numbers/problem) - hr ] [ [manipulative-numbers.cpp](./cp_code/manipulative-numbers.cpp), [manipulative-numbers.MD](./cp_code/manipulative-numbers.MD) ] ✓
 
 ### ❀🦩 Dynamic Programming :
 + [ [sherlocks-array-merging-algorithm (60) ](https://www.hackerrank.com/challenges/sherlocks-array-merging-algorithm/problem) - hr ] [ [sherlocks-array-merging-algorithm.cpp](./cp_code/sherlocks-array-merging-algorithm.cpp), [sherlocks-array-merging-algorithm.MD](./cp_code/sherlocks-array-merging-algorithm.MD) ] ✓
 + [ [wet-shark-and-two-subsequences](https://www.hackerrank.com/challenges/wet-shark-and-two-subsequences/problem) - hr ] [ [wet-shark-and-two-subsequences.cpp](./cp_code/wet-shark-and-two-subsequences.cpp), [wet-shark-and-two-subsequences.MD](./cp_code/wet-shark-and-two-subsequences.MD) ] 
 + [ [choosing-white-balls](https://www.hackerrank.com/challenges/choosing-white-balls/problem) - hr ] [ [choosing-white-balls.cpp](./cp_code/choosing-white-balls.cpp), [choosing-white-balls.MD](./cp_code/choosing-white-balls.MD) ] 
 + [ [dynamic-programming-classics-the-longest-common-subsequence](https://www.hackerrank.com/challenges/dynamic-programming-classics-the-longest-common-subsequence/problem) - hr ] [ [dynamic-programming-classics-the-longest-common-subsequence.cpp](./cp_code/dynamic-programming-classics-the-longest-common-subsequence.cpp), [dynamic-programming-classics-the-longest-common-subsequence.MD](./cp_code/dynamic-programming-classics-the-longest-common-subsequence.MD) ] ✓
-+ [ [longest-palindromic-subsequence](https://www.hackerrank.com/challenges/longest-palindromic-subsequence/problem) - hr ] [ [longest-palindromic-subsequence.cpp](./cp_code/longest-palindromic-subsequence.cpp), [longest-palindromic-subsequence.MD](./cp_code/longest-palindromic-subsequence.MD) ] 
++ [ [longest-palindromic-subsequence](https://www.hackerrank.com/challenges/longest-palindromic-subsequence/problem) - hr ] [ [longest-palindromic-subsequence.cpp](./cp_code/longest-palindromic-subsequence.cpp), [longest-palindromic-subsequence.MD](./cp_code/longest-palindromic-subsequence.MD) ] ✓
 
 ### 𖡼🦩 Graph Theory :
 + [ [journey-scheduling (75) ](https://www.hackerrank.com/challenges/journey-scheduling/problem) - hr ] [ [journey-scheduling.cpp](./cp_code/journey-scheduling.cpp), [journey-scheduling.MD](./cp_code/journey-scheduling.MD) ] ✓
