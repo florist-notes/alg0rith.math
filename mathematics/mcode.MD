@@ -2,7 +2,7 @@
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-<img src="./notes/math22.png" width=100%>
+<img src="./notes/math24.png" width=100%>
 
 [map of mathematics](./notes/map-of-mathematics.webp)
 
@@ -14,7 +14,8 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 Matrix multiplication can be described mathematically as follows:
 
-$$ matmul(XY)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = XY_{i,j} $$
+$$ \text{matmul}(XY)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = XY_{i,j}  $$
+
 
 This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
 
@@ -246,7 +247,8 @@ $$ surprise(p, i) = -log(p_i) $$
 
 <br/>
 
-$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j}e^{x_j}} $$
+$$ \text{softmax}(x)_i = \frac{e^{x_i}}{\sum_{j}e^{x_j}} $$
+
 
 <br/>
 
@@ -382,4 +384,4 @@ More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/m
 
 [ Separating Hyperplanes, Primal Support Vector Machine, Dual Support Vector Machine, Kernels 388, Numerical Solution ]
 
-### Continuous Optimization [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.07%20Continuous%20Optimization.ipynb)]
+## Continuous Optimization [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.07%20Continuous%20Optimization.ipynb)]
