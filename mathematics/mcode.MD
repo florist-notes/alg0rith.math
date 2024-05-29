@@ -12,11 +12,6 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 `Linear Algebra` : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
-Matrix multiplication can be described mathematically as follows:
-
-$$ \text{matmul}(XY)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = XY_{i,j}  $$
-
-
 This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
 
 #### Understanding Arrays as Linear Functions
@@ -244,8 +239,6 @@ def softmax(x):
 </table>
 
 $$ surprise(p, i) = -log(p_i) $$
-
-<br/>
 
 $$ \text{softmax}(x)_i = \frac{e^{x_i}}{\sum_{j}e^{x_j}} $$
 
