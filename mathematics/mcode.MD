@@ -2,11 +2,11 @@
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-<img src="./notes/math22.webp" width=100%>
+<img src="./notes/math22.png" width=100%>
 
 [map of mathematics](./notes/map-of-mathematics.webp)
 
-## Linear Algebra
+## Linear Algebra [[numpy](https://numpy.org/doc/stable/reference/routines.linalg.html), [code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.02%20Linear%20Algebra.ipynb)]
 
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
@@ -14,22 +14,22 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 Matrix multiplication can be described mathematically as follows:
 
-$$ {matmul}(X, Y)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = (XY)_{i,j} $$
+$$ matmul(XY)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
 This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
 
-### Understanding Arrays as Linear Functions
+#### Understanding Arrays as Linear Functions
 In linear algebra, arrays (or matrices) represent linear transformations or functions. These functions are particularly well-suited to operations involving weighted sums. A linear function, represented by a matrix, maps vectors from one space to another while preserving vector addition and scalar multiplication.
 
-### The Kernel of a Linear Function
+#### The Kernel of a Linear Function
 The kernel (or null space) of a linear function consists of all input vectors that are mapped to the zero vector by that function. Mathematically, if A is a matrix representing a linear function f, then the kernel of f is defined as:
 
 $$ Ker(A)={x∣Ax=0} $$
 
-### Rank of a Linear Function
+#### Rank of a Linear Function
 The rank of a linear function (or matrix) is a measure of the dimension of the image (or column space) of the matrix. It tells us the maximum number of linearly independent columns in the matrix. These columns span the range of the function, meaning any vector in the range can be expressed as a linear combination of these columns.
 
-### Rank and Non-Kernel Elements
+#### Rank and Non-Kernel Elements
 The rank of a matrix answers a crucial question: How many linearly independent vectors (non-kernel elements) are required to span the entire range of the matrix? In other words, the rank gives us the number of independent directions in which the linear function can map input vectors. Knowing this allows us to understand the full capacity of the transformation described by the matrix.
 
 By comprehending these concepts, we can better appreciate the structure and behavior of linear transformations in various mathematical and practical applications.
@@ -42,7 +42,7 @@ By comprehending these concepts, we can better appreciate the structure and beha
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 
-### Matrix Decompositions :
+### Matrix Decompositions : [[code](https://people.duke.edu/~ccc14/sta-663-2016/07_LinearAlgebra2.html), [code_2](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.04%20Matrix%20Decompositions.ipynb)]
 
 [  Determinant and Trace,  Eigenvalues and Eigenvectors, Cholesky Decomposition, Eigendecomposition and Diagonalization, Singular Value Decomposition, Matrix Approximation, Matrix Phylogeny ]
 
@@ -99,14 +99,14 @@ print(np.concatenate(arrays))
 
 `numpy.allclose()` function is used to find if two arrays are element-wise equal within a tolerance and the `numpy.hstack()` function is used to stack arrays in sequence horizontally. More on linear algebra [here](https://github.com/wandb/edu/blob/main/math-for-ml/01_linearalgebra/extras.ipynb).
 
-## Analytic Geometry
+## Analytic Geometry [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.03%20Analytic%20Geometry.ipynb)]
 
 [ Norms, Inner Products, Lengths and Distances, Angles and Orthogonality, Orthonormal Basis, Orthogonal Complement, Inner Product of Functions, Orthogonal Projections, Rotations ]
 
 
-## Multiple View Geometry [[notes](./mvgeometry.MD)]
+### Multiple View Geometry [[notes](./mvgeometry.MD)]
 
-## Vector Calculus
+## Vector Calculus [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.05%20Vector%20Calculus.ipynb)]
 
 [ Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices, Useful Identities for Computing Gradients, Backpropagation and Automatic Differentiation, Higher-Order Derivatives, Linearization and Multivariate Taylor Series ]
 
@@ -142,7 +142,7 @@ print(sympy.limit(f_x / g_x, x, 0))
 More on Calculus in [notebook 1](https://github.com/wandb/edu/blob/main/math-for-ml/02_calculus/extras.ipynb) and [notebook 2](https://colab.research.google.com/github/ageron/handson-ml2/blob/master/math_differential_calculus.ipynb). Blog : [Calculus on Computational Graphs: Backpropagation](https://colah.github.io/posts/2015-08-Backprop/), [Calculus in SymPy](http://prob140.org/sp17/textbook/ch17/Calculus_in_SymPy.html).
 
 
-## Probability and Distributions
+## Probability and Distributions [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.06%20Probability%20and%20Distributions.ipynb)]
 
 [ Construction of a Probability Space, Discrete and Continuous Probabilities, Sum Rule, Product Rule, and Bayes’ Theorem, Summary Statistics and Independence, Gaussian Distribution, Conjugacy and the Exponential Family, Change of Variables/Inverse Transform ]
 
@@ -246,7 +246,7 @@ $$ surprise(p, i) = -log(p_i) $$
 
 <br/>
 
-$$ {softmax}(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
+$$ softmax(x)_i = \frac{e^{x_i}}{\sum_{j}e^{x_j}} $$
 
 <br/>
 
@@ -319,7 +319,7 @@ and we can say:
 $$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
 
 
-### Minimizing the Surprise with Gradient Descent - The Gaussian Distribution and its Surprise Function :
+#### Minimizing the Surprise with Gradient Descent - The Gaussian Distribution and its Surprise Function :
 
 Cross Entropy is the average surprise using the pmf q on samples from the pmf p.
 
@@ -381,3 +381,5 @@ More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/m
 ### Classification with Support Vector Machines :
 
 [ Separating Hyperplanes, Primal Support Vector Machine, Dual Support Vector Machine, Kernels 388, Numerical Solution ]
+
+### Continuous Optimization [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.07%20Continuous%20Optimization.ipynb)]
