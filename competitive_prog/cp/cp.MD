@@ -6,7 +6,7 @@
 + [ [balanced-forest](https://www.hackerrank.com/challenges/balanced-forest/problem) - hr ] [ [balanced-forest.cpp](./cp_code/balanced-forest.cpp), [balanced-forest.MD](./cp_code/balanced-forest.MD) ]  
 + [ [castle-on-the-grid](https://www.hackerrank.com/challenges/castle-on-the-grid/problem) - hr ] [ [castle-on-the-grid.cpp](./cp_code/castle-on-the-grid.cpp), [castle-on-the-grid.MD](./cp_code/castle-on-the-grid.MD) ] ✓
 + [ [minimum-average-waiting-time](https://www.hackerrank.com/challenges/minimum-average-waiting-time/problem) - hr ] [ [minimum-average-waiting-time.cpp](./cp_code/minimum-average-waiting-time.cpp), [minimum-average-waiting-time.MD](./cp_code/minimum-average-waiting-time.MD) ] ✓
-+ [ [kittys-calculations-on-a-tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem) - hr ] [ [kittys-calculations-on-a-tree.cpp](./cp_code/kittys-calculations-on-a-tree.cpp), [kittys-calculations-on-a-tree.MD](./cp_code/kittys-calculations-on-a-tree.MD) ]
++ [ [kittys-calculations-on-a-tree](https://www.hackerrank.com/challenges/kittys-calculations-on-a-tree/problem) - hr ] [ [kittys-calculations-on-a-tree.cpp](./cp_code/kittys-calculations-on-a-tree.cpp), [kittys-calculations-on-a-tree.MD](./cp_code/kittys-calculations-on-a-tree.MD) ] ✓
 
 ### ✿🦩 Bitwise (Bit Manipulation) :
 + [ [string-transmission (60)](https://www.hackerrank.com/challenges/string-transmission/problem) -hr ] [ [string-transmission.cpp](./cp_code/string-transmission.cpp), [string-transmission.MD](./cp_code/string-transmission.MD) ] ✓
