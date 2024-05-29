@@ -2,7 +2,7 @@
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-<img src="./notes/math2.png" width=100%>
+<img src="./notes/math22.webp" width=100%>
 
 [map of mathematics](./notes/map-of-mathematics.webp)
 
@@ -14,7 +14,7 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 Matrix multiplication can be described mathematically as follows:
 
-$$ matmul(X,Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
+$$ {matmul}(X, Y)_{i,j} = \sum_{r} X_{i,r} Y_{r,j} = (XY)_{i,j} $$
 
 This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
 
@@ -246,7 +246,7 @@ $$ surprise(p, i) = -log(p_i) $$
 
 <br/>
 
-$$ softmax(x)_i = \frac{ e^{x_i} }{ \sum_{j} e^{x_j} } $$
+$$ {softmax}(x)_i = \frac{e^{x_i}}{\sum_{j} e^{x_j}} $$
 
 <br/>
 
@@ -319,7 +319,7 @@ and we can say:
 $$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
 
 
-### Minimizing the Surprise with Gradient Descent: The Gaussian Distribution and its Surprise Function
+### Minimizing the Surprise with Gradient Descent - The Gaussian Distribution and its Surprise Function :
 
 Cross Entropy is the average surprise using the pmf q on samples from the pmf p.
 
@@ -362,22 +362,22 @@ print("Surprise at x:", surprise)
 
 More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/main/math-for-ml/03_probability/extras.ipynb) notebook.
 
-## When Model Meet Data
+### When Model Meet Data :
 
 [ Data, Models, and Learning; Empirical Risk Minimization, Parameter Estimation, Probabilistic Modeling and Inference, Directed Graphical Models ]
 
-## Linear Regression
+### Linear Regression :
 
 [ Problem Formulation, Parameter Estimation, Bayesian Linear Regression, Maximum Likelihood as Orthogonal Projection ] ([notebook.ipynb](./code/linear_regression_solution.ipynb))
 
-## Dimensionality Reduction with Principal Component Analysis
+### Dimensionality Reduction with Principal Component Analysis :
 
 [ Problem Setting, Maximum Variance Perspective, Projection Perspective, Eigenvector Computation and Low-Rank Approximations, PCA in High Dimensions, Key Steps of PCA in Practice ([notebook.ipynb](./code/pca_solution.ipynb)), Latent Variable Perspective ]
 
-## Dimensionality Estimation with Gaussian Mixture Models
+### Dimensionality Estimation with Gaussian Mixture Models :
 
 [ Gaussian Mixture Model ([notebook.ipynb](./code/gmm_solution.ipynb)), Parameter Learning via Maximum Likelihood, EM Algorithm, Latent-Variable Perspective ]
 
-## Classification with Support Vector Machines
+### Classification with Support Vector Machines :
 
 [ Separating Hyperplanes, Primal Support Vector Machine, Dual Support Vector Machine, Kernels 388, Numerical Solution ]
