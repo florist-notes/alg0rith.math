@@ -2,7 +2,7 @@
 
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
 
-<img src="./notes/math.jpg" width=100%>
+<img src="./notes/math2.png" width=100%>
 
 [map of mathematics](./notes/map-of-mathematics.webp)
 
@@ -12,14 +12,33 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 `Linear Algebra` : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
+Matrix multiplication can be described mathematically as follows:
 
-$$ matmul(X,Y){i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
+$$ matmul(X,Y)_{i,j} = \sum_{i} X_{i,r} Y_{r,j} = XY_{i,j} $$
 
-Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
+This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
+
+### Understanding Arrays as Linear Functions
+In linear algebra, arrays (or matrices) represent linear transformations or functions. These functions are particularly well-suited to operations involving weighted sums. A linear function, represented by a matrix, maps vectors from one space to another while preserving vector addition and scalar multiplication.
+
+### The Kernel of a Linear Function
+The kernel (or null space) of a linear function consists of all input vectors that are mapped to the zero vector by that function. Mathematically, if A is a matrix representing a linear function f, then the kernel of f is defined as:
+
+$$ Ker(A)={x∣Ax=0} $$
+
+### Rank of a Linear Function
+The rank of a linear function (or matrix) is a measure of the dimension of the image (or column space) of the matrix. It tells us the maximum number of linearly independent columns in the matrix. These columns span the range of the function, meaning any vector in the range can be expressed as a linear combination of these columns.
+
+### Rank and Non-Kernel Elements
+The rank of a matrix answers a crucial question: How many linearly independent vectors (non-kernel elements) are required to span the entire range of the matrix? In other words, the rank gives us the number of independent directions in which the linear function can map input vectors. Knowing this allows us to understand the full capacity of the transformation described by the matrix.
+
+By comprehending these concepts, we can better appreciate the structure and behavior of linear transformations in various mathematical and practical applications.
+
+🌸 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?s
 
 `Single Value Decomposition (SVD)`: Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
 
-<center><img src="./svdn.webp" width=100%></center>
+<center><img src="./svdn2.png" width=100%></center>
 
 Refactoring : Eigen Decomposition, Low rank approximation, SVD
 

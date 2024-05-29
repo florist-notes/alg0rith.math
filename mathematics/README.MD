@@ -44,14 +44,18 @@ Mathematics is beautiful and imperative for problem solving with control. Import
 
 ## Mathematics NOTES 📖:
 
-`LINEAR ALGEBRA`: [M4ML - Linear Algebra](https://youtu.be/T73ldK46JqE), [3b1b - Essence of Linear Algebra](https://youtu.be/fNk_zzaMoSs), [MIT 18.06 Linear Algebra - Gilbert Strang](https://www.youtube.com/watch?v=QVKj3LADCnA&list=PL49CF3715CB9EF31D) <br />
+` > LINEAR ALGEBRA`: [M4ML - Linear Algebra](https://www.youtube.com/watch?v=T73ldK46JqE&list=PLiiljHvN6z1_o1ztXTKWPrShrMrBLo5P3), [3b1b - Essence of Linear Algebra](https://www.youtube.com/watch?v=kjBOesZCoqc&list=PL0-GT3co4r2y2YErbmuJw2L5tW4Ew2O5B), [MIT 18.06 Linear Algebra - Gilbert Strang](https://www.youtube.com/watch?v=QVKj3LADCnA&list=PL49CF3715CB9EF31D) <br />
 { [linear_algebra_cs229.pdf](./notes/cs229-linalg.pdf), [linear_algebra_review.pdf](./notes/cs229-linalg2.pdf), [vip_referesher_linear_algebra.pdf](./notes/linear-algebra.pdf) } 📖
 
 Linear algebra forms the backbone of many machine learning algorithms, particularly in handling high-dimensional data. Key concepts include vectors, matrices, matrix operations (addition, multiplication), and linear transformations. Examples:
 + Representation of datasets as matrices.
 + Matrix multiplication for linear transformations in neural networks.
 
-More on Lie Group and Lie Algebra from my notes @[slam/lie](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/lieg.MD)
+In Robotics [SLAM] : `Lie Group`: A Lie group is a group that is also a differentiable manifold, meaning it has a smooth structure that allows for calculus to be performed. The group operations (multiplication and inversion) are smooth maps. Lie groups are used to study continuous symmetries.
+
+`Lie Algebra`: Associated with every Lie group is a Lie algebra, which is a vector space equipped with a binary operation called the Lie bracket. The Lie algebra captures the infinitesimal structure of the Lie group and is crucial in understanding its properties.
+
+ More on Lie Group and Lie Algebra from my notes @[slam/lie](https://github.com/florist-notes/aicore_n/blob/main/notes/code/slam/lieg.MD)
 
 <br />
 
@@ -69,17 +73,17 @@ $$
 
 Matrix Decomposition: [MIT 18.065 Matrix Methods in Data Analysis, Signal Processing, and ML](https://www.youtube.com/playlist?list=PLUl4u3cNGP63oMNUHXqIUcrkS2PivhN3k)<br />
 
-`ANALYTIC GEOMETRY`: [MIT Graph and Geometry Reading Group](https://www.youtube.com/playlist?list=PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl) [ Discrete Differential Geometry - [CMU 15-458/858](https://www.youtube.com/playlist?list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS) ]<br />
+`> ANALYTIC GEOMETRY`: [MIT Graph and Geometry Reading Group](https://www.youtube.com/playlist?list=PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl) [ Discrete Differential Geometry - [CMU 15-458/858](https://www.youtube.com/playlist?list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS) ]<br />
 { [Geometric foundations of deep learning](https://towardsdatascience.com/geometric-foundations-of-deep-learning-94cdd45b451d), @github/[awesome-neural-geometry](https://github.com/neurreps/awesome-neural-geometry), [AMMI 2022 Course "Geometric Deep Learning" ](https://www.youtube.com/watch?v=5c_-KX1sRDQ&list=PLn2-dEmQeTfSLXW8yXP4q_Ii58wFdxb3C), [Geometric Deep Learning](https://a-j.gitbook.io/geometric-deep-learning/), [mathematical_methods_computervision_robotics_graphics.pdf](./notes/cs205a_notes.pdf) }
 
 
-`CALCULUS` : [Calculus I (Limits, Derivative, Integrals)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m), [Calculus II (Integration Methods, Series, Parametric/Polar, Vectors)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc4ySKTIW19TLrT91Ik9M4n), [Calculus III: Multivariable Calculus (Vectors, Curves, Partial Derivatives, Integration](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd), [Mathematics for Machine Learning - Multivariate Calculus](https://www.youtube.com/playlist?list=PLiiljHvN6z193BBzS0Ln8NnqQmzimTW23); VECTOR CALCULUS: [Calculus IV: Vector Calculus](https://www.youtube.com/watch?v=AIxiYG-gZ00&list=PLHXZ9OQGMqxfW0GMqeUE1bLKaYor6kbHa).
+`> CALCULUS` : [Calculus I (Limits, Derivative, Integrals)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxfT9RMcReZ4WcoVILP4k6-m), [Calculus II (Integration Methods, Series, Parametric/Polar, Vectors)](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc4ySKTIW19TLrT91Ik9M4n), [Calculus III: Multivariable Calculus (Vectors, Curves, Partial Derivatives, Integration](https://www.youtube.com/playlist?list=PLHXZ9OQGMqxc_CvEy7xBKRQr6I214QJcd), [Mathematics for Machine Learning - Multivariate Calculus](https://www.youtube.com/playlist?list=PLiiljHvN6z193BBzS0Ln8NnqQmzimTW23); VECTOR CALCULUS: [Calculus IV: Vector Calculus](https://www.youtube.com/watch?v=AIxiYG-gZ00&list=PLHXZ9OQGMqxfW0GMqeUE1bLKaYor6kbHa).
 
 Calculus provides tools for optimization, which is fundamental in training machine learning models. Concepts such as derivatives, gradients, and optimization techniques like gradient descent are indispensable. Examples:
 + Calculating gradients for updating model parameters in gradient descent.
 + Using second derivatives for optimization methods like Newton's method.<br />
 
-`PROBABILITY AND DISTRIBUTION`: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
+`> PROBABILITY AND DISTRIBUTION`: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
 { [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](./notes/refresher-probabilities-statistics.pdf)  } 📖
 
 Probability theory deals with uncertainty and randomness. Concepts include probability distributions, conditional probability, and Bayes' theorem. Examples:
@@ -92,7 +96,7 @@ $$\dfrac{n!}{k!(n-k)!} = \binom{n}{k}$$
 
 <br />
 
-`CONTINUOUS OPTIMIZATION`: [Optimization Methods for Machine Learning and Engineering](https://www.youtube.com/playlist?list=PLdkTDauaUnQpzuOCZyUUZc0lxf4-PXNR5)<br />
+`> CONTINUOUS OPTIMIZATION`: [Optimization Methods for Machine Learning and Engineering](https://www.youtube.com/playlist?list=PLdkTDauaUnQpzuOCZyUUZc0lxf4-PXNR5), [CS769 - Optimization in Machine Learning](https://www.youtube.com/watch?v=ydFjUzqyZkw&list=PLyo3HAXSZD3xk6Bc3Fri5-efbi4NKDtlO) <br />
 
 Optimization techniques are crucial for training machine learning models by finding the optimal parameters that minimize a cost function. Concepts include convex optimization, constrained optimization, and stochastic optimization. Examples:
 + Gradient descent for optimizing neural network weights.
