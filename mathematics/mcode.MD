@@ -1,6 +1,8 @@
 # Practical Mathematics 🌸
 
+<p align="justify">
 Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear algebra to understand the objects being optimized (data and models are array), Calculus to understand how we optimize (with tiny changes) and Probability & Statistics to understand what we want to optimize. SVD (Single Value Decomposition) is a matrix version of refactoring.
+</p>
 
 <img src="./notes/math24.png" width=100%>
 
@@ -10,29 +12,43 @@ Mathematics in Machine Learning (ML) is mostly used for Optimization. Linear alg
 
 [ Systems of Linear Equations,  Matrices, Solving Systems of Linear Equations, Vector Spaces, Linear Independence, Basis and Rank, Linear Mappings, Affine Spaces ]
 
-`Linear Algebra` : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
++ `Linear Algebra` : Algebra of arrays/ matrix. Some examples of matrix multiplication in action: [ Linear / Logistic Regression, {dot, scalar, inner} product, Discrete Fourier Transform, Convolutions, Principal Component Analysis (PCA), Feedforward pass and Backpropagation pass ]
 
+<p align="justify">
 This equation means that the element in the i-th row and j-th column of the product matrix XY is obtained by taking the dot product of the i-th row of matrix X and the j-th column of matrix Y. In other words, you sum the products of corresponding elements from these rows and columns.
+</p>
 
-#### Understanding Arrays as Linear Functions
+#### Understanding Arrays as Linear Functions :
+<p align="justify">
 In linear algebra, arrays (or matrices) represent linear transformations or functions. These functions are particularly well-suited to operations involving weighted sums. A linear function, represented by a matrix, maps vectors from one space to another while preserving vector addition and scalar multiplication.
+</p>
 
 #### The Kernel of a Linear Function
+<p align="justify">
 The kernel (or null space) of a linear function consists of all input vectors that are mapped to the zero vector by that function. Mathematically, if A is a matrix representing a linear function f, then the kernel of f is defined as:
+</p>
 
 $$ Ker(A)={x∣Ax=0} $$
 
 #### Rank of a Linear Function
+<p align="justify">
 The rank of a linear function (or matrix) is a measure of the dimension of the image (or column space) of the matrix. It tells us the maximum number of linearly independent columns in the matrix. These columns span the range of the function, meaning any vector in the range can be expressed as a linear combination of these columns.
+</p>
 
 #### Rank and Non-Kernel Elements
+<p align="justify">
 The rank of a matrix answers a crucial question: How many linearly independent vectors (non-kernel elements) are required to span the entire range of the matrix? In other words, the rank gives us the number of independent directions in which the linear function can map input vectors. Knowing this allows us to understand the full capacity of the transformation described by the matrix.
+</p>
 
+<p align="justify">
 By comprehending these concepts, we can better appreciate the structure and behavior of linear transformations in various mathematical and practical applications.
+</p>
 
-🌸 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?s
+<p align="justify">
+🌸 Arrays represent linear functions. Linear functions really plays nice with weighted sum. Anything that is sent to 0 ( == 0 ) is called the Kernel of that function. These weighted sums define the rank of the function. We can make new non-kernel elements by making weighted sums of known non-kernel elements. Rank answers the question: how many non kernel elements do I need to know in order to make every element that's not in the kernel ?
+</p>
 
-`Single Value Decomposition (SVD)`: Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.
++ `Single Value Decomposition (SVD)`: <p align="justify">Change internals of matrix without changing the output. Matrix Factorization: At its core, SVD decomposes a matrix into three separate matrices, representing the singular values, left singular vectors, and right singular vectors. This factorization helps in representing complex data structures in a simpler, more interpretable form. In ML, this is particularly useful when dealing with high-dimensional data.</p>
 
 <center><img src="./svdn2.png" width=100%></center>
 
@@ -104,10 +120,13 @@ print(np.concatenate(arrays))
 
 ## Vector Calculus [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.05%20Vector%20Calculus.ipynb)]
 
+<p align="justify">
 [ Differentiation of Univariate Functions, Partial Differentiation and Gradients, Gradients of Vector-Valued Functions, Gradients of Matrices, Useful Identities for Computing Gradients, Backpropagation and Automatic Differentiation, Higher-Order Derivatives, Linearization and Multivariate Taylor Series ]
+</p>
 
+<p align="justify">
 Calculus is approximation with linear maps and helps us incrementally optimize.The derivative is the ratio between change in output and change in input.
-
+</p>
 
 $$ f^{'}(x) \lim_{ε \to 0} \dfrac{f(x)+ε}{ε}$$
 
@@ -140,7 +159,9 @@ More on Calculus in [notebook 1](https://github.com/wandb/edu/blob/main/math-for
 
 ## Probability and Distributions [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.06%20Probability%20and%20Distributions.ipynb)]
 
+<p align="justify">
 [ Construction of a Probability Space, Discrete and Continuous Probabilities, Sum Rule, Product Rule, and Bayes’ Theorem, Summary Statistics and Independence, Gaussian Distribution, Conjugacy and the Exponential Family, Change of Variables/Inverse Transform ]
+</p>
 
 ```py
 import numpy as np
@@ -151,14 +172,18 @@ data = true_sigma * np.random.standard_normal(size=N) + true_mu
 
 #### Probability Mass Function (PMF):
 
+<p align="justify">
 A PMF is used to describe the probability distribution of a discrete random variable. It assigns a probability to each possible outcome or value that the random variable can take.
+</p>
 
 Mathematically, for a discrete random variable X, the PMF is defined as:
 
 $$ P(X = x) $$
 
+<p align="justify">
 Where x is a specific value that X can take, and P(X=x) is the probability of X taking that value.
 In Python, we can create a PMF using a dictionary to represent the mapping of values to their probabilities.
+</p>
 
 ```py
 # Example PMF for a six-sided die
@@ -171,7 +196,9 @@ probability_3 = pmf_die[3]
 
 #### Probability Density Function (PDF):
 
+<p align="justify">
 A PDF is used to describe the probability distribution of a continuous random variable. Unlike a PMF, which assigns probabilities to discrete values, a PDF assigns probabilities to intervals or ranges of values.
+</p>
 
 Mathematically, for a continuous random variable X, the PDF is represented as a function f(x) such that:
 
@@ -200,7 +227,9 @@ probability_interval = norm.cdf(1, loc=mean, scale=std_dev) - norm.cdf(-1, loc=m
 <tr>
 <td>
 
+<p align="justify">
 While the probability captures the chance that an event occurs, the negative log probability, or "surprise", captures how unexpected an event is -- larger values mean it is more unexpected. Entropy measures the uncertainty or surprise associated with a probability distribution. Higher entropy values indicate more uncertainty or surprise.
+</p>
 
 Given the probability mass function (pmf), we can always compute the suprise by taking the negative logarithm:
 
@@ -220,8 +249,9 @@ print("Entropy:", entropy)
 </td>
 <td>
 
+<p align="justify">
 Softmax is a mathematical function often used in machine learning and deep learning to convert a vector of real numbers into a probability distribution. It takes an input vector and normalizes it to produce a set of values between 0 and 1 that sum up to 1. The Softmax function is commonly used for multi-class classification problems to determine the probabilities of each class.
-
+</p>
 
 
 ```python
@@ -254,11 +284,17 @@ $$ \text{softmax}(x)_i = \frac{e^{x_i}}{\sum_{j}e^{x_j}} $$
 <tr>
 <td>
 
+<p align="justify">
 This is the same as the expected value of the surprise -- if we were to draw a large number of samples of a random variable with p as its pmf, calculate the surprise function on each, and then take the average, it would be close to the entropy.
+</p>
 
+<p align="justify">
 If we draw samples according to the distribution p, but calculate the surprise using the distribution q, then the average surprise will not be the entropy. Instead, it will be the cross-entropy -- the entropy from mixing probability and surprise across distributions.
+</p>
 
+<p align="justify">
 It measures the dissimilarity between the predicted probability distribution and the true (target) probability distribution. In the context of binary classification, the cross-entropy loss is often referred to as "binary cross-entropy," while for multi-class classification, it's called "categorical cross-entropy."
+</p>
 
 ```python
 
@@ -279,7 +315,9 @@ def categorical_cross_entropy(y_true, y_pred):
 </td>
 <td>
 
+<p align="justify">
 KL divergence measures the difference between two probability distributions. It quantifies how one distribution differs from another, in terms of surprise or information.
+</p>
 
 ```python
 # Example probability distributions (P and Q)
@@ -291,12 +329,17 @@ kl_divergence = stats.entropy(P, Q, base=2)
 print("KL Divergence:", kl_divergence)
 ```
 
+<p align="justify">
 The cross-entropy gives us one way to measure how different two probability mass functions are -- almost like a notion of distance between two pmfs.
+</p>
 
+<p align="justify">
 But the distance from a point to itself should be 0, while crossentropy(p, p) == entropy(p)
+</p>
 
+<p align="justify">
 So instead of using the cross-entropy, it is sometimes convenient to use a different quantity to measure the difference between two probability distributions.
-
+</p>
 
 </td>
 </tr>
@@ -318,7 +361,9 @@ $$ divergence(p, q) = crossentropy(p, q) - entropy(p) $$
 
 Cross Entropy is the average surprise using the pmf q on samples from the pmf p.
 
+<p align="justify">
 But cross entropies and surprises don't always appear directly in the loss function. For example, if the variable we are predicting has a pdf instead of a pmf, then we'd need to work with functions instead of arrays, which is much tricker. Even in that case, the loss function is still usually derived from a surprise.
+</p>
 
 The Gaussian, or normal, distribution has the following probability density function:
 
@@ -327,7 +372,9 @@ $$ p(x;  μ) = \frac{1}{\sqrt{Z}}.e^{ - \frac{1}{2} (x- μ)^2 } $$
 where 
  (pronounced "mew") is the mean of the distribution and Z = 2π.This constant ensures that the distribution integrates to 1.
 
+<p align="justify">
  The surprise function in the context of the Gaussian distribution typically refers to the likelihood or probability of observing a specific value or range of values from the distribution.
+ </p>
 
 ```python
 import numpy as np
@@ -359,11 +406,17 @@ More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/m
 
 ### When Model Meet Data :
 
+<p align="justify">
 [ Data, Models, and Learning; Empirical Risk Minimization, Parameter Estimation, Probabilistic Modeling and Inference, Directed Graphical Models ]
+</p>
 
 ### Linear Regression :
 
-[ Problem Formulation, Parameter Estimation, Bayesian Linear Regression, Maximum Likelihood as Orthogonal Projection ] ([notebook.ipynb](./code/linear_regression_solution.ipynb))
+<p align="justify">
+[ Problem Formulation, Parameter Estimation, Bayesian Linear Regression, Maximum Likelihood as Orthogonal Projection ] 
+</p>
+
+([notebook.ipynb](./code/linear_regression_solution.ipynb))
 
 ### Dimensionality Reduction with Principal Component Analysis :
 
@@ -378,3 +431,15 @@ More on Probability and Statistics in [this](https://github.com/wandb/edu/blob/m
 [ Separating Hyperplanes, Primal Support Vector Machine, Dual Support Vector Machine, Kernels 388, Numerical Solution ]
 
 ## Continuous Optimization [[code](https://github.com/vbartle/MML-Companion/blob/master/MML%20Python%2C%20Ch.07%20Continuous%20Optimization.ipynb)]
+
+<p align="justify">
+Continuous optimization plays a fundamental role in the field of machine learning (ML). It involves the process of finding the best parameters for a given model by minimizing or maximizing an objective function, which is often a measure of error or loss. Since many ML algorithms rely on optimizing such functions, continuous optimization techniques are crucial for training models effectively.
+</p>
+
+<p align="justify">
+Machine learning models are typically built on parameters that define their behavior. The objective function (often a loss function) quantifies how well the model performs with a specific set of parameters. Continuous optimization aims to find the parameter values that minimize this loss function, thereby improving the model’s performance.
+</p>
+
+<p align="justify">
+For example, in supervised learning, the goal is to minimize the difference between the predicted outputs and the actual labels. This difference is captured by the loss function, and continuous optimization techniques like gradient descent are used to adjust the model parameters to reduce this difference.
+</p>
