@@ -1,4 +1,6 @@
 # 🌸 Competitive Programming Problems and Solutions :
+
+[ [solutions](./solutions/) ]
   
 ### ❁🦩 Data Structures :
 + [ [merging-communities (50)](https://www.hackerrank.com/challenges/merging-communities/problem) - hr ] [ [merging-communities.cpp](./cp_code/merging-communities.cpp), [merging-communities.MD](./cp_code/merging-communities.MD) ] ✓

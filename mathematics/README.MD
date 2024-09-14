@@ -51,6 +51,38 @@ Linear algebra forms the backbone of many machine learning algorithms, particula
 + Representation of datasets as matrices.
 + Matrix multiplication for linear transformations in neural networks.
 
+Eigenvalues and eigenvectors are used in algorithms like Principal Component Analysis (PCA), which reduces the dimensionality of the data.
+
+```python
+# Eigenvalues and Eigenvectors
+A = np.array([[3, 1], [1, 3]])
+
+# Compute eigenvalues and eigenvectors
+eigenvalues, eigenvectors = np.linalg.eig(A)
+
+print("Eigenvalues:", eigenvalues)
+print("Eigenvectors:\n", eigenvectors)
+```
+
+In machine learning, the gradient is the vector of partial derivatives of a function. In linear regression, gradients are used for updating weights during training.
+
+```python
+# Example data (features and labels)
+X = np.array([[1, 1], [1, 2], [2, 2], [2, 3]])  # Features
+y = np.dot(X, np.array([1, 2])) + 3  # Labels
+
+# Initial weights
+w = np.array([0.1, 0.2])
+
+# Predicted values
+y_pred = np.dot(X, w)
+
+# Compute gradients (partial derivatives of Mean Squared Error Loss)
+gradient = np.dot(X.T, (y_pred - y)) / len(y)
+
+print("Gradient:", gradient)
+```
+
 In Robotics [SLAM] : `Lie Group`: A Lie group is a group that is also a differentiable manifold, meaning it has a smooth structure that allows for calculus to be performed. The group operations (multiplication and inversion) are smooth maps. Lie groups are used to study continuous symmetries.
 
 `Lie Algebra`: Associated with every Lie group is a Lie algebra, which is a vector space equipped with a binary operation called the Lie bracket. The Lie algebra captures the infinitesimal structure of the Lie group and is crucial in understanding its properties.
@@ -83,6 +115,29 @@ Calculus provides tools for optimization, which is fundamental in training machi
 + Calculating gradients for updating model parameters in gradient descent.
 + Using second derivatives for optimization methods like Newton's method.<br />
 
+In optimization and machine learning, the Jacobian matrix represents the gradient of a vector-valued function, and the Hessian matrix represents the second-order partial derivatives of a scalar function. Let's compute the Hessian matrix for :
+
+$$ f(x,y)=x^2 + y^2 $$
+
+```python
+import autograd.numpy as np
+from autograd import jacobian, hessian
+
+# Define a multivariable function f(x, y) = x^2 + y^2
+def f_xy(params):
+    x, y = params
+    return x**2 + y**2
+
+# Compute the Jacobian and Hessian of f
+jacobian_f = jacobian(f_xy)
+hessian_f = hessian(f_xy)
+
+# Evaluate at (x, y) = (1, 2)
+params = np.array([1.0, 2.0])
+print("Jacobian at (1, 2):", jacobian_f(params))
+print("Hessian at (1, 2):\n", hessian_f(params))
+```
+
 `> PROBABILITY AND DISTRIBUTION`: [Random Variable and Probability Distribution](https://www.youtube.com/watch?v=3v9w79NhsfI&list=PLU5aQXLWR3_xDN0M2ZeZ_zHIia0e42_3O), [Discrete Probability](https://www.youtube.com/watch?v=rifK8BtHaYI&list=PLIeGtxpvyG-LWd2IOW1wveszJXy_aHytX)<br />
 { [prob_theory_review_for_ml.pdf](./notes/cs229-prob.pdf), [review_probability_theory.pdf](./notes/cs229-prob2.pdf), [vip_refresher_probability_statistics.pdf](./notes/refresher-probabilities-statistics.pdf)  } 📖
 
@@ -108,7 +163,7 @@ Information theory provides insights into the representation and transmission of
 
 <img src="ml.png" width=100%><br />
 
-I had UG math classes @AEC : Advanced Mathematics and Numerical Analysis (MA 401), Discrete Mathematics (MA 477), Graph Theory (CS 7751EL), Calculus, Probability, Statistics and Linear Algebra. I completed "[Mathematics for ML](https://coursera.org/share/2ebcf551575bebcdb474d3bafa64d7c0) - ICL" and in 2017 I wrote articles on [phyllotaxis](https://www.geeksforgeeks.org/algorithmic-botany-phyllotaxis-python/) and [several others](https://drive.google.com/file/d/17WSdA97HEU9O_5I0pfH9of9pvUMwKjOi/view). I participated in IMO in grade 7 (2009) and love being around logic & patterns.
+I had UG math classes @AEC : Advanced Mathematics and Numerical Analysis (MA 401), Discrete Mathematics (MA 477), Graph Theory (CS 7751EL), Calculus, Probability, Statistics and Linear Algebra. Completed "[Mathematics for ML](https://coursera.org/share/2ebcf551575bebcdb474d3bafa64d7c0) - ICL" and in 2017 wrote articles on [phyllotaxis](https://www.geeksforgeeks.org/algorithmic-botany-phyllotaxis-python/) and [several others](https://drive.google.com/file/d/17WSdA97HEU9O_5I0pfH9of9pvUMwKjOi/view). I participated in IMO in grade 7 (2009) and love being around logic & patterns.
 
 Class :  EPFL - Optimization: principles and algorithms : [Linear optimization](https://www.edx.org/course/linear-optimization), [Unconstrained nonlinear optimization](https://www.edx.org/course/unconstrained-nonlinear-optimization?index=product&queryID=ec062ec93ab3de3fc59aea78a593ee5b&position=14), [Network and discrete optimization](https://www.edx.org/course/network-and-discrete-optimization?index=product&queryID=ec062ec93ab3de3fc59aea78a593ee5b&position=15); [Python engineering animations: Bring math & data to life](https://www.udemy.com/course/python-animations-for-engineers-bring-mathematics-to-life/), [Quaternions and 3d rotation, explained interactively](https://youtu.be/zjMuIxRvygQ), [Visualizing quaternions (4d numbers) with stereographic projection](https://youtu.be/d4EgbgTm0Bg), [18.657 | Mathematics Of Machine Learning](https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015/pages/lecture-notes/).
 
